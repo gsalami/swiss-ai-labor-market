@@ -27,7 +27,7 @@
         "Cypher query support verified",
         "npm scripts: db:start, db:stop"
       ],
-      "status": "pending",
+      "status": "done",
       "phase": 1
     },
     {
