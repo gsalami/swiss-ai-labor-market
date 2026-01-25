@@ -1,222 +1,188 @@
 # Swiss AI Labor Market Intelligence 🇨🇭🤖
 
-Eine selbstlernende Wissensdatenbank über den Schweizer Arbeitsmarkt und die Auswirkungen von KI. Gebaut mit [ruVector](https://github.com/ruvnet/ruvector) für semantische Suche und Graph-Abfragen, exponiert via MCP für Claude Desktop, Clawdbot und andere KI-Agenten.
+Eine selbstlernende Wissensbasis zum Schweizer Arbeitsmarkt und dem Einfluss von KI. Mit MCP-Server für Claude Desktop, Clawdbot und andere AI-Agenten.
 
-## Features
-
-- **Automatisierte Datensammlung** - Aggregiert Daten von BFS, SECO, und Schweizer News-Quellen
-- **Selbstlernende Vector DB** - ruVector's GNN verbessert die Suchqualität über Zeit
-- **Graph-Beziehungen** - Cypher-Abfragen für Industrie ↔ Jobs ↔ Skills ↔ KI-Impact
-- **MCP Server** - Nutzbar als Tool in Claude Desktop, Claude Code oder Clawdbot
-- **Web Dashboard** - Durchsuche und erkunde die Wissensdatenbank
-
-## Architektur
-
-```
-Datenquellen → Ingestion Pipeline → ruVector DB → MCP Server → KI-Agenten
-                                         ↓
-                                   Web Dashboard
-```
-
-## Voraussetzungen
-
-- Node.js 20+
-- npm oder pnpm
-
-## Installation
+## 🚀 Quick Start
 
 ```bash
 # Repository klonen
-git clone https://github.com/kuble/swiss-ai-labor-market.git
+git clone https://github.com/gsalami/swiss-ai-labor-market.git
 cd swiss-ai-labor-market
 
 # Dependencies installieren
 npm install
 
-# TypeScript kompilieren (optional)
-npm run build
-```
+# Environment konfigurieren
+cp .env.example .env
+# Dann OPENAI_API_KEY in .env eintragen
 
-## Quick Start
-
-### 1. Daten sammeln
-
-```bash
-# News sammeln (täglich empfohlen)
-npm run collect:news
-
-# BFS Statistiken sammeln (wöchentlich empfohlen)
-npm run collect:stats
-```
-
-### 2. Dashboard starten
-
-```bash
-# API Server starten (Port 9001)
+# Dashboard starten
 npm run dashboard
 
-# Oder mit Hot-Reload für Development
-npm run dashboard:dev
+# Öffne http://localhost:9001
 ```
 
-Das Dashboard ist dann erreichbar unter: http://localhost:9001
+## 📊 Features
 
-### 3. MCP Server starten
+- **Echte Quellen** – McKinsey, WEF, BFS, SECO, Stanford HAI, OECD mit verifizierten URLs
+- **Semantic Search** – Vector-basierte Suche mit OpenAI Embeddings
+- **AI Impact Scores** – Analyse welche Branchen/Jobs am stärksten betroffen sind
+- **MCP Server** – Integration mit Claude Desktop und anderen AI-Agenten
+- **Auto-Updates** – Tägliche News und wöchentliche Statistik-Updates
 
-```bash
-npm run mcp:start
-```
-
-## npm Scripts
-
-| Script | Beschreibung |
-|--------|-------------|
-| `npm start` | Startet den API Server (Production) |
-| `npm run build` | Kompiliert TypeScript |
-| `npm run dashboard` | Startet das Dashboard + API |
-| `npm run dashboard:dev` | Dashboard mit Hot-Reload |
-| `npm run mcp:start` | Startet den MCP Server |
-| `npm run collect:news` | Sammelt News-Artikel |
-| `npm run collect:stats` | Sammelt BFS Statistiken |
-| `npm run ingest` | Führt die Ingestion Pipeline aus |
-
-## MCP Integration
+## 🔧 MCP Integration
 
 ### Claude Desktop
 
-Füge zu `~/Library/Application Support/Claude/claude_desktop_config.json` hinzu:
+1. Öffne die Claude Desktop Config:
+   ```
+   ~/Library/Application Support/Claude/claude_desktop_config.json
+   ```
 
-```json
-{
-  "mcpServers": {
-    "swiss-labor-market": {
-      "command": "npx",
-      "args": ["tsx", "/pfad/zu/swiss-ai-labor-market/src/mcp/server.ts"]
-    }
-  }
+2. Füge den Server hinzu:
+   ```json
+   {
+     "mcpServers": {
+       "swiss-labor-market": {
+         "command": "npx",
+         "args": ["tsx", "/DEIN/PFAD/swiss-ai-labor-market/src/mcp/server.ts"]
+       }
+     }
+   }
+   ```
+
+3. Claude Desktop neu starten
+
+4. Du siehst jetzt ein 🔧 Icon mit den verfügbaren Tools
+
+### Verfügbare MCP Tools
+
+| Tool | Beschreibung | Beispiel |
+|------|--------------|----------|
+| `search_labor_market` | Semantische Suche | "AI Impact Schweizer Banken" |
+| `get_ai_impact` | Impact Score für Branche/Job | `{target: "Finanzdienstleistungen", target_type: "industry"}` |
+| `get_job_trends` | Arbeitsmarkt-Trends | `{metric: "employment", timeframe: "1y"}` |
+
+### Beispiel-Prompts für Claude
+
+```
+"Wie stark ist die Finanzbranche in der Schweiz von AI betroffen?"
+
+"Welche Skills sind aktuell am gefragtesten im Schweizer Arbeitsmarkt?"
+
+"Zeig mir die Arbeitsmarkt-Trends der letzten 12 Monate"
+
+"Was sagt die McKinsey-Studie über Generative AI?"
+```
+
+## 🌐 Web Dashboard
+
+Das Dashboard bietet:
+- **Übersicht** – Key Metrics (Beschäftigung, Arbeitslosigkeit, AI-Adoption, Löhne)
+- **Suche** – Volltextsuche mit Filtern
+- **Branchen** – AI Impact Scores pro Branche
+- **Trends** – Visualisierungen der Entwicklung
+- **Quellen** – Alle verwendeten Studien mit Links
+
+### Starten
+
+```bash
+npm run dashboard
+# → http://localhost:9001
+```
+
+### Via Proxy (für externe Zugriffe)
+
+Wenn du einen Proxy auf Port 9000 hast, füge diese Route hinzu:
+
+```javascript
+// In deinem proxy-server.js
+if (url.startsWith('/swiss-ai-labor-market/api/')) {
+  return swissLaborProxy(req, res);  // → localhost:9001
 }
 ```
 
-### Clawdbot
-
-Füge zu deiner Clawdbot MCP-Konfiguration hinzu:
-
-```yaml
-mcp:
-  servers:
-    - name: swiss-labor-market
-      command: npx tsx /pfad/zu/swiss-ai-labor-market/src/mcp/server.ts
-```
-
-## MCP Tools
-
-| Tool | Beschreibung |
-|------|-------------|
-| `search_labor_market` | Semantische Suche über alle Daten |
-| `get_ai_impact` | KI-Impact-Analyse nach Industrie/Rolle |
-| `get_job_trends` | Arbeitsmarkt-Trends über Zeit |
-
-### Beispiel-Abfragen
-
-```
-"Wie wirkt sich KI auf den Schweizer Finanzsektor aus?"
-"Welche Berufe sind am stärksten von Automatisierung betroffen?"
-"Zeige mir die Arbeitslosenquote nach Kantonen"
-```
-
-## API Endpoints
-
-Der API Server läuft standardmässig auf Port 9001.
-
-| Endpoint | Method | Beschreibung |
-|----------|--------|-------------|
-| `GET /api/search` | GET | Suche mit Query-Parameter `q` |
-| `GET /api/industries` | GET | Liste aller Industrien mit KI-Impact-Scores |
-| `GET /api/trends` | GET | Arbeitsmarkt-Trends |
-| `GET /api/stats` | GET | Übersichts-Statistiken |
-| `GET /api/health` | GET | Health Check |
-
-### Beispiele
-
-```bash
-# Suche
-curl "http://localhost:9001/api/search?q=fintech"
-
-# Industrien
-curl "http://localhost:9001/api/industries"
-
-# Health Check
-curl "http://localhost:9001/api/health"
-```
-
-## Automatische Updates
-
-Das Projekt enthält Scripts für automatische Datenaktualisierung:
-
-- **Täglich**: `scripts/update-news.ts` - Sammelt aktuelle News
-- **Wöchentlich**: `scripts/update-stats.ts` - Aktualisiert BFS-Statistiken
-
-Siehe [scripts/cron-config.md](scripts/cron-config.md) für Clawdbot Cron-Integration.
-
-## Datenquellen
-
-- **BFS** - Bundesamt für Statistik (offizielle Statistiken)
-- **SECO** - Staatssekretariat für Wirtschaft (Wirtschaftsdaten)
-- **News** - NZZ, Tages-Anzeiger, SRF, Handelszeitung (KI-relevante Artikel)
-- **opendata.swiss** - Schweizer Open Data Portal
-
-## Projektstruktur
+## 📁 Projektstruktur
 
 ```
 swiss-ai-labor-market/
 ├── src/
-│   ├── api/          # Express API Server
-│   ├── collectors/   # Daten-Sammler
-│   ├── db/           # ruVector Datenbank
-│   ├── graph/        # Graph-Operationen
-│   ├── mcp/          # MCP Server
-│   └── pipeline/     # Ingestion Pipeline
-├── scripts/          # Automation Scripts
-├── dashboard/        # Web Dashboard (HTML/CSS/JS)
-├── data/             # Gesammelte Daten
-└── logs/             # Update Logs
+│   ├── api/           # Express API Server
+│   ├── collectors/    # Daten-Sammler (BFS, News, Research)
+│   ├── db/            # ruVector Datenbank
+│   ├── graph/         # Entity Extraction & Impact Scoring
+│   ├── mcp/           # MCP Server & Tools
+│   └── pipeline/      # Embedding & Ingestion Pipeline
+├── data/
+│   ├── bfs/           # BFS Statistiken
+│   ├── news/          # News-Artikel
+│   ├── research/      # Research Papers
+│   └── ruvector/      # Vector Datenbank
+├── dashboard/         # Web UI
+├── scripts/           # Utility Scripts
+└── logs/              # Log Files
 ```
 
-## Development
+## 🔄 Auto-Updates
+
+### Manuell ausführen
 
 ```bash
-# Mit Hot-Reload entwickeln
-npm run dashboard:dev
+# News aktualisieren
+npx tsx scripts/update-news.ts
 
-# Nur News sammeln ohne zu speichern
-npm run collect:news -- --no-save
-
-# Tests (falls vorhanden)
-npm test
+# Statistiken aktualisieren
+npx tsx scripts/update-stats.ts
 ```
 
-## Troubleshooting
+### Mit Cron (Clawdbot)
 
-### Port bereits belegt
-```bash
-# Anderen Port verwenden
-PORT=9002 npm run dashboard
+```yaml
+# Täglich um 08:00 - News
+- name: swiss-labor-news-daily
+  schedule: "0 8 * * *"
+  command: "cd /path/to/swiss-ai-labor-market && npx tsx scripts/update-news.ts"
+
+# Montags um 09:00 - Statistiken
+- name: swiss-labor-stats-weekly  
+  schedule: "0 9 * * 1"
+  command: "cd /path/to/swiss-ai-labor-market && npx tsx scripts/update-stats.ts"
 ```
 
-### RSS Feeds nicht erreichbar
-Einige Feeds können temporär nicht verfügbar sein. Das Script loggt Fehler und fährt mit den verfügbaren Quellen fort.
+## 📚 Datenquellen
 
-### ruVector Initialisierung
-ruVector wird automatisch beim ersten Start initialisiert. Die Datenbank liegt in `data/`.
+| Quelle | Institution | URL |
+|--------|-------------|-----|
+| GenAI Economic Potential | McKinsey | [Link](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier) |
+| Future of Jobs Report | WEF | [Link](https://www.weforum.org/publications/the-future-of-jobs-report-2023/) |
+| Arbeitsmarktindikatoren | BFS | [Link](https://www.bfs.admin.ch/bfs/de/home/statistiken/arbeit-erwerb.html) |
+| Konjunkturprognosen | SECO | [Link](https://www.seco.admin.ch/seco/de/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/konjunkturprognosen.html) |
+| AI Index Report | Stanford HAI | [Link](https://aiindex.stanford.edu/report/) |
+| Employment Outlook | OECD | [Link](https://www.oecd.org/employment/outlook/) |
 
-## License
+## 🛠 API Endpoints
 
-MIT - siehe [LICENSE](LICENSE)
+| Endpoint | Beschreibung |
+|----------|--------------|
+| `GET /api/stats` | Übersicht-Statistiken |
+| `GET /api/industries` | Branchen mit AI Impact Scores |
+| `GET /api/trends` | Trend-Daten für Charts |
+| `GET /api/sources` | Alle Quellen mit URLs |
+| `GET /api/search?q=...` | Semantische Suche |
+| `GET /api/industry/:name` | Details zu einer Branche |
 
-## Contributing
+## 🤝 Contributing
 
-Beiträge sind willkommen! Siehe [CONTRIBUTING.md](CONTRIBUTING.md) für Guidelines.
+PRs willkommen! Bitte:
+1. Fork das Repository
+2. Erstelle einen Feature Branch
+3. Committe mit Conventional Commits
+4. Erstelle einen Pull Request
+
+## 📄 License
+
+MIT – siehe [LICENSE](LICENSE)
 
 ---
 
-Gebaut mit ❤️ für den Schweizer Arbeitsmarkt
+**Built with** [ruVector](https://github.com/ruvnet/ruvector) • [MCP](https://modelcontextprotocol.io) • [Clawdbot](https://clawd.bot)

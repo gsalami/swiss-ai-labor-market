@@ -275,12 +275,117 @@
       gap: 1rem;
       font-size: 0.8rem;
       color: var(--text-secondary);
+      flex-wrap: wrap;
+      align-items: center;
     }
     
     .result-tag {
       background: rgba(255,255,255,0.1);
       padding: 0.15rem 0.5rem;
       border-radius: 4px;
+    }
+    
+    .result-link {
+      color: var(--accent-blue);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    
+    .result-link:hover {
+      color: var(--accent-primary);
+      text-decoration: underline;
+    }
+    
+    /* Sources Section */
+    .sources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1.25rem;
+    }
+    
+    .source-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s;
+    }
+    
+    .source-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    
+    .source-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+    
+    .source-institution {
+      font-size: 0.8rem;
+      color: var(--accent-blue);
+      font-weight: 500;
+    }
+    
+    .source-year {
+      background: rgba(255,255,255,0.1);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+    }
+    
+    .source-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .source-description {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      background: rgba(59, 130, 246, 0.15);
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    
+    .source-link:hover {
+      background: rgba(59, 130, 246, 0.25);
+      transform: translateX(3px);
+    }
+    
+    .source-topics {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+    }
+    
+    .source-topic {
+      font-size: 0.7rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      color: var(--text-secondary);
     }
     
     /* Section Title */
@@ -720,6 +825,7 @@
         <a href="#search">Suche</a>
         <a href="#industries">Branchen</a>
         <a href="#trends">Trends</a>
+        <a href="#sources">Quellen</a>
       </nav>
     </div>
   </header>
@@ -808,6 +914,20 @@
         </div>
       </div>
     </section>
+
+    <!-- Sources Section -->
+    <section id="sources">
+      <h2 class="section-title">📚 Datenquellen & Forschung</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Alle Analysen basieren auf verifizierten Quellen von führenden Institutionen.
+      </p>
+      <div class="sources-grid" id="sourcesGrid">
+        <div class="loading">
+          <div class="spinner"></div>
+          Lade Quellen...
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -842,6 +962,7 @@
       await loadStats();
       await loadIndustries();
       await loadTrends();
+      await loadSources();
       setupSearch();
     });
     
@@ -1029,6 +1150,7 @@
                 <span class="result-tag">${result.source}</span>
                 ${result.industry ? `<span class="result-tag">${result.industry}</span>` : ''}
                 ${result.date ? `<span>${result.date}</span>` : ''}
+                ${result.sourceUrl ? `<a href="${result.sourceUrl}" target="_blank" class="result-link">🔗 Quelle öffnen</a>` : ''}
               </div>
             </div>
           `).join('');
@@ -1092,6 +1214,43 @@
       } catch (err) {
         modalBody.innerHTML = '<p style="color: var(--accent-primary);">Fehler beim Laden der Details.</p>';
       }
+    }
+    
+    // Load Sources
+    async function loadSources() {
+      try {
+        const res = await fetch(`${API_BASE}/sources`);
+        const { data } = await res.json();
+        renderSources(data);
+      } catch (err) {
+        console.error('Failed to load sources:', err);
+        document.getElementById('sourcesGrid').innerHTML = 
+          '<p style="color: var(--accent-primary);">Fehler beim Laden der Quellen.</p>';
+      }
+    }
+    
+    // Render Sources
+    function renderSources(sources) {
+      const grid = document.getElementById('sourcesGrid');
+      
+      grid.innerHTML = sources.map(source => `
+        <div class="source-card">
+          <div class="source-header">
+            <span class="source-institution">${source.institution}</span>
+            <span class="source-year">${source.year}</span>
+          </div>
+          <div class="source-title">${source.title}</div>
+          <div class="source-description">${source.abstract ? source.abstract.substring(0, 150) + '...' : ''}</div>
+          <a href="${source.url}" target="_blank" rel="noopener noreferrer" class="source-link">
+            📖 Zum Dokument →
+          </a>
+          ${source.topics ? `
+            <div class="source-topics">
+              ${source.topics.slice(0, 4).map(t => `<span class="source-topic">${t}</span>`).join('')}
+            </div>
+          ` : ''}
+        </div>
+      `).join('');
     }
     
     // Close Modal
