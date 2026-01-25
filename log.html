@@ -138,6 +138,25 @@
       color: var(--text-primary);
     }
     
+    .btn-primary {
+      background: var(--gradient-primary);
+      border: none;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 15px rgba(13,162,231,0.3);
+      text-decoration: none;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13,162,231,0.4);
+    }
+    
     /* Main Content */
     .main {
       max-width: 1000px;
@@ -374,6 +393,7 @@
       
       <div class="header-cta">
         <a href="https://github.com/gsalami/swiss-ai-labor-market" target="_blank" class="btn-ghost">GitHub</a>
+        <a href="index.html#search" class="btn-primary">Erkunden</a>
       </div>
     </div>
   </header>
