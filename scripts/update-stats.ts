@@ -282,6 +282,50 @@ async function updateStats(): Promise<UpdateResult> {
 }
 
 /**
+ * Add entry to update-log.json for the dashboard
+ */
+async function addToUpdateLog(result: UpdateResult) {
+  const logPath = path.join(process.cwd(), 'data', 'update-log.json');
+  
+  try {
+    let log: any[] = [];
+    try {
+      const existing = await fs.readFile(logPath, 'utf-8');
+      log = JSON.parse(existing);
+    } catch {
+      // File doesn't exist or is invalid
+    }
+    
+    const entry = {
+      timestamp: new Date().toISOString(),
+      type: 'stats',
+      status: result.success ? 'success' : 'error',
+      title: 'Wöchentliches Stats Update',
+      description: result.message,
+      results: [],
+      stats: {
+        searched: 'BFS, SECO Datenquellen',
+        found: String(result.stats.bfsDatasetsCollected),
+        added: String(result.stats.documentsIngested)
+      }
+    };
+    
+    // Add to beginning of array
+    log.unshift(entry);
+    
+    // Keep only last 100 entries
+    if (log.length > 100) {
+      log = log.slice(0, 100);
+    }
+    
+    await fs.writeFile(logPath, JSON.stringify(log, null, 2), 'utf-8');
+    console.log('✓ Added entry to update-log.json');
+  } catch (error) {
+    console.error('Could not update log:', error);
+  }
+}
+
+/**
  * Entry point
  */
 async function main() {
@@ -290,6 +334,9 @@ async function main() {
   console.log('╚═════════════════════════════════════════════╝\n');
   
   const result = await updateStats();
+  
+  // Add to dashboard log
+  await addToUpdateLog(result);
   
   console.log('\n' + '─'.repeat(50));
   console.log(result.success ? '✓ SUCCESS' : '✗ FAILED');
