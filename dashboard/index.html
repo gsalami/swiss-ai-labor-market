@@ -7,23 +7,31 @@
   <title>Swiss AI Labor Market Intelligence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* Design Tokens */
     :root {
-      --bg-primary: #1a1a2e;
-      --bg-secondary: #16213e;
-      --bg-card: #0f3460;
-      --bg-card-hover: #1a4a7a;
-      --text-primary: #ffffff;
-      --text-secondary: #a0aec0;
-      --accent-primary: #e94560;
-      --accent-secondary: #0f4c75;
+      --bg-dark: #0a0a0f;
+      --bg-darker: #050508;
+      --bg-card: rgba(255,255,255,0.03);
+      --bg-card-hover: rgba(255,255,255,0.06);
+      --accent-primary: #6366f1;
+      --accent-secondary: #ec4899;
       --accent-green: #10b981;
       --accent-yellow: #f59e0b;
       --accent-blue: #3b82f6;
-      --border-color: rgba(255,255,255,0.1);
-      --shadow: 0 4px 20px rgba(0,0,0,0.3);
-      --radius: 12px;
+      --gradient-primary: linear-gradient(135deg, #6366f1, #ec4899);
+      --gradient-hero: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(236,72,153,0.15));
+      --text-primary: #ffffff;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --border-subtle: rgba(255,255,255,0.08);
+      --border-light: rgba(255,255,255,0.12);
+      --shadow-glow: 0 0 60px rgba(99,102,241,0.15);
+      --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+      --radius: 16px;
+      --radius-sm: 8px;
+      --radius-lg: 24px;
     }
     
     * {
@@ -32,23 +40,45 @@
       box-sizing: border-box;
     }
     
+    html {
+      scroll-behavior: smooth;
+    }
+    
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      background: var(--bg-dark);
       min-height: 100vh;
       color: var(--text-primary);
       line-height: 1.6;
+      overflow-x: hidden;
     }
     
-    /* Header */
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-subtle);
+    }
+    
+    /* ================================
+       HEADER / NAVIGATION
+       ================================ */
     .header {
-      background: rgba(15, 52, 96, 0.8);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-color);
-      padding: 1rem 2rem;
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 100;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .header.scrolled {
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
     }
     
     .header-content {
@@ -63,186 +93,694 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
     }
     
     .logo-icon {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-blue));
+      width: 42px;
+      height: 42px;
       border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
+      overflow: hidden;
     }
     
     .logo-text {
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-    
-    .logo-subtitle {
-      font-size: 0.75rem;
-      color: var(--text-secondary);
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 0.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 50px;
+      padding: 0.35rem;
     }
     
     .nav-links a {
       color: var(--text-secondary);
       text-decoration: none;
       font-size: 0.9rem;
-      transition: color 0.2s;
+      font-weight: 500;
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      transition: all 0.2s;
     }
     
-    .nav-links a:hover, .nav-links a.active {
+    .nav-links a:hover {
       color: var(--text-primary);
     }
     
-    /* Main Content */
-    .main {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 2rem;
+    .nav-links a.active {
+      background: var(--gradient-primary);
+      color: white;
     }
     
-    /* Stats Grid */
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .btn-ghost {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    
+    .btn-ghost:hover {
+      color: var(--text-primary);
+    }
+    
+    .btn-primary {
+      background: var(--gradient-primary);
+      border: none;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 15px rgba(99,102,241,0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(99,102,241,0.4);
+    }
+    
+    /* ================================
+       HERO SECTION
+       ================================ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 120px 2rem 100px;
+      overflow: hidden;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-hero);
+      z-index: 0;
+    }
+    
+    .hero-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(150px);
+      opacity: 0.4;
+    }
+    
+    .hero-glow-1 {
+      top: -200px;
+      right: -100px;
+      background: var(--accent-primary);
+    }
+    
+    .hero-glow-2 {
+      bottom: -200px;
+      left: -100px;
+      background: var(--accent-secondary);
+    }
+    
+    .hero-content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 50px;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+    
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #fff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-title span {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.35rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+    
+    .hero-description {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn-hero {
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .btn-hero-primary {
+      background: var(--gradient-primary);
+      border: none;
+      color: white;
+      box-shadow: 0 4px 20px rgba(99,102,241,0.4);
+    }
+    
+    .btn-hero-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(99,102,241,0.5);
+    }
+    
+    .btn-hero-secondary {
+      background: transparent;
+      border: 1px solid var(--border-light);
+      color: var(--text-primary);
+    }
+    
+    .btn-hero-secondary:hover {
+      background: var(--bg-card);
+      border-color: var(--border-light);
+    }
+    
+    /* ================================
+       SECTIONS COMMON
+       ================================ */
+    section {
+      padding: 100px 2rem;
+    }
+    
+    .section-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-primary);
+      margin-bottom: 1rem;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* ================================
+       STATS SECTION
+       ================================ */
+    #stats {
+      background: var(--bg-darker);
+      position: relative;
+    }
+    
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
-      margin-bottom: 2rem;
+    }
+    
+    @media (max-width: 1024px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (max-width: 640px) {
+      .stats-grid { grid-template-columns: 1fr; }
     }
     
     .stat-card {
       background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius);
-      padding: 1.5rem;
-      border: 1px solid var(--border-color);
-      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 2rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-primary);
+      opacity: 0;
+      transition: opacity 0.3s;
     }
     
     .stat-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+      background: var(--bg-card-hover);
+      box-shadow: var(--shadow-glow);
     }
     
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
+    .stat-card:hover::before {
+      opacity: 1;
+    }
+    
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gradient-primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
     }
     
     .stat-value {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 0.25rem;
+      background: linear-gradient(135deg, #fff, #e2e8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     
-    .stat-change {
-      font-size: 0.85rem;
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-    
-    .stat-change.up { color: var(--accent-green); }
-    .stat-change.down { color: var(--accent-primary); }
-    
-    /* Search Section */
-    .search-section {
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border: 1px solid var(--border-color);
-    }
-    
-    .search-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
+    .stat-label {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
     
-    .search-form {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
+    .stat-trend {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 50px;
+      margin-top: 0.75rem;
     }
     
-    .search-input-wrapper {
-      flex: 1;
-      min-width: 300px;
+    .stat-trend.up {
+      background: rgba(16,185,129,0.15);
+      color: var(--accent-green);
+    }
+    
+    .stat-trend.down {
+      background: rgba(239,68,68,0.15);
+      color: #ef4444;
+    }
+    
+    .stat-trend.stable {
+      background: rgba(59,130,246,0.15);
+      color: var(--accent-blue);
+    }
+    
+    .info-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      color: var(--text-muted);
+      font-size: 10px;
+      font-style: normal;
+      cursor: help;
       position: relative;
     }
     
-    .search-input {
-      width: 100%;
-      padding: 0.875rem 1rem 0.875rem 2.5rem;
-      background: rgba(0,0,0,0.2);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
+    .info-icon:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-dark);
       color: var(--text-primary);
-      font-size: 0.95rem;
-      transition: border-color 0.2s;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      white-space: nowrap;
+      z-index: 100;
+      box-shadow: var(--shadow-card);
+      transition: all 0.2s;
+      border: 1px solid var(--border-subtle);
     }
     
-    .search-input:focus {
-      outline: none;
-      border-color: var(--accent-blue);
+    .tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: var(--bg-dark);
     }
     
-    .search-input::placeholder {
+    /* ================================
+       BRANCHEN / INDUSTRIES SECTION
+       ================================ */
+    #industries {
+      background: var(--bg-dark);
+    }
+    
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    
+    @media (max-width: 1024px) {
+      .industries-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (max-width: 640px) {
+      .industries-grid { grid-template-columns: 1fr; }
+    }
+    
+    .industry-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: all 0.3s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .industry-card:hover {
+      transform: translateY(-4px);
+      background: var(--bg-card-hover);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--border-light);
+    }
+    
+    .industry-number {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 3rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.05);
+      line-height: 1;
+    }
+    
+    .industry-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .industry-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--gradient-primary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .industry-name {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .industry-description {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    
+    .industry-impact {
+      margin: 1.25rem 0;
+    }
+    
+    .impact-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    
+    .impact-label {
+      font-size: 0.8rem;
       color: var(--text-secondary);
+    }
+    
+    .impact-score {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    
+    .impact-score.high { color: var(--accent-secondary); }
+    .impact-score.medium { color: var(--accent-yellow); }
+    .impact-score.low { color: var(--accent-green); }
+    
+    .impact-bar {
+      height: 6px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    
+    .impact-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+    
+    .impact-fill.high {
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    }
+    
+    .impact-fill.medium {
+      background: linear-gradient(90deg, var(--accent-yellow), #f97316);
+    }
+    
+    .impact-fill.low {
+      background: linear-gradient(90deg, var(--accent-green), #22c55e);
+    }
+    
+    .industry-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+    
+    .industry-employees {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    
+    .industry-btn {
+      background: transparent;
+      border: 1px solid var(--border-light);
+      color: var(--text-primary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .industry-btn:hover {
+      background: var(--accent-primary);
+      border-color: var(--accent-primary);
+    }
+    
+    /* ================================
+       SEARCH SECTION
+       ================================ */
+    #search {
+      background: var(--bg-darker);
+    }
+    
+    .search-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .search-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
+    }
+    
+    .search-box:focus-within {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
     }
     
     .search-icon {
-      position: absolute;
-      left: 0.875rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-secondary);
+      padding: 0 1rem;
+      color: var(--text-muted);
+      font-size: 1.25rem;
     }
     
-    .filter-select {
-      padding: 0.875rem 1rem;
-      background: rgba(0,0,0,0.2);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
+    .search-input {
+      flex: 1;
+      background: transparent;
+      border: none;
       color: var(--text-primary);
-      font-size: 0.95rem;
-      min-width: 180px;
+      font-size: 1.05rem;
+      padding: 1rem 0;
+      outline: none;
     }
     
-    .filter-select option {
-      background: var(--bg-secondary);
+    .search-input::placeholder {
+      color: var(--text-muted);
     }
     
     .search-btn {
-      padding: 0.875rem 2rem;
-      background: linear-gradient(135deg, var(--accent-primary), #c13750);
+      background: var(--gradient-primary);
       border: none;
-      border-radius: 8px;
       color: white;
+      font-size: 0.95rem;
       font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 50px;
       cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: all 0.2s;
     }
     
     .search-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+      transform: scale(1.02);
+      box-shadow: 0 4px 15px rgba(99,102,241,0.4);
     }
     
-    /* Search Results */
-    .search-results {
+    .filter-chips {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
       margin-top: 1.5rem;
+    }
+    
+    .filter-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .filter-chip:hover,
+    .filter-chip.active {
+      background: var(--accent-primary);
+      border-color: var(--accent-primary);
+      color: white;
+    }
+    
+    .search-results {
+      margin-top: 2rem;
       display: none;
     }
     
@@ -251,428 +789,333 @@
     }
     
     .result-card {
-      background: rgba(0,0,0,0.2);
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 0.75rem;
-      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: all 0.2s;
+    }
+    
+    .result-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateX(4px);
     }
     
     .result-title {
+      font-size: 1.05rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: var(--accent-blue);
+      color: var(--accent-primary);
     }
     
     .result-snippet {
       font-size: 0.9rem;
       color: var(--text-secondary);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
     }
     
     .result-meta {
       display: flex;
-      gap: 1rem;
-      font-size: 0.8rem;
-      color: var(--text-secondary);
+      gap: 0.75rem;
       flex-wrap: wrap;
       align-items: center;
     }
     
     .result-tag {
-      background: rgba(255,255,255,0.1);
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
+      background: rgba(255,255,255,0.08);
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
     }
     
     .result-link {
-      color: var(--accent-blue);
+      color: var(--accent-primary);
       text-decoration: none;
+      font-size: 0.85rem;
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
-      font-size: 0.85rem;
       transition: color 0.2s;
     }
     
     .result-link:hover {
-      color: var(--accent-primary);
-      text-decoration: underline;
+      color: var(--accent-secondary);
     }
     
-    /* Sources Section */
+    /* ================================
+       SOURCES SECTION
+       ================================ */
+    #sources {
+      background: var(--bg-dark);
+    }
+    
+    .source-tabs {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .source-tab {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .source-tab:hover,
+    .source-tab.active {
+      background: var(--gradient-primary);
+      border-color: transparent;
+      color: white;
+    }
+    
     .sources-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 1.25rem;
+      gap: 1.5rem;
     }
     
     .source-card {
       background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius);
-      padding: 1.25rem;
-      border: 1px solid var(--border-color);
+      padding: 1.5rem;
       transition: all 0.3s;
     }
     
     .source-card:hover {
+      transform: translateY(-4px);
       background: var(--bg-card-hover);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-glow);
     }
     
     .source-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .source-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(236,72,153,0.2));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    
+    .source-year {
+      background: rgba(255,255,255,0.08);
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
     }
     
     .source-institution {
       font-size: 0.8rem;
-      color: var(--accent-blue);
+      color: var(--accent-primary);
       font-weight: 500;
-    }
-    
-    .source-year {
-      background: rgba(255,255,255,0.1);
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
+      margin-bottom: 0.25rem;
     }
     
     .source-title {
-      font-weight: 600;
       font-size: 1rem;
+      font-weight: 600;
       margin-bottom: 0.5rem;
+      line-height: 1.4;
     }
     
     .source-description {
       font-size: 0.85rem;
-      color: var(--text-secondary);
+      color: var(--text-muted);
+      line-height: 1.6;
       margin-bottom: 1rem;
-      line-height: 1.5;
     }
     
     .source-link {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: var(--accent-blue);
+      color: var(--accent-primary);
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 500;
       padding: 0.5rem 1rem;
-      background: rgba(59, 130, 246, 0.15);
-      border-radius: 6px;
+      background: rgba(99,102,241,0.1);
+      border-radius: 50px;
       transition: all 0.2s;
     }
     
     .source-link:hover {
-      background: rgba(59, 130, 246, 0.25);
-      transform: translateX(3px);
+      background: rgba(99,102,241,0.2);
+      transform: translateX(4px);
     }
     
     .source-topics {
       display: flex;
       gap: 0.5rem;
       flex-wrap: wrap;
-      margin-top: 0.75rem;
+      margin-top: 1rem;
     }
     
     .source-topic {
-      font-size: 0.7rem;
-      background: rgba(255,255,255,0.08);
-      padding: 0.2rem 0.5rem;
-      border-radius: 3px;
-      color: var(--text-secondary);
+      font-size: 0.75rem;
+      background: rgba(255,255,255,0.05);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      color: var(--text-muted);
     }
     
-    /* Section Title */
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+    /* ================================
+       FOOTER
+       ================================ */
+    .footer {
+      background: var(--bg-darker);
+      border-top: 1px solid var(--border-subtle);
+      padding: 4rem 2rem 2rem;
     }
     
-    /* Industry Cards Grid */
-    .industries-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
     }
     
-    .industry-card {
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      border: 1px solid var(--border-color);
-      transition: all 0.3s;
-      cursor: pointer;
-    }
-    
-    .industry-card:hover {
-      background: var(--bg-card-hover);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow);
-    }
-    
-    .industry-header {
+    .footer-top {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    
+    .footer-brand {
+      max-width: 300px;
+    }
+    
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       margin-bottom: 1rem;
     }
     
-    .industry-name {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-    
-    .industry-description {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-    }
-    
-    .impact-badge {
-      padding: 0.5rem 0.75rem;
+    .footer-logo-icon {
+      width: 36px;
+      height: 36px;
       border-radius: 8px;
-      font-weight: 700;
-      font-size: 1rem;
+      overflow: hidden;
     }
     
-    .impact-badge.high {
-      background: rgba(233, 69, 96, 0.2);
+    .footer-logo-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .footer-tagline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+    
+    .footer-column h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    .footer-column a {
+      display: block;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+    }
+    
+    .footer-column a:hover {
       color: var(--accent-primary);
     }
     
-    .impact-badge.medium {
-      background: rgba(245, 158, 11, 0.2);
-      color: var(--accent-yellow);
-    }
-    
-    .impact-badge.low {
-      background: rgba(16, 185, 129, 0.2);
-      color: var(--accent-green);
-    }
-    
-    .industry-metrics {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    
-    .metric {
-      text-align: center;
-    }
-    
-    .metric-value {
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-    
-    .metric-label {
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-    }
-    
-    .industry-footer {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border-color);
+    .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      gap: 1rem;
     }
     
-    .employees-count {
+    .footer-copyright {
       font-size: 0.85rem;
-      color: var(--text-secondary);
+      color: var(--text-muted);
     }
     
-    .trend-indicator {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      font-size: 0.85rem;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-    }
-    
-    .trend-indicator.growing {
-      background: rgba(16, 185, 129, 0.15);
-      color: var(--accent-green);
-    }
-    
-    .trend-indicator.stable {
-      background: rgba(59, 130, 246, 0.15);
-      color: var(--accent-blue);
-    }
-    
-    .trend-indicator.declining {
-      background: rgba(233, 69, 96, 0.15);
+    .footer-copyright a {
       color: var(--accent-primary);
-    }
-    
-    /* Charts Section */
-    .charts-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    
-    .chart-card {
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      border: 1px solid var(--border-color);
-    }
-    
-    .chart-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .chart-container {
-      height: 250px;
-      position: relative;
-    }
-    
-    /* Bar Chart (CSS only) */
-    .bar-chart {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-around;
-      height: 100%;
-      padding-top: 20px;
-    }
-    
-    .bar-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 1;
-      max-width: 60px;
-    }
-    
-    .bar {
-      width: 40px;
-      background: linear-gradient(180deg, var(--accent-blue), var(--accent-primary));
-      border-radius: 4px 4px 0 0;
-      transition: height 0.5s ease;
-      position: relative;
-    }
-    
-    .bar-value {
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-    
-    .bar-label {
-      margin-top: 0.5rem;
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-    }
-    
-    /* Horizontal Bar Chart */
-    .horizontal-bars {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    
-    .h-bar-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    
-    .h-bar-label {
-      width: 120px;
-      font-size: 0.8rem;
-      text-align: right;
-      color: var(--text-secondary);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    
-    .h-bar-track {
-      flex: 1;
-      height: 24px;
-      background: rgba(0,0,0,0.2);
-      border-radius: 4px;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .h-bar-fill {
-      height: 100%;
-      border-radius: 4px;
-      transition: width 0.5s ease;
-      display: flex;
-      align-items: center;
-      padding-left: 8px;
-    }
-    
-    .h-bar-fill.high {
-      background: linear-gradient(90deg, var(--accent-primary), #c13750);
-    }
-    
-    .h-bar-fill.medium {
-      background: linear-gradient(90deg, var(--accent-yellow), #d48806);
-    }
-    
-    .h-bar-fill.low {
-      background: linear-gradient(90deg, var(--accent-green), #059669);
-    }
-    
-    .h-bar-value {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: white;
-    }
-    
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--text-secondary);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border-color);
-      margin-top: 2rem;
-    }
-    
-    .footer a {
-      color: var(--accent-blue);
       text-decoration: none;
     }
     
-    /* Modal */
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .footer-social a:hover {
+      background: var(--accent-primary);
+      border-color: var(--accent-primary);
+      color: white;
+    }
+    
+    /* ================================
+       MODAL
+       ================================ */
     .modal-overlay {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.7);
-      z-index: 1000;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(5px);
+      z-index: 2000;
       align-items: center;
       justify-content: center;
       padding: 2rem;
@@ -683,21 +1126,24 @@
     }
     
     .modal {
-      background: var(--bg-secondary);
-      border-radius: var(--radius);
+      background: var(--bg-dark);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
       max-width: 600px;
       width: 100%;
-      max-height: 80vh;
+      max-height: 85vh;
       overflow-y: auto;
-      border: 1px solid var(--border-color);
     }
     
     .modal-header {
-      padding: 1.5rem;
-      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--border-subtle);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      background: var(--bg-dark);
     }
     
     .modal-title {
@@ -706,23 +1152,31 @@
     }
     
     .modal-close {
-      background: none;
+      background: var(--bg-card);
       border: none;
       color: var(--text-secondary);
-      font-size: 1.5rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.25rem;
       cursor: pointer;
-      padding: 0.25rem;
+      transition: all 0.2s;
+    }
+    
+    .modal-close:hover {
+      background: var(--accent-primary);
+      color: white;
     }
     
     .modal-body {
-      padding: 1.5rem;
+      padding: 2rem;
     }
     
     .detail-row {
       display: flex;
       justify-content: space-between;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-subtle);
     }
     
     .detail-label {
@@ -733,35 +1187,45 @@
       font-weight: 600;
     }
     
+    .recommendations-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
     .recommendations-list {
-      margin-top: 1rem;
+      list-style: none;
     }
     
     .recommendations-list li {
-      padding: 0.5rem 0;
+      padding: 0.75rem 0;
       padding-left: 1.5rem;
       position: relative;
       color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-subtle);
     }
     
     .recommendations-list li::before {
       content: '→';
       position: absolute;
       left: 0;
-      color: var(--accent-blue);
+      color: var(--accent-primary);
     }
     
-    /* Loading */
+    /* ================================
+       LOADING
+       ================================ */
     .loading {
       text-align: center;
-      padding: 2rem;
-      color: var(--text-secondary);
+      padding: 3rem;
+      color: var(--text-muted);
     }
     
     .spinner {
       width: 40px;
       height: 40px;
-      border: 3px solid var(--border-color);
+      border: 3px solid var(--border-subtle);
       border-top-color: var(--accent-primary);
       border-radius: 50%;
       animation: spin 1s linear infinite;
@@ -772,64 +1236,9 @@
       to { transform: rotate(360deg); }
     }
     
-    /* Info Icons with Tooltips */
-    .info-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.1);
-      color: var(--text-secondary);
-      font-size: 10px;
-      font-style: normal;
-      cursor: help;
-      margin-left: 6px;
-      position: relative;
-      vertical-align: middle;
-    }
-
-    .info-icon:hover .tooltip {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .tooltip {
-      visibility: hidden;
-      opacity: 0;
-      position: absolute;
-      bottom: 125%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--bg-card);
-      color: var(--text-primary);
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-size: 12px;
-      white-space: nowrap;
-      z-index: 100;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: all 0.2s;
-      border: 1px solid var(--border-color);
-    }
-
-    .tooltip::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 6px solid transparent;
-      border-top-color: var(--bg-card);
-    }
-
-    .stat-label .info-icon,
-    .chart-title .info-icon {
-      vertical-align: middle;
-    }
-
-    /* Responsive */
+    /* ================================
+       RESPONSIVE
+       ================================ */
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
@@ -837,160 +1246,287 @@
       }
       
       .nav-links {
-        gap: 1rem;
+        order: 3;
       }
       
-      .main {
-        padding: 1rem;
+      .header-cta {
+        display: none;
       }
       
-      .search-form {
+      .hero {
+        padding-top: 160px;
+      }
+      
+      section {
+        padding: 60px 1rem;
+      }
+      
+      .footer-top {
         flex-direction: column;
       }
       
-      .search-input-wrapper {
-        min-width: 100%;
+      .footer-links {
+        gap: 2rem;
       }
       
-      .industries-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .charts-section {
-        grid-template-columns: 1fr;
-      }
-      
-      .stat-value {
-        font-size: 1.5rem;
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="header-content">
-      <div class="logo">
-        <div class="logo-icon"><svg viewBox="0 0 32 32" width="40" height="40" style="border-radius: 8px;"><rect width="32" height="32" fill="#FF0000"/><rect x="13" y="6" width="6" height="20" fill="#FFF"/><rect x="6" y="13" width="20" height="6" fill="#FFF"/></svg></div>
-        <div>
-          <div class="logo-text">Swiss AI Labor Market</div>
-          <div class="logo-subtitle">Intelligence Dashboard</div>
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 42 42" width="42" height="42">
+            <rect width="42" height="42" fill="#FF0000"/>
+            <rect x="17" y="8" width="8" height="26" fill="#FFF"/>
+            <rect x="8" y="17" width="26" height="8" fill="#FFF"/>
+          </svg>
         </div>
-      </div>
+        <span class="logo-text">Swiss AI Labor Market</span>
+      </a>
+      
       <nav class="nav-links">
         <a href="#stats" class="active">Übersicht</a>
         <a href="#search">Suche</a>
         <a href="#industries">Branchen</a>
-        <a href="#trends">Trends</a>
         <a href="#sources">Quellen</a>
       </nav>
+      
+      <div class="header-cta">
+        <button class="btn-ghost">GitHub</button>
+        <button class="btn-primary" onclick="document.getElementById('search').scrollIntoView({behavior:'smooth'})">Erkunden</button>
+      </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="main">
-    <!-- Stats Grid -->
-    <section id="stats">
-      <h2 class="section-title">📊 Schweizer Arbeitsmarkt Übersicht</h2>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Live Daten · Aktualisiert 2025
+      </div>
+      <h1 class="hero-title">
+        Swiss AI Labor Market<br><span>Intelligence</span>
+      </h1>
+      <p class="hero-subtitle">
+        Die Wissensbasis zum Schweizer Arbeitsmarkt und KI-Impact
+      </p>
+      <p class="hero-description">
+        Entdecken Sie, wie Künstliche Intelligenz die Schweizer Arbeitswelt transformiert. 
+        Basierend auf offiziellen Quellen von BFS, SECO und führenden Forschungsinstitutionen.
+      </p>
+      <div class="hero-buttons">
+        <a href="#stats" class="btn-hero btn-hero-primary">
+          Erkunden →
+        </a>
+        <a href="#sources" class="btn-hero btn-hero-secondary">
+          📚 Quellen ansehen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Überblick</span>
+        <h2 class="section-title">Schweizer Arbeitsmarkt in Zahlen</h2>
+        <p class="section-subtitle">
+          Aktuelle Kennzahlen zum Beschäftigungsstand und AI-Adoption in der Schweiz
+        </p>
+      </div>
+      
       <div class="stats-grid" id="statsGrid">
         <div class="stat-card">
-          <div class="stat-label">Beschäftigte<span class="info-icon">i<span class="tooltip">Quelle: BFS Erwerbstätigenstatistik Q4 2024</span></span></div>
+          <div class="stat-icon">👥</div>
           <div class="stat-value" id="statEmployment">-</div>
-          <div class="stat-change up" id="statEmploymentChange">↑ -</div>
+          <div class="stat-label">
+            Beschäftigte
+            <span class="info-icon">i<span class="tooltip">Quelle: BFS Erwerbstätigenstatistik Q4 2024</span></span>
+          </div>
+          <div class="stat-trend up" id="statEmploymentChange">↑ -</div>
         </div>
+        
         <div class="stat-card">
-          <div class="stat-label">Arbeitslosenquote<span class="info-icon">i<span class="tooltip">Quelle: SECO Arbeitslosenstatistik, registrierte Arbeitslose</span></span></div>
+          <div class="stat-icon">📊</div>
           <div class="stat-value" id="statUnemployment">-</div>
-          <div class="stat-change" id="statUnemploymentChange">-</div>
+          <div class="stat-label">
+            Arbeitslosenquote
+            <span class="info-icon">i<span class="tooltip">Quelle: SECO Arbeitslosenstatistik</span></span>
+          </div>
+          <div class="stat-trend stable" id="statUnemploymentChange">-</div>
         </div>
+        
         <div class="stat-card">
-          <div class="stat-label">AI-Adoption<span class="info-icon">i<span class="tooltip">Basiert auf: Stanford HAI AI Index 2024, Schweizer Durchschnitt geschätzt</span></span></div>
+          <div class="stat-icon">🤖</div>
           <div class="stat-value" id="statAIAdoption">-</div>
-          <div class="stat-change up" id="statAIAdoptionChange">↑ -</div>
+          <div class="stat-label">
+            AI-Adoption
+            <span class="info-icon">i<span class="tooltip">Basiert auf: Stanford HAI AI Index 2024</span></span>
+          </div>
+          <div class="stat-trend up" id="statAIAdoptionChange">↑ -</div>
         </div>
+        
         <div class="stat-card">
-          <div class="stat-label">Medianlohn<span class="info-icon">i<span class="tooltip">Quelle: BFS Lohnstrukturerhebung 2022</span></span></div>
+          <div class="stat-icon">💰</div>
           <div class="stat-value" id="statWages">-</div>
-          <div class="stat-change up" id="statWagesChange">↑ -</div>
+          <div class="stat-label">
+            Medianlohn
+            <span class="info-icon">i<span class="tooltip">Quelle: BFS Lohnstrukturerhebung 2022</span></span>
+          </div>
+          <div class="stat-trend up" id="statWagesChange">↑ -</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Search Section -->
-    <section id="search" class="search-section">
-      <h3 class="search-title">🔍 Wissensbasis durchsuchen</h3>
-      <form class="search-form" id="searchForm">
-        <div class="search-input-wrapper">
-          <span class="search-icon">🔎</span>
-          <input type="text" class="search-input" id="searchQuery" 
-                 placeholder="Suche nach AI Impact, Branchen, Trends...">
-        </div>
-        <select class="filter-select" id="filterIndustry">
-          <option value="">Alle Branchen</option>
-        </select>
-        <select class="filter-select" id="filterSource">
-          <option value="">Alle Quellen</option>
-          <option value="bfs">BFS Statistik</option>
-          <option value="news">News</option>
-          <option value="research">Forschung</option>
-        </select>
-        <button type="submit" class="search-btn">Suchen</button>
-      </form>
-      <div class="search-results" id="searchResults"></div>
-    </section>
-
-    <!-- AI Impact Explorer -->
-    <section id="industries">
-      <h2 class="section-title">🤖 AI Impact Explorer</h2>
+  <!-- Industries Section -->
+  <section id="industries">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">AI Impact</span>
+        <h2 class="section-title">Impact nach Branche</h2>
+        <p class="section-subtitle">
+          Wie stark verschiedene Branchen von Künstlicher Intelligenz betroffen sind
+        </p>
+      </div>
+      
       <div class="industries-grid" id="industriesGrid">
         <div class="loading">
           <div class="spinner"></div>
           Lade Branchen-Daten...
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Trends Charts -->
-    <section id="trends">
-      <h2 class="section-title">📈 Trends & Statistiken</h2>
-      <div class="charts-section">
-        <!-- AI Adoption Chart -->
-        <div class="chart-card">
-          <h4 class="chart-title">🚀 AI-Adoption nach Jahr<span class="info-icon">i<span class="tooltip">Daten: Stanford HAI AI Index, McKinsey Global Survey, Schweizer Schätzungen</span></span></h4>
-          <div class="chart-container">
-            <div class="bar-chart" id="aiAdoptionChart"></div>
-          </div>
+  <!-- Search Section -->
+  <section id="search">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Recherche</span>
+        <h2 class="section-title">Wissensbasis durchsuchen</h2>
+        <p class="section-subtitle">
+          Durchsuchen Sie Analysen, Trends und Forschungsergebnisse
+        </p>
+      </div>
+      
+      <div class="search-container">
+        <form class="search-box" id="searchForm">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="searchQuery" 
+                 placeholder="Suche nach AI Impact, Branchen, Skills...">
+          <button type="submit" class="search-btn">Suchen</button>
+        </form>
+        
+        <div class="filter-chips">
+          <button type="button" class="filter-chip active" data-filter="">Alle</button>
+          <button type="button" class="filter-chip" data-filter="bfs">BFS Statistik</button>
+          <button type="button" class="filter-chip" data-filter="research">Forschung</button>
+          <button type="button" class="filter-chip" data-filter="news">News</button>
         </div>
         
-        <!-- Industry Impact Ranking -->
-        <div class="chart-card">
-          <h4 class="chart-title">⚡ AI Impact nach Branche<span class="info-icon">i<span class="tooltip">Berechnet aus: Automatisierungspotenzial, AI-Adoption, Job-Trends, Skills-Gap. Skala 1-10.</span></span></h4>
-          <div class="chart-container">
-            <div class="horizontal-bars" id="impactRankingChart"></div>
-          </div>
-        </div>
+        <div class="search-results" id="searchResults"></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Sources Section -->
-    <section id="sources">
-      <h2 class="section-title">📚 Datenquellen & Forschung</h2>
-      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-        Alle Analysen basieren auf verifizierten Quellen von führenden Institutionen.
-      </p>
+  <!-- Sources Section -->
+  <section id="sources">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Datenquellen</span>
+        <h2 class="section-title">Forschung & Studien</h2>
+        <p class="section-subtitle">
+          Alle Analysen basieren auf verifizierten Quellen führender Institutionen
+        </p>
+      </div>
+      
+      <div class="source-tabs">
+        <button class="source-tab active" data-category="">Alle Quellen</button>
+        <button class="source-tab" data-category="government">Bund & Kantone</button>
+        <button class="source-tab" data-category="research">Forschung</button>
+        <button class="source-tab" data-category="international">International</button>
+      </div>
+      
       <div class="sources-grid" id="sourcesGrid">
         <div class="loading">
           <div class="spinner"></div>
           Lade Quellen...
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>Swiss AI Labor Market Intelligence © 2025 | Powered by <a href="https://kuble.ch">Kuble</a></p>
-    <p>Datenquellen: BFS, SECO, Forschungsberichte | <a href="https://github.com/kuble/swiss-ai-labor-market">GitHub</a></p>
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">
+              <svg viewBox="0 0 36 36" width="36" height="36">
+                <rect width="36" height="36" fill="#FF0000"/>
+                <rect x="14" y="7" width="8" height="22" fill="#FFF"/>
+                <rect x="7" y="14" width="22" height="8" fill="#FFF"/>
+              </svg>
+            </div>
+            <span class="footer-logo-text">Swiss AI Labor Market</span>
+          </div>
+          <p class="footer-tagline">
+            Open-Source Intelligence zum Schweizer Arbeitsmarkt und KI-Transformation.
+          </p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Navigation</h4>
+            <a href="#stats">Übersicht</a>
+            <a href="#industries">Branchen</a>
+            <a href="#search">Suche</a>
+            <a href="#sources">Quellen</a>
+          </div>
+          <div class="footer-column">
+            <h4>Ressourcen</h4>
+            <a href="https://github.com/kuble/swiss-ai-labor-market" target="_blank">GitHub</a>
+            <a href="#">API Docs</a>
+            <a href="#">Methodik</a>
+          </div>
+          <div class="footer-column">
+            <h4>Datenquellen</h4>
+            <a href="https://bfs.admin.ch" target="_blank">BFS</a>
+            <a href="https://seco.admin.ch" target="_blank">SECO</a>
+            <a href="#">Alle Quellen</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Swiss AI Labor Market · Powered by <a href="https://kuble.ch" target="_blank">Kuble</a>
+        </p>
+        <div class="footer-social">
+          <a href="https://github.com/kuble/swiss-ai-labor-market" target="_blank" title="GitHub">
+            ⭐
+          </a>
+          <a href="https://linkedin.com/company/kuble" target="_blank" title="LinkedIn">
+            💼
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <!-- Industry Detail Modal -->
@@ -1007,21 +1543,60 @@
   </div>
 
   <script>
-    // API Base URL (relative for proxy)
+    // API Base URL
     const API_BASE = './api';
     
     // State
     let industries = [];
-    let trends = {};
+    let currentSourceFilter = '';
+    let currentSearchFilter = '';
     
     // Initialize
     document.addEventListener('DOMContentLoaded', async () => {
+      setupHeader();
+      setupNavigation();
       await loadStats();
       await loadIndustries();
-      await loadTrends();
       await loadSources();
       setupSearch();
+      setupFilterChips();
+      setupSourceTabs();
     });
+    
+    // Header scroll effect
+    function setupHeader() {
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    }
+    
+    // Active nav link on scroll
+    function setupNavigation() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 200;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+    }
     
     // Load Overview Stats
     async function loadStats() {
@@ -1035,7 +1610,6 @@
           
           document.getElementById('statUnemployment').textContent = data.metrics.unemployment.value;
           document.getElementById('statUnemploymentChange').textContent = data.metrics.unemployment.change;
-          document.getElementById('statUnemploymentChange').className = 'stat-change up';
           
           document.getElementById('statAIAdoption').textContent = data.metrics.aiAdoption.value;
           document.getElementById('statAIAdoptionChange').textContent = '↑ ' + data.metrics.aiAdoption.change;
@@ -1054,117 +1628,56 @@
         const res = await fetch(`${API_BASE}/industries`);
         const { data } = await res.json();
         industries = data;
-        
         renderIndustries(data);
-        populateIndustryFilter(data);
       } catch (err) {
         console.error('Failed to load industries:', err);
         document.getElementById('industriesGrid').innerHTML = 
-          '<p style="color: var(--accent-primary);">Fehler beim Laden der Daten.</p>';
+          '<p style="color: var(--accent-secondary); text-align: center;">Fehler beim Laden der Daten.</p>';
       }
     }
+    
+    // Industry icons
+    const industryIcons = {
+      'Finanzdienstleistungen': '🏦',
+      'IT & Technologie': '💻',
+      'Gesundheitswesen': '🏥',
+      'Produktion & Industrie': '🏭',
+      'Detailhandel': '🛒',
+      'Bildung': '🎓',
+      'Öffentliche Verwaltung': '🏛️',
+      'Transport & Logistik': '🚚',
+      'Gastgewerbe': '🏨',
+      'Bauwesen': '🏗️'
+    };
     
     // Render Industry Cards
     function renderIndustries(data) {
       const grid = document.getElementById('industriesGrid');
       
-      grid.innerHTML = data.map(industry => `
+      grid.innerHTML = data.map((industry, index) => `
         <div class="industry-card" onclick="showIndustryDetails('${industry.name}')">
+          <span class="industry-number">${String(index + 1).padStart(2, '0')}</span>
           <div class="industry-header">
+            <div class="industry-icon">${industryIcons[industry.name] || '📊'}</div>
             <div>
               <div class="industry-name">${industry.name}</div>
               <div class="industry-description">${industry.description}</div>
             </div>
-            <div class="impact-badge ${industry.riskLevel}" style="position: relative;">
-              ${industry.aiImpactScore.toFixed(1)}
-              <span class="info-icon" style="position: absolute; top: -8px; right: -8px; width: 14px; height: 14px; font-size: 9px;">i<span class="tooltip">Berechnet aus: Automatisierungspotenzial, AI-Adoption, Job-Trends, Skills-Gap. Skala 1-10.</span></span>
-            </div>
           </div>
-          <div class="industry-metrics">
-            <div class="metric">
-              <div class="metric-value">${(industry.automationPotential * 10).toFixed(0)}%</div>
-              <div class="metric-label">Automation</div>
+          <div class="industry-impact">
+            <div class="impact-header">
+              <span class="impact-label">AI Impact Score</span>
+              <span class="impact-score ${industry.riskLevel}">${industry.aiImpactScore.toFixed(1)}/10</span>
             </div>
-            <div class="metric">
-              <div class="metric-value">${(industry.adoptionRate * 10).toFixed(0)}%</div>
-              <div class="metric-label">AI Adoption</div>
-            </div>
-            <div class="metric">
-              <div class="metric-value">${(industry.skillsGap * 10).toFixed(0)}%</div>
-              <div class="metric-label">Skills Gap</div>
+            <div class="impact-bar">
+              <div class="impact-fill ${industry.riskLevel}" style="width: ${industry.aiImpactScore * 10}%"></div>
             </div>
           </div>
           <div class="industry-footer">
-            <span class="employees-count">
+            <span class="industry-employees">
               ${industry.employees ? (industry.employees / 1000).toFixed(0) + 'k Beschäftigte' : '-'}
             </span>
-            <span class="trend-indicator ${industry.trend}">
-              ${industry.trend === 'growing' ? '↗ Wachsend' : 
-                industry.trend === 'declining' ? '↘ Rückläufig' : '→ Stabil'}
-            </span>
-          </div>
-        </div>
-      `).join('');
-    }
-    
-    // Populate Industry Filter
-    function populateIndustryFilter(data) {
-      const select = document.getElementById('filterIndustry');
-      data.forEach(industry => {
-        const option = document.createElement('option');
-        option.value = industry.name;
-        option.textContent = industry.name;
-        select.appendChild(option);
-      });
-    }
-    
-    // Load Trends
-    async function loadTrends() {
-      try {
-        const res = await fetch(`${API_BASE}/trends`);
-        const { data } = await res.json();
-        trends = data;
-        
-        renderAIAdoptionChart(data.ai_adoption);
-        renderImpactRanking(industries);
-      } catch (err) {
-        console.error('Failed to load trends:', err);
-      }
-    }
-    
-    // Render AI Adoption Bar Chart
-    function renderAIAdoptionChart(data) {
-      const container = document.getElementById('aiAdoptionChart');
-      if (!data) return;
-      
-      const maxValue = Math.max(...data.values);
-      
-      container.innerHTML = data.labels.map((label, i) => `
-        <div class="bar-item">
-          <div class="bar" style="height: ${(data.values[i] / maxValue * 200)}px">
-            <span class="bar-value">${data.values[i]}%</span>
-          </div>
-          <span class="bar-label">${label}</span>
-        </div>
-      `).join('');
-    }
-    
-    // Render Impact Ranking
-    function renderImpactRanking(data) {
-      const container = document.getElementById('impactRankingChart');
-      if (!data || data.length === 0) return;
-      
-      const sorted = [...data].sort((a, b) => b.aiImpactScore - a.aiImpactScore).slice(0, 8);
-      const maxScore = 10;
-      
-      container.innerHTML = sorted.map(industry => `
-        <div class="h-bar-item">
-          <span class="h-bar-label">${industry.name.split(' ')[0]}</span>
-          <div class="h-bar-track">
-            <div class="h-bar-fill ${industry.riskLevel}" 
-                 style="width: ${(industry.aiImpactScore / maxScore * 100)}%">
-              <span class="h-bar-value">${industry.aiImpactScore.toFixed(1)}</span>
-            </div>
+            <button class="industry-btn">Details →</button>
           </div>
         </div>
       `).join('');
@@ -1175,49 +1688,126 @@
       const form = document.getElementById('searchForm');
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        const query = document.getElementById('searchQuery').value;
-        const industry = document.getElementById('filterIndustry').value;
-        const source = document.getElementById('filterSource').value;
-        
-        if (!query.trim()) return;
-        
-        const resultsContainer = document.getElementById('searchResults');
-        resultsContainer.innerHTML = '<div class="loading"><div class="spinner"></div>Suche...</div>';
-        resultsContainer.classList.add('visible');
-        
-        try {
-          const params = new URLSearchParams({ q: query });
-          if (industry) params.append('industry', industry);
-          if (source) params.append('source', source);
-          
-          const res = await fetch(`${API_BASE}/search?${params}`);
-          const { data, count } = await res.json();
-          
-          if (count === 0) {
-            resultsContainer.innerHTML = `
-              <p style="color: var(--text-secondary);">
-                Keine Ergebnisse für "${query}". Versuchen Sie eine andere Suche.
-              </p>`;
-            return;
-          }
-          
-          resultsContainer.innerHTML = data.map(result => `
-            <div class="result-card">
-              <div class="result-title">${result.title}</div>
-              <div class="result-snippet">${result.snippet}</div>
-              <div class="result-meta">
-                <span class="result-tag">${result.source}</span>
-                ${result.industry ? `<span class="result-tag">${result.industry}</span>` : ''}
-                ${result.date ? `<span>${result.date}</span>` : ''}
-                ${result.sourceUrl ? `<a href="${result.sourceUrl}" target="_blank" class="result-link">🔗 Quelle öffnen</a>` : ''}
-              </div>
-            </div>
-          `).join('');
-        } catch (err) {
-          resultsContainer.innerHTML = '<p style="color: var(--accent-primary);">Fehler bei der Suche.</p>';
-        }
+        performSearch();
       });
+    }
+    
+    // Setup Filter Chips
+    function setupFilterChips() {
+      const chips = document.querySelectorAll('.filter-chip');
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          currentSearchFilter = chip.dataset.filter;
+        });
+      });
+    }
+    
+    // Perform Search
+    async function performSearch() {
+      const query = document.getElementById('searchQuery').value;
+      if (!query.trim()) return;
+      
+      const resultsContainer = document.getElementById('searchResults');
+      resultsContainer.innerHTML = '<div class="loading"><div class="spinner"></div>Suche...</div>';
+      resultsContainer.classList.add('visible');
+      
+      try {
+        const params = new URLSearchParams({ q: query });
+        if (currentSearchFilter) params.append('source', currentSearchFilter);
+        
+        const res = await fetch(`${API_BASE}/search?${params}`);
+        const { data, count } = await res.json();
+        
+        if (count === 0) {
+          resultsContainer.innerHTML = `
+            <div class="result-card">
+              <p style="color: var(--text-muted); text-align: center;">
+                Keine Ergebnisse für "${query}". Versuchen Sie eine andere Suche.
+              </p>
+            </div>`;
+          return;
+        }
+        
+        resultsContainer.innerHTML = data.map(result => `
+          <div class="result-card">
+            <div class="result-title">${result.title}</div>
+            <div class="result-snippet">${result.snippet}</div>
+            <div class="result-meta">
+              <span class="result-tag">${result.source}</span>
+              ${result.industry ? `<span class="result-tag">${result.industry}</span>` : ''}
+              ${result.sourceUrl ? `<a href="${result.sourceUrl}" target="_blank" class="result-link">Quelle öffnen →</a>` : ''}
+            </div>
+          </div>
+        `).join('');
+      } catch (err) {
+        resultsContainer.innerHTML = '<div class="result-card"><p style="color: var(--accent-secondary);">Fehler bei der Suche.</p></div>';
+      }
+    }
+    
+    // Setup Source Tabs
+    function setupSourceTabs() {
+      const tabs = document.querySelectorAll('.source-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', async () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          currentSourceFilter = tab.dataset.category;
+          await loadSources(currentSourceFilter);
+        });
+      });
+    }
+    
+    // Load Sources
+    async function loadSources(category = '') {
+      try {
+        let url = `${API_BASE}/sources`;
+        if (category) url += `?category=${category}`;
+        
+        const res = await fetch(url);
+        const { data } = await res.json();
+        renderSources(data);
+      } catch (err) {
+        console.error('Failed to load sources:', err);
+        document.getElementById('sourcesGrid').innerHTML = 
+          '<p style="color: var(--accent-secondary); text-align: center;">Fehler beim Laden der Quellen.</p>';
+      }
+    }
+    
+    // Source icons
+    const sourceIcons = {
+      'BFS': '🏛️',
+      'SECO': '📊',
+      'Stanford HAI': '🎓',
+      'McKinsey': '📈',
+      'WEF': '🌍',
+      'OECD': '🌐'
+    };
+    
+    // Render Sources
+    function renderSources(sources) {
+      const grid = document.getElementById('sourcesGrid');
+      
+      grid.innerHTML = sources.map(source => `
+        <div class="source-card">
+          <div class="source-header">
+            <div class="source-icon">${sourceIcons[source.institution] || '📄'}</div>
+            <span class="source-year">${source.year}</span>
+          </div>
+          <div class="source-institution">${source.institution}</div>
+          <div class="source-title">${source.title}</div>
+          <div class="source-description">${source.abstract ? source.abstract.substring(0, 120) + '...' : ''}</div>
+          <a href="${source.url}" target="_blank" rel="noopener noreferrer" class="source-link">
+            Zum Dokument →
+          </a>
+          ${source.topics ? `
+            <div class="source-topics">
+              ${source.topics.slice(0, 3).map(t => `<span class="source-topic">${t}</span>`).join('')}
+            </div>
+          ` : ''}
+        </div>
+      `).join('');
     }
     
     // Show Industry Details Modal
@@ -1241,7 +1831,7 @@
           <div class="detail-row">
             <span class="detail-label">Risikostufe</span>
             <span class="detail-value" style="color: ${
-              data.riskLevel === 'high' ? 'var(--accent-primary)' :
+              data.riskLevel === 'high' ? 'var(--accent-secondary)' :
               data.riskLevel === 'medium' ? 'var(--accent-yellow)' : 'var(--accent-green)'
             }">${data.riskLevel === 'high' ? 'Hoch' : data.riskLevel === 'medium' ? 'Mittel' : 'Niedrig'}</span>
           </div>
@@ -1259,58 +1849,21 @@
           </div>
           <div class="detail-row">
             <span class="detail-label">Beschäftigte</span>
-            <span class="detail-value">${data.employees ? (data.employees).toLocaleString() : '-'}</span>
+            <span class="detail-value">${data.employees ? data.employees.toLocaleString() : '-'}</span>
           </div>
           <div class="detail-row">
             <span class="detail-label">Betroffene Rollen</span>
             <span class="detail-value">${data.affectedRoles.join(', ')}</span>
           </div>
           
-          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Empfehlungen</h4>
+          <h4 class="recommendations-title">Empfehlungen</h4>
           <ul class="recommendations-list">
             ${data.recommendations.map(r => `<li>${r}</li>`).join('')}
           </ul>
         `;
       } catch (err) {
-        modalBody.innerHTML = '<p style="color: var(--accent-primary);">Fehler beim Laden der Details.</p>';
+        modalBody.innerHTML = '<p style="color: var(--accent-secondary);">Fehler beim Laden der Details.</p>';
       }
-    }
-    
-    // Load Sources
-    async function loadSources() {
-      try {
-        const res = await fetch(`${API_BASE}/sources`);
-        const { data } = await res.json();
-        renderSources(data);
-      } catch (err) {
-        console.error('Failed to load sources:', err);
-        document.getElementById('sourcesGrid').innerHTML = 
-          '<p style="color: var(--accent-primary);">Fehler beim Laden der Quellen.</p>';
-      }
-    }
-    
-    // Render Sources
-    function renderSources(sources) {
-      const grid = document.getElementById('sourcesGrid');
-      
-      grid.innerHTML = sources.map(source => `
-        <div class="source-card">
-          <div class="source-header">
-            <span class="source-institution">${source.institution}</span>
-            <span class="source-year">${source.year}</span>
-          </div>
-          <div class="source-title">${source.title}</div>
-          <div class="source-description">${source.abstract ? source.abstract.substring(0, 150) + '...' : ''}</div>
-          <a href="${source.url}" target="_blank" rel="noopener noreferrer" class="source-link">
-            📖 Zum Dokument →
-          </a>
-          ${source.topics ? `
-            <div class="source-topics">
-              ${source.topics.slice(0, 4).map(t => `<span class="source-topic">${t}</span>`).join('')}
-            </div>
-          ` : ''}
-        </div>
-      `).join('');
     }
     
     // Close Modal
