@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Log – Swiss AI Labor Market</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Design Tokens - Swiss AI Desk Style */
+    :root {
+      --bg-dark: #080c16;
+      --bg-darker: #050810;
+      --bg-card: rgba(29, 40, 58, 0.5);
+      --bg-card-hover: rgba(29, 40, 58, 0.8);
+      --bg-card-solid: #0b111e;
+      --accent-primary: #0da2e7;
+      --accent-secondary: #14d2d8;
+      --accent-green: #22c55e;
+      --accent-yellow: #f59e0b;
+      --accent-red: #ef4343;
+      --accent-blue: #0da2e7;
+      --gradient-primary: linear-gradient(135deg, #0da2e7, #14d2d8);
+      --gradient-hero: linear-gradient(135deg, rgba(13, 162, 231, 0.15), rgba(20, 210, 216, 0.1));
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --border-subtle: rgba(29, 40, 58, 0.8);
+      --border-light: rgba(148, 163, 184, 0.2);
+      --shadow-glow: 0 0 60px rgba(13, 162, 231, 0.15);
+      --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
+      --radius: 16px;
+      --radius-sm: 8px;
+      --radius-lg: 24px;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-dark);
+      min-height: 100vh;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+    
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      background: rgba(8, 12, 22, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 0.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 50px;
+      padding: 0.35rem;
+    }
+    
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      transition: all 0.2s;
+    }
+    
+    .nav-links a:hover { color: var(--text-primary); }
+    .nav-links a.active {
+      background: var(--gradient-primary);
+      color: white;
+    }
+    
+    /* Main Content */
+    .main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 120px 2rem 60px;
+    }
+    
+    .page-header {
+      margin-bottom: 3rem;
+    }
+    
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    
+    .page-title span {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .page-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+    
+    /* Log Timeline */
+    .log-timeline {
+      position: relative;
+    }
+    
+    .log-timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border-subtle);
+    }
+    
+    .log-entry {
+      position: relative;
+      padding-left: 60px;
+      margin-bottom: 2rem;
+    }
+    
+    .log-dot {
+      position: absolute;
+      left: 12px;
+      top: 6px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--bg-dark);
+      border: 3px solid var(--accent-primary);
+    }
+    
+    .log-dot.success { border-color: var(--accent-green); }
+    .log-dot.warning { border-color: var(--accent-yellow); }
+    .log-dot.error { border-color: var(--accent-red); }
+    
+    .log-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: all 0.2s;
+    }
+    
+    .log-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-light);
+    }
+    
+    .log-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    
+    .log-type {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.35rem 0.75rem;
+      border-radius: 50px;
+      background: rgba(13, 162, 231, 0.15);
+      color: var(--accent-primary);
+    }
+    
+    .log-type.news { background: rgba(34, 197, 94, 0.15); color: var(--accent-green); }
+    .log-type.stats { background: rgba(245, 158, 11, 0.15); color: var(--accent-yellow); }
+    .log-type.research { background: rgba(13, 162, 231, 0.15); color: var(--accent-primary); }
+    
+    .log-date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    
+    .log-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    
+    .log-content {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    
+    .log-results {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+    
+    .log-results-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    
+    .log-result-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    
+    .log-result-item::before {
+      content: '→';
+      color: var(--accent-primary);
+    }
+    
+    .log-result-item a {
+      color: var(--accent-primary);
+      text-decoration: none;
+    }
+    
+    .log-result-item a:hover {
+      text-decoration: underline;
+    }
+    
+    .log-stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    
+    .log-stat {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    
+    .log-stat-value {
+      font-weight: 600;
+      color: var(--accent-primary);
+    }
+    
+    /* Empty State */
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-muted);
+    }
+    
+    .empty-state-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 4rem;
+    }
+    
+    .footer a {
+      color: var(--accent-primary);
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .page-title { font-size: 1.8rem; }
+      .log-entry { padding-left: 45px; }
+      .log-timeline::before { left: 12px; }
+      .log-dot { left: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 42 42" fill="none">
+            <rect width="42" height="42" fill="#0da2e7"/>
+            <rect x="8" y="8" width="26" height="8" fill="#FFF"/>
+            <rect x="8" y="17" width="26" height="8" fill="#FFF"/>
+          </svg>
+        </div>
+        <span class="logo-text">Swiss AI Labor Market</span>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="index.html#stats">Übersicht</a>
+        <a href="index.html#search">Suche</a>
+        <a href="index.html#industries">Branchen</a>
+        <a href="index.html#sources">Quellen</a>
+        <a href="log.html" class="active">Log</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-header">
+      <h1 class="page-title">Update <span>Log</span></h1>
+      <p class="page-subtitle">Chronik aller Daten-Updates, Recherchen und neuen Quellen</p>
+    </div>
+
+    <div class="log-timeline" id="log-timeline">
+      <!-- Log entries will be loaded here -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2026 Swiss AI Labor Market · Powered by <a href="https://kuble.ch" target="_blank">Kuble</a>
+  </footer>
+
+  <script>
+    // Load log entries from JSON
+    async function loadLog() {
+      const timeline = document.getElementById('log-timeline');
+      
+      try {
+        const response = await fetch('./data/update-log.json');
+        const entries = await response.json();
+        
+        if (entries.length === 0) {
+          timeline.innerHTML = `
+            <div class="empty-state">
+              <div class="empty-state-icon">📋</div>
+              <p>Noch keine Log-Einträge vorhanden.</p>
+            </div>
+          `;
+          return;
+        }
+        
+        timeline.innerHTML = entries.map(entry => `
+          <div class="log-entry">
+            <div class="log-dot ${entry.status || 'success'}"></div>
+            <div class="log-card">
+              <div class="log-header">
+                <span class="log-type ${entry.type}">${getTypeLabel(entry.type)}</span>
+                <span class="log-date">${formatDate(entry.timestamp)}</span>
+              </div>
+              <h3 class="log-title">${entry.title}</h3>
+              <p class="log-content">${entry.description}</p>
+              ${entry.results && entry.results.length > 0 ? `
+                <div class="log-results">
+                  <div class="log-results-title">Gefunden / Hinzugefügt</div>
+                  ${entry.results.map(r => `
+                    <div class="log-result-item">
+                      ${r.url ? `<a href="${r.url}" target="_blank">${r.title}</a>` : r.title}
+                      ${r.source ? ` (${r.source})` : ''}
+                    </div>
+                  `).join('')}
+                </div>
+              ` : ''}
+              ${entry.stats ? `
+                <div class="log-stats">
+                  ${entry.stats.searched ? `<div class="log-stat">Durchsucht: <span class="log-stat-value">${entry.stats.searched}</span></div>` : ''}
+                  ${entry.stats.found ? `<div class="log-stat">Gefunden: <span class="log-stat-value">${entry.stats.found}</span></div>` : ''}
+                  ${entry.stats.added ? `<div class="log-stat">Hinzugefügt: <span class="log-stat-value">${entry.stats.added}</span></div>` : ''}
+                </div>
+              ` : ''}
+            </div>
+          </div>
+        `).join('');
+        
+      } catch (error) {
+        timeline.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">📋</div>
+            <p>Log-Daten werden geladen...</p>
+          </div>
+        `;
+      }
+    }
+    
+    function getTypeLabel(type) {
+      const labels = {
+        'news': '📰 News Update',
+        'stats': '📊 Stats Update',
+        'research': '🔬 Research',
+        'manual': '✏️ Manuell',
+        'system': '⚙️ System'
+      };
+      return labels[type] || type;
+    }
+    
+    function formatDate(timestamp) {
+      const date = new Date(timestamp);
+      return date.toLocaleDateString('de-CH', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+    }
+    
+    loadLog();
+  </script>
+</body>
+</html>
