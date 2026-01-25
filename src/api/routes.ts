@@ -322,18 +322,28 @@ router.get('/search', async (req: Request, res: Response) => {
     // Transform results
     const transformed = results
       .filter(r => !r.id.startsWith('entity:') && !r.id.startsWith('impact:'))
-      .map(r => ({
-        id: r.id,
-        title: r.metadata.title || r.content.split('\n')[0].substring(0, 100),
-        snippet: r.content.substring(0, 250) + '...',
-        source: r.metadata.source || 'unknown',
-        sourceUrl: r.metadata.sourceUrl,
-        industry: r.metadata.industry,
-        canton: r.metadata.canton,
-        date: r.metadata.date,
-        relevance: Math.round(r.score * 100) / 100,
-        tags: r.metadata.tags || [],
-      }));
+      .map(r => {
+        // Look up source URL from RESEARCH_SOURCES
+        const titleLower = (r.metadata.title || '').toLowerCase();
+        const matchedSource = RESEARCH_SOURCES.find(s => 
+          titleLower.includes(s.id.replace('research-', '').toLowerCase()) ||
+          s.id.toLowerCase().includes(titleLower.replace('research-', ''))
+        );
+        
+        return {
+          id: r.id,
+          title: matchedSource?.title || r.metadata.title || r.content.split('\n')[0].substring(0, 100),
+          snippet: r.content.substring(0, 250) + '...',
+          source: r.metadata.source || 'unknown',
+          sourceUrl: r.metadata.sourceUrl || matchedSource?.url,
+          institution: matchedSource?.institution,
+          industry: r.metadata.industry,
+          canton: r.metadata.canton,
+          date: r.metadata.date,
+          relevance: Math.round(r.score * 100) / 100,
+          tags: r.metadata.tags || [],
+        };
+      });
     
     res.json({
       success: true,
