@@ -117,6 +117,27 @@
       color: white;
     }
     
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .btn-ghost {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+    
+    .btn-ghost:hover {
+      color: var(--text-primary);
+    }
+    
     /* Main Content */
     .main {
       max-width: 1000px;
@@ -334,9 +355,9 @@
     <div class="header-content">
       <a href="index.html" class="logo">
         <div class="logo-icon">
-          <svg viewBox="0 0 42 42" fill="none">
-            <rect width="42" height="42" fill="#0da2e7"/>
-            <rect x="8" y="8" width="26" height="8" fill="#FFF"/>
+          <svg viewBox="0 0 42 42" width="42" height="42">
+            <rect width="42" height="42" fill="#FF0000"/>
+            <rect x="17" y="8" width="8" height="26" fill="#FFF"/>
             <rect x="8" y="17" width="26" height="8" fill="#FFF"/>
           </svg>
         </div>
@@ -350,6 +371,10 @@
         <a href="index.html#sources">Quellen</a>
         <a href="log.html" class="active">Log</a>
       </nav>
+      
+      <div class="header-cta">
+        <a href="https://github.com/gsalami/swiss-ai-labor-market" target="_blank" class="btn-ghost">GitHub</a>
+      </div>
     </div>
   </header>
 
