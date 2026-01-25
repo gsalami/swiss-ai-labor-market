@@ -1,0 +1,35 @@
+{
+  "name": "swiss-ai-labor-market",
+  "version": "0.1.0",
+  "description": "Self-learning knowledge base about Swiss labor market and AI impact, with MCP server for AI agents",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "db:start": "echo 'Starting ruVector...'",
+    "db:stop": "echo 'Stopping ruVector...'",
+    "mcp:start": "tsx src/mcp/server.ts",
+    "ingest": "tsx src/pipeline/ingest.ts",
+    "collect:news": "tsx scripts/update-news.ts",
+    "collect:stats": "tsx scripts/update-stats.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "ruvector": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "author": "Kuble",
+  "license": "MIT"
+}
