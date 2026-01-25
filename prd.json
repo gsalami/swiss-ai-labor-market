@@ -55,7 +55,7 @@
         "Store raw data in data/bfs/",
         "Ingest into ruVector"
       ],
-      "status": "pending",
+      "status": "done",
       "phase": 2
     },
     {
