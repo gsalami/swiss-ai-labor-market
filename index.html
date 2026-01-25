@@ -726,16 +726,34 @@
     
     .search-input {
       flex: 1;
-      background: transparent;
+      background: transparent !important;
+      background-color: transparent !important;
       border: none;
       color: var(--text-primary);
       font-size: 1.05rem;
       padding: 1rem 0;
       outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    
+    .search-input:focus {
+      background: transparent !important;
+      background-color: transparent !important;
     }
     
     .search-input::placeholder {
       color: var(--text-muted);
+    }
+    
+    /* Fix autofill background */
+    .search-input:-webkit-autofill,
+    .search-input:-webkit-autofill:hover,
+    .search-input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px var(--bg-card-solid) inset !important;
+      -webkit-text-fill-color: var(--text-primary) !important;
+      background-color: transparent !important;
     }
     
     .search-btn {
