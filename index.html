@@ -1669,7 +1669,6 @@
     <div class="learning-header">
       <h2>Self-Learning <span>Intelligence</span></h2>
       <p>Die Datenbank lernt kontinuierlich aus Suchanfragen und Nutzerverhalten</p>
-      <button onclick="LearningTracker.trackSearch('test', 5); LearningTracker.trackClick(); alert('Test: +1 Suche, +1 Klick getrackt!');" style="margin-top: 1rem; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border-subtle); color: var(--text-secondary); border-radius: 8px; cursor: pointer; font-size: 0.85rem;">🧪 Test Tracking</button>
     </div>
     
     <div class="learning-grid" id="learningStats">
@@ -2054,8 +2053,6 @@
       const query = document.getElementById('searchQuery').value;
       if (!query.trim()) return;
       
-      console.log('[Search] Starting search for:', query);
-      
       const resultsContainer = document.getElementById('searchResults');
       resultsContainer.innerHTML = '<div class="loading"><div class="spinner"></div>Suche...</div>';
       resultsContainer.classList.add('visible');
@@ -2064,10 +2061,8 @@
         const params = new URLSearchParams({ q: query });
         if (currentSearchFilter) params.append('source', currentSearchFilter);
         
-        console.log('[Search] Fetching from:', `${API_BASE}/search?${params}`);
         const res = await fetch(`${API_BASE}/search?${params}`);
         const { data, count } = await res.json();
-        console.log('[Search] Got results:', count);
         
         if (count === 0) {
           resultsContainer.innerHTML = `
@@ -2080,9 +2075,7 @@
         }
         
         // Track search
-        console.log('[Search] Tracking search:', query, count);
         LearningTracker.trackSearch(query, count);
-        console.log('[Search] Tracked!');
         
         resultsContainer.innerHTML = data.map(result => `
           <div class="result-card">
