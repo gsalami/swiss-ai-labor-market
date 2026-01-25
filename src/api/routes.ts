@@ -412,6 +412,79 @@ router.get('/cantons', async (req: Request, res: Response) => {
   }
 });
 
+// Research Sources with verified URLs
+const RESEARCH_SOURCES = [
+  {
+    id: 'research-mckinsey-genai-2023',
+    title: 'The economic potential of generative AI',
+    institution: 'McKinsey Global Institute',
+    year: 2023,
+    abstract: 'Comprehensive analysis of how generative AI could transform productivity across industries. Estimates generative AI could add $2.6-4.4 trillion annually to the global economy.',
+    url: 'https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier',
+    topics: ['generative ai', 'automation', 'productivity', 'labor market'],
+  },
+  {
+    id: 'research-wef-future-jobs-2023',
+    title: 'Future of Jobs Report 2023',
+    institution: 'World Economic Forum',
+    year: 2023,
+    abstract: 'Global report on labor market transformation through 2027. Projects 23% of jobs to change in next 5 years, with 69M new jobs created and 83M displaced.',
+    url: 'https://www.weforum.org/publications/the-future-of-jobs-report-2023/',
+    topics: ['future of work', 'skills', 'job creation', 'displacement'],
+  },
+  {
+    id: 'research-bfs-arbeitsmarkt-2024',
+    title: 'Arbeitsmarktindikatoren Schweiz',
+    institution: 'BFS',
+    year: 2024,
+    abstract: 'Offizielle Schweizer Arbeitsmarktstatistiken. Umfasst Erwerbstätigkeit, Arbeitslosigkeit, Löhne, Arbeitsbedingungen und Branchenentwicklung.',
+    url: 'https://www.bfs.admin.ch/bfs/de/home/statistiken/arbeit-erwerb.html',
+    topics: ['arbeitsmarkt', 'statistik', 'beschäftigung', 'löhne'],
+  },
+  {
+    id: 'research-seco-konjunktur-2024',
+    title: 'Konjunkturprognosen',
+    institution: 'SECO',
+    year: 2024,
+    abstract: 'Offizielle Konjunkturprognosen der Schweizer Regierung. Vierteljährliche Analysen zu BIP-Entwicklung, Arbeitsmarkt und Wirtschaftsaussichten.',
+    url: 'https://www.seco.admin.ch/seco/de/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/konjunkturprognosen.html',
+    topics: ['konjunktur', 'prognose', 'wirtschaft', 'arbeitsmarkt'],
+  },
+  {
+    id: 'research-stanford-hai-2024',
+    title: 'AI Index Report 2024',
+    institution: 'Stanford HAI',
+    year: 2024,
+    abstract: 'Annual comprehensive report tracking AI progress across research, industry, policy and public perception. Covers model capabilities, investment trends, and labor market impacts.',
+    url: 'https://aiindex.stanford.edu/report/',
+    topics: ['ai research', 'ai policy', 'ai investment', 'ai capabilities'],
+  },
+  {
+    id: 'research-oecd-employment-2024',
+    title: 'OECD Employment Outlook 2024',
+    institution: 'OECD',
+    year: 2024,
+    abstract: 'Annual flagship publication on labor markets in OECD countries including Switzerland. Analyzes AI impact on jobs, skills requirements, and policy responses.',
+    url: 'https://www.oecd.org/employment/outlook/',
+    topics: ['employment', 'ai impact', 'skills', 'policy'],
+  },
+];
+
+/**
+ * GET /api/sources - List all research sources with URLs
+ */
+router.get('/sources', async (req: Request, res: Response) => {
+  try {
+    res.json({
+      success: true,
+      count: RESEARCH_SOURCES.length,
+      data: RESEARCH_SOURCES,
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, error: (error as Error).message });
+  }
+});
+
 // Helper functions
 function generateRecommendations(score: number): string[] {
   if (score >= 7) {
