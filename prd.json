@@ -13,7 +13,7 @@
         ".env.example with required variables",
         ".gitignore for node_modules, .env, data/"
       ],
-      "status": "pending",
+      "status": "done",
       "phase": 1
     },
     {
