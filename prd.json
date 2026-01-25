@@ -1,0 +1,231 @@
+{
+  "project": "Swiss AI Labor Market Intelligence",
+  "description": "Self-learning knowledge base about Swiss labor market and AI impact, with MCP server for AI agents",
+  "stories": [
+    {
+      "id": "1.1",
+      "title": "Project Setup",
+      "description": "Initialize Node.js project with TypeScript, proper folder structure, and dependencies",
+      "acceptance_criteria": [
+        "package.json with dependencies: ruvector, @modelcontextprotocol/sdk, typescript, tsx, dotenv",
+        "tsconfig.json configured",
+        "Folder structure: src/, data/, scripts/, dashboard/",
+        ".env.example with required variables",
+        ".gitignore for node_modules, .env, data/"
+      ],
+      "status": "pending",
+      "phase": 1
+    },
+    {
+      "id": "1.2",
+      "title": "ruVector Integration",
+      "description": "Install and configure ruVector for vector storage and graph queries",
+      "acceptance_criteria": [
+        "ruVector installed via npm",
+        "src/db/ruvector.ts with init, insert, search, query functions",
+        "Basic CRUD operations tested",
+        "Cypher query support verified",
+        "npm scripts: db:start, db:stop"
+      ],
+      "status": "pending",
+      "phase": 1
+    },
+    {
+      "id": "1.3",
+      "title": "Embedding Pipeline",
+      "description": "Create pipeline to chunk, embed, and store documents",
+      "acceptance_criteria": [
+        "src/pipeline/chunker.ts - split documents into chunks",
+        "src/pipeline/embedder.ts - generate embeddings (OpenAI or local)",
+        "src/pipeline/ingest.ts - orchestrate the full pipeline",
+        "Support for markdown, text, and JSON documents",
+        "Batch processing with progress logging"
+      ],
+      "status": "pending",
+      "phase": 1
+    },
+    {
+      "id": "2.1",
+      "title": "BFS Data Collector",
+      "description": "Collect employment data from Bundesamt für Statistik",
+      "acceptance_criteria": [
+        "src/collectors/bfs.ts - fetch BFS data via their API or web scraping",
+        "Collect: employment by sector, unemployment by canton, wage statistics",
+        "Transform to standard document format",
+        "Store raw data in data/bfs/",
+        "Ingest into ruVector"
+      ],
+      "status": "pending",
+      "phase": 2
+    },
+    {
+      "id": "2.2",
+      "title": "News Collector",
+      "description": "Collect AI-related labor market news from Swiss sources",
+      "acceptance_criteria": [
+        "src/collectors/news.ts - RSS/Atom feed parser",
+        "Sources: NZZ, Tages-Anzeiger, SRF, Handelszeitung",
+        "Filter for AI + labor market keywords",
+        "Extract article content and metadata",
+        "Ingest into ruVector with source attribution"
+      ],
+      "status": "pending",
+      "phase": 2
+    },
+    {
+      "id": "2.3",
+      "title": "Web Research Collector",
+      "description": "Collect research and reports about AI impact on Swiss jobs",
+      "acceptance_criteria": [
+        "src/collectors/research.ts - search and collect research",
+        "Sources: Google Scholar, ETH research, UBS/CS reports",
+        "Extract abstracts and key findings",
+        "Categorize by industry and topic",
+        "Ingest into ruVector"
+      ],
+      "status": "pending",
+      "phase": 2
+    },
+    {
+      "id": "3.1",
+      "title": "Entity Extraction",
+      "description": "Extract entities from documents for graph relationships",
+      "acceptance_criteria": [
+        "src/graph/entities.ts - extract industries, jobs, skills, locations",
+        "Use LLM or regex patterns for extraction",
+        "Standardize entity names (e.g., 'Software Dev' -> 'Software Developer')",
+        "Store entities as graph nodes in ruVector"
+      ],
+      "status": "pending",
+      "phase": 3
+    },
+    {
+      "id": "3.2",
+      "title": "AI Impact Scoring",
+      "description": "Calculate AI impact scores for industries and job roles",
+      "acceptance_criteria": [
+        "src/graph/impact.ts - scoring algorithm",
+        "Factors: automation potential, AI mentions, job trend",
+        "Scale 1-10 with explanation",
+        "Store scores in graph with relationships",
+        "Update scores when new data arrives"
+      ],
+      "status": "pending",
+      "phase": 3
+    },
+    {
+      "id": "4.1",
+      "title": "MCP Server Setup",
+      "description": "Create MCP server for AI agent integration",
+      "acceptance_criteria": [
+        "src/mcp/server.ts - MCP server with @modelcontextprotocol/sdk",
+        "Server manifest with capabilities",
+        "Health check and logging",
+        "npm script: mcp:start",
+        "Documentation for Claude Desktop config"
+      ],
+      "status": "pending",
+      "phase": 4
+    },
+    {
+      "id": "4.2",
+      "title": "MCP Search Tool",
+      "description": "Implement search_labor_market MCP tool",
+      "acceptance_criteria": [
+        "Tool: search_labor_market(query, filters, limit)",
+        "Semantic search across all documents",
+        "Filter by industry, canton, timeframe, source_type",
+        "Returns snippets with sources and confidence",
+        "Tested with sample queries"
+      ],
+      "status": "pending",
+      "phase": 4
+    },
+    {
+      "id": "4.3",
+      "title": "MCP AI Impact Tool",
+      "description": "Implement get_ai_impact MCP tool",
+      "acceptance_criteria": [
+        "Tool: get_ai_impact(target, target_type)",
+        "Returns impact score with reasoning",
+        "Lists affected roles or required skills",
+        "Includes citations from sources",
+        "Tested for multiple industries"
+      ],
+      "status": "pending",
+      "phase": 4
+    },
+    {
+      "id": "4.4",
+      "title": "MCP Trends Tool",
+      "description": "Implement get_job_trends MCP tool",
+      "acceptance_criteria": [
+        "Tool: get_job_trends(metric, industry, canton, timeframe)",
+        "Returns time series data",
+        "Includes percent change and comparison",
+        "Visualization-friendly format",
+        "Tested with real data"
+      ],
+      "status": "pending",
+      "phase": 4
+    },
+    {
+      "id": "5.1",
+      "title": "Web Dashboard",
+      "description": "Create web interface for exploring the knowledge base",
+      "acceptance_criteria": [
+        "dashboard/index.html - main page",
+        "Search interface with filters",
+        "AI impact explorer with industry cards",
+        "Statistics overview",
+        "Dark theme consistent with Kuble's Apps",
+        "Responsive design"
+      ],
+      "status": "pending",
+      "phase": 5
+    },
+    {
+      "id": "5.2",
+      "title": "Dashboard API",
+      "description": "Create API endpoints for the dashboard",
+      "acceptance_criteria": [
+        "src/api/routes.ts - Express routes",
+        "GET /api/search - search endpoint",
+        "GET /api/industries - list industries with scores",
+        "GET /api/trends - trends data",
+        "GET /api/stats - overview statistics",
+        "Integrate with existing proxy server"
+      ],
+      "status": "pending",
+      "phase": 5
+    },
+    {
+      "id": "6.1",
+      "title": "Auto-Update Pipeline",
+      "description": "Set up automated data collection",
+      "acceptance_criteria": [
+        "scripts/update-news.ts - daily news collection",
+        "scripts/update-stats.ts - weekly statistics update",
+        "Clawdbot cron integration",
+        "Logging and error handling",
+        "Notification on failures"
+      ],
+      "status": "pending",
+      "phase": 6
+    },
+    {
+      "id": "6.2",
+      "title": "GitHub Release",
+      "description": "Publish project as open source",
+      "acceptance_criteria": [
+        "Clean git history with meaningful commits",
+        "LICENSE file (MIT)",
+        "CONTRIBUTING.md with guidelines",
+        "GitHub repository created",
+        "README with setup instructions"
+      ],
+      "status": "pending",
+      "phase": 6
+    }
+  ]
+}
