@@ -181,7 +181,7 @@
         "Dark theme consistent with Kuble's Apps",
         "Responsive design"
       ],
-      "status": "pending",
+      "status": "done",
       "phase": 5
     },
     {
@@ -196,7 +196,7 @@
         "GET /api/stats - overview statistics",
         "Integrate with existing proxy server"
       ],
-      "status": "pending",
+      "status": "done",
       "phase": 5
     },
     {

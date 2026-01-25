@@ -11,6 +11,8 @@
     "db:start": "echo 'Starting ruVector...'",
     "db:stop": "echo 'Stopping ruVector...'",
     "mcp:start": "tsx src/mcp/server.ts",
+    "dashboard": "tsx src/api/server.ts",
+    "dashboard:dev": "tsx watch src/api/server.ts",
     "ingest": "tsx src/pipeline/ingest.ts",
     "collect:news": "tsx scripts/update-news.ts",
     "collect:stats": "tsx scripts/update-stats.ts"

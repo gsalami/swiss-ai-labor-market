@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiss AI Labor Market Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #1a1a2e;
+      --bg-secondary: #16213e;
+      --bg-card: #0f3460;
+      --bg-card-hover: #1a4a7a;
+      --text-primary: #ffffff;
+      --text-secondary: #a0aec0;
+      --accent-primary: #e94560;
+      --accent-secondary: #0f4c75;
+      --accent-green: #10b981;
+      --accent-yellow: #f59e0b;
+      --accent-blue: #3b82f6;
+      --border-color: rgba(255,255,255,0.1);
+      --shadow: 0 4px 20px rgba(0,0,0,0.3);
+      --radius: 12px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      min-height: 100vh;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+    
+    /* Header */
+    .header {
+      background: rgba(15, 52, 96, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-blue));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+    
+    .logo-text {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    
+    .logo-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--text-primary);
+    }
+    
+    /* Main Content */
+    .main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .stat-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border: 1px solid var(--border-color);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    
+    .stat-change {
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    
+    .stat-change.up { color: var(--accent-green); }
+    .stat-change.down { color: var(--accent-primary); }
+    
+    /* Search Section */
+    .search-section {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border-color);
+    }
+    
+    .search-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .search-form {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .search-input-wrapper {
+      flex: 1;
+      min-width: 300px;
+      position: relative;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 0.875rem 1rem 0.875rem 2.5rem;
+      background: rgba(0,0,0,0.2);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+    
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+    }
+    
+    .search-input::placeholder {
+      color: var(--text-secondary);
+    }
+    
+    .search-icon {
+      position: absolute;
+      left: 0.875rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-secondary);
+    }
+    
+    .filter-select {
+      padding: 0.875rem 1rem;
+      background: rgba(0,0,0,0.2);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      min-width: 180px;
+    }
+    
+    .filter-select option {
+      background: var(--bg-secondary);
+    }
+    
+    .search-btn {
+      padding: 0.875rem 2rem;
+      background: linear-gradient(135deg, var(--accent-primary), #c13750);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .search-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+    }
+    
+    /* Search Results */
+    .search-results {
+      margin-top: 1.5rem;
+      display: none;
+    }
+    
+    .search-results.visible {
+      display: block;
+    }
+    
+    .result-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--border-color);
+    }
+    
+    .result-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--accent-blue);
+    }
+    
+    .result-snippet {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .result-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    
+    .result-tag {
+      background: rgba(255,255,255,0.1);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+    }
+    
+    /* Section Title */
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    /* Industry Cards Grid */
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .industry-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    
+    .industry-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    
+    .industry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    
+    .industry-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .industry-description {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    
+    .impact-badge {
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    
+    .impact-badge.high {
+      background: rgba(233, 69, 96, 0.2);
+      color: var(--accent-primary);
+    }
+    
+    .impact-badge.medium {
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--accent-yellow);
+    }
+    
+    .impact-badge.low {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--accent-green);
+    }
+    
+    .industry-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .metric {
+      text-align: center;
+    }
+    
+    .metric-value {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+    
+    .industry-footer {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .employees-count {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    
+    .trend-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+    
+    .trend-indicator.growing {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-green);
+    }
+    
+    .trend-indicator.stable {
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--accent-blue);
+    }
+    
+    .trend-indicator.declining {
+      background: rgba(233, 69, 96, 0.15);
+      color: var(--accent-primary);
+    }
+    
+    /* Charts Section */
+    .charts-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .chart-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border: 1px solid var(--border-color);
+    }
+    
+    .chart-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .chart-container {
+      height: 250px;
+      position: relative;
+    }
+    
+    /* Bar Chart (CSS only) */
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      height: 100%;
+      padding-top: 20px;
+    }
+    
+    .bar-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      max-width: 60px;
+    }
+    
+    .bar {
+      width: 40px;
+      background: linear-gradient(180deg, var(--accent-blue), var(--accent-primary));
+      border-radius: 4px 4px 0 0;
+      transition: height 0.5s ease;
+      position: relative;
+    }
+    
+    .bar-value {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .bar-label {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+    
+    /* Horizontal Bar Chart */
+    .horizontal-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .h-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .h-bar-label {
+      width: 120px;
+      font-size: 0.8rem;
+      text-align: right;
+      color: var(--text-secondary);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    
+    .h-bar-track {
+      flex: 1;
+      height: 24px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .h-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.5s ease;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+    }
+    
+    .h-bar-fill.high {
+      background: linear-gradient(90deg, var(--accent-primary), #c13750);
+    }
+    
+    .h-bar-fill.medium {
+      background: linear-gradient(90deg, var(--accent-yellow), #d48806);
+    }
+    
+    .h-bar-fill.low {
+      background: linear-gradient(90deg, var(--accent-green), #059669);
+    }
+    
+    .h-bar-value {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: white;
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 2rem;
+    }
+    
+    .footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+    
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    
+    .modal-overlay.visible {
+      display: flex;
+    }
+    
+    .modal {
+      background: var(--bg-secondary);
+      border-radius: var(--radius);
+      max-width: 600px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      border: 1px solid var(--border-color);
+    }
+    
+    .modal-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+    
+    .modal-body {
+      padding: 1.5rem;
+    }
+    
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .detail-label {
+      color: var(--text-secondary);
+    }
+    
+    .detail-value {
+      font-weight: 600;
+    }
+    
+    .recommendations-list {
+      margin-top: 1rem;
+    }
+    
+    .recommendations-list li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--text-secondary);
+    }
+    
+    .recommendations-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent-blue);
+    }
+    
+    /* Loading */
+    .loading {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-secondary);
+    }
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--border-color);
+      border-top-color: var(--accent-primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .nav-links {
+        gap: 1rem;
+      }
+      
+      .main {
+        padding: 1rem;
+      }
+      
+      .search-form {
+        flex-direction: column;
+      }
+      
+      .search-input-wrapper {
+        min-width: 100%;
+      }
+      
+      .industries-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .charts-section {
+        grid-template-columns: 1fr;
+      }
+      
+      .stat-value {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <div class="logo-icon">🇨🇭</div>
+        <div>
+          <div class="logo-text">Swiss AI Labor Market</div>
+          <div class="logo-subtitle">Intelligence Dashboard</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#stats" class="active">Übersicht</a>
+        <a href="#search">Suche</a>
+        <a href="#industries">Branchen</a>
+        <a href="#trends">Trends</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Stats Grid -->
+    <section id="stats">
+      <h2 class="section-title">📊 Schweizer Arbeitsmarkt Übersicht</h2>
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat-card">
+          <div class="stat-label">Beschäftigte</div>
+          <div class="stat-value" id="statEmployment">-</div>
+          <div class="stat-change up" id="statEmploymentChange">↑ -</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Arbeitslosenquote</div>
+          <div class="stat-value" id="statUnemployment">-</div>
+          <div class="stat-change" id="statUnemploymentChange">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">AI-Adoption</div>
+          <div class="stat-value" id="statAIAdoption">-</div>
+          <div class="stat-change up" id="statAIAdoptionChange">↑ -</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Medianlohn</div>
+          <div class="stat-value" id="statWages">-</div>
+          <div class="stat-change up" id="statWagesChange">↑ -</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="search-section">
+      <h3 class="search-title">🔍 Wissensbasis durchsuchen</h3>
+      <form class="search-form" id="searchForm">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔎</span>
+          <input type="text" class="search-input" id="searchQuery" 
+                 placeholder="Suche nach AI Impact, Branchen, Trends...">
+        </div>
+        <select class="filter-select" id="filterIndustry">
+          <option value="">Alle Branchen</option>
+        </select>
+        <select class="filter-select" id="filterSource">
+          <option value="">Alle Quellen</option>
+          <option value="bfs">BFS Statistik</option>
+          <option value="news">News</option>
+          <option value="research">Forschung</option>
+        </select>
+        <button type="submit" class="search-btn">Suchen</button>
+      </form>
+      <div class="search-results" id="searchResults"></div>
+    </section>
+
+    <!-- AI Impact Explorer -->
+    <section id="industries">
+      <h2 class="section-title">🤖 AI Impact Explorer</h2>
+      <div class="industries-grid" id="industriesGrid">
+        <div class="loading">
+          <div class="spinner"></div>
+          Lade Branchen-Daten...
+        </div>
+      </div>
+    </section>
+
+    <!-- Trends Charts -->
+    <section id="trends">
+      <h2 class="section-title">📈 Trends & Statistiken</h2>
+      <div class="charts-section">
+        <!-- AI Adoption Chart -->
+        <div class="chart-card">
+          <h4 class="chart-title">🚀 AI-Adoption nach Jahr</h4>
+          <div class="chart-container">
+            <div class="bar-chart" id="aiAdoptionChart"></div>
+          </div>
+        </div>
+        
+        <!-- Industry Impact Ranking -->
+        <div class="chart-card">
+          <h4 class="chart-title">⚡ AI Impact nach Branche</h4>
+          <div class="chart-container">
+            <div class="horizontal-bars" id="impactRankingChart"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Swiss AI Labor Market Intelligence © 2025 | Powered by <a href="https://kuble.ch">Kuble</a></p>
+    <p>Datenquellen: BFS, SECO, Forschungsberichte | <a href="https://github.com/kuble/swiss-ai-labor-market">GitHub</a></p>
+  </footer>
+
+  <!-- Industry Detail Modal -->
+  <div class="modal-overlay" id="industryModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Branche Details</h3>
+        <button class="modal-close" onclick="closeModal()">×</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Dynamic content -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // API Base URL (relative for proxy)
+    const API_BASE = './api';
+    
+    // State
+    let industries = [];
+    let trends = {};
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', async () => {
+      await loadStats();
+      await loadIndustries();
+      await loadTrends();
+      setupSearch();
+    });
+    
+    // Load Overview Stats
+    async function loadStats() {
+      try {
+        const res = await fetch(`${API_BASE}/stats`);
+        const { data } = await res.json();
+        
+        if (data.metrics) {
+          document.getElementById('statEmployment').textContent = data.metrics.employment.value;
+          document.getElementById('statEmploymentChange').textContent = '↑ ' + data.metrics.employment.change;
+          
+          document.getElementById('statUnemployment').textContent = data.metrics.unemployment.value;
+          document.getElementById('statUnemploymentChange').textContent = data.metrics.unemployment.change;
+          document.getElementById('statUnemploymentChange').className = 'stat-change up';
+          
+          document.getElementById('statAIAdoption').textContent = data.metrics.aiAdoption.value;
+          document.getElementById('statAIAdoptionChange').textContent = '↑ ' + data.metrics.aiAdoption.change;
+          
+          document.getElementById('statWages').textContent = data.metrics.medianWage.value;
+          document.getElementById('statWagesChange').textContent = '↑ ' + data.metrics.medianWage.change;
+        }
+      } catch (err) {
+        console.error('Failed to load stats:', err);
+      }
+    }
+    
+    // Load Industries
+    async function loadIndustries() {
+      try {
+        const res = await fetch(`${API_BASE}/industries`);
+        const { data } = await res.json();
+        industries = data;
+        
+        renderIndustries(data);
+        populateIndustryFilter(data);
+      } catch (err) {
+        console.error('Failed to load industries:', err);
+        document.getElementById('industriesGrid').innerHTML = 
+          '<p style="color: var(--accent-primary);">Fehler beim Laden der Daten.</p>';
+      }
+    }
+    
+    // Render Industry Cards
+    function renderIndustries(data) {
+      const grid = document.getElementById('industriesGrid');
+      
+      grid.innerHTML = data.map(industry => `
+        <div class="industry-card" onclick="showIndustryDetails('${industry.name}')">
+          <div class="industry-header">
+            <div>
+              <div class="industry-name">${industry.name}</div>
+              <div class="industry-description">${industry.description}</div>
+            </div>
+            <div class="impact-badge ${industry.riskLevel}">${industry.aiImpactScore.toFixed(1)}</div>
+          </div>
+          <div class="industry-metrics">
+            <div class="metric">
+              <div class="metric-value">${(industry.automationPotential * 10).toFixed(0)}%</div>
+              <div class="metric-label">Automation</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">${(industry.adoptionRate * 10).toFixed(0)}%</div>
+              <div class="metric-label">AI Adoption</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">${(industry.skillsGap * 10).toFixed(0)}%</div>
+              <div class="metric-label">Skills Gap</div>
+            </div>
+          </div>
+          <div class="industry-footer">
+            <span class="employees-count">
+              ${industry.employees ? (industry.employees / 1000).toFixed(0) + 'k Beschäftigte' : '-'}
+            </span>
+            <span class="trend-indicator ${industry.trend}">
+              ${industry.trend === 'growing' ? '↗ Wachsend' : 
+                industry.trend === 'declining' ? '↘ Rückläufig' : '→ Stabil'}
+            </span>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    // Populate Industry Filter
+    function populateIndustryFilter(data) {
+      const select = document.getElementById('filterIndustry');
+      data.forEach(industry => {
+        const option = document.createElement('option');
+        option.value = industry.name;
+        option.textContent = industry.name;
+        select.appendChild(option);
+      });
+    }
+    
+    // Load Trends
+    async function loadTrends() {
+      try {
+        const res = await fetch(`${API_BASE}/trends`);
+        const { data } = await res.json();
+        trends = data;
+        
+        renderAIAdoptionChart(data.ai_adoption);
+        renderImpactRanking(industries);
+      } catch (err) {
+        console.error('Failed to load trends:', err);
+      }
+    }
+    
+    // Render AI Adoption Bar Chart
+    function renderAIAdoptionChart(data) {
+      const container = document.getElementById('aiAdoptionChart');
+      if (!data) return;
+      
+      const maxValue = Math.max(...data.values);
+      
+      container.innerHTML = data.labels.map((label, i) => `
+        <div class="bar-item">
+          <div class="bar" style="height: ${(data.values[i] / maxValue * 200)}px">
+            <span class="bar-value">${data.values[i]}%</span>
+          </div>
+          <span class="bar-label">${label}</span>
+        </div>
+      `).join('');
+    }
+    
+    // Render Impact Ranking
+    function renderImpactRanking(data) {
+      const container = document.getElementById('impactRankingChart');
+      if (!data || data.length === 0) return;
+      
+      const sorted = [...data].sort((a, b) => b.aiImpactScore - a.aiImpactScore).slice(0, 8);
+      const maxScore = 10;
+      
+      container.innerHTML = sorted.map(industry => `
+        <div class="h-bar-item">
+          <span class="h-bar-label">${industry.name.split(' ')[0]}</span>
+          <div class="h-bar-track">
+            <div class="h-bar-fill ${industry.riskLevel}" 
+                 style="width: ${(industry.aiImpactScore / maxScore * 100)}%">
+              <span class="h-bar-value">${industry.aiImpactScore.toFixed(1)}</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    // Setup Search
+    function setupSearch() {
+      const form = document.getElementById('searchForm');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const query = document.getElementById('searchQuery').value;
+        const industry = document.getElementById('filterIndustry').value;
+        const source = document.getElementById('filterSource').value;
+        
+        if (!query.trim()) return;
+        
+        const resultsContainer = document.getElementById('searchResults');
+        resultsContainer.innerHTML = '<div class="loading"><div class="spinner"></div>Suche...</div>';
+        resultsContainer.classList.add('visible');
+        
+        try {
+          const params = new URLSearchParams({ q: query });
+          if (industry) params.append('industry', industry);
+          if (source) params.append('source', source);
+          
+          const res = await fetch(`${API_BASE}/search?${params}`);
+          const { data, count } = await res.json();
+          
+          if (count === 0) {
+            resultsContainer.innerHTML = `
+              <p style="color: var(--text-secondary);">
+                Keine Ergebnisse für "${query}". Versuchen Sie eine andere Suche.
+              </p>`;
+            return;
+          }
+          
+          resultsContainer.innerHTML = data.map(result => `
+            <div class="result-card">
+              <div class="result-title">${result.title}</div>
+              <div class="result-snippet">${result.snippet}</div>
+              <div class="result-meta">
+                <span class="result-tag">${result.source}</span>
+                ${result.industry ? `<span class="result-tag">${result.industry}</span>` : ''}
+                ${result.date ? `<span>${result.date}</span>` : ''}
+              </div>
+            </div>
+          `).join('');
+        } catch (err) {
+          resultsContainer.innerHTML = '<p style="color: var(--accent-primary);">Fehler bei der Suche.</p>';
+        }
+      });
+    }
+    
+    // Show Industry Details Modal
+    async function showIndustryDetails(name) {
+      const modal = document.getElementById('industryModal');
+      const modalBody = document.getElementById('modalBody');
+      document.getElementById('modalTitle').textContent = name;
+      
+      modal.classList.add('visible');
+      modalBody.innerHTML = '<div class="loading"><div class="spinner"></div>Lade Details...</div>';
+      
+      try {
+        const res = await fetch(`${API_BASE}/industry/${encodeURIComponent(name)}`);
+        const { data } = await res.json();
+        
+        modalBody.innerHTML = `
+          <div class="detail-row">
+            <span class="detail-label">AI Impact Score</span>
+            <span class="detail-value">${data.aiImpactScore}/10</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Risikostufe</span>
+            <span class="detail-value" style="color: ${
+              data.riskLevel === 'high' ? 'var(--accent-primary)' :
+              data.riskLevel === 'medium' ? 'var(--accent-yellow)' : 'var(--accent-green)'
+            }">${data.riskLevel === 'high' ? 'Hoch' : data.riskLevel === 'medium' ? 'Mittel' : 'Niedrig'}</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Automation Potential</span>
+            <span class="detail-value">${(data.factors.automationPotential * 10).toFixed(0)}%</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">AI Adoption Rate</span>
+            <span class="detail-value">${(data.factors.adoptionRate * 10).toFixed(0)}%</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Skills Gap</span>
+            <span class="detail-value">${(data.factors.skillsGap * 10).toFixed(0)}%</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Beschäftigte</span>
+            <span class="detail-value">${data.employees ? (data.employees).toLocaleString() : '-'}</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Betroffene Rollen</span>
+            <span class="detail-value">${data.affectedRoles.join(', ')}</span>
+          </div>
+          
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Empfehlungen</h4>
+          <ul class="recommendations-list">
+            ${data.recommendations.map(r => `<li>${r}</li>`).join('')}
+          </ul>
+        `;
+      } catch (err) {
+        modalBody.innerHTML = '<p style="color: var(--accent-primary);">Fehler beim Laden der Details.</p>';
+      }
+    }
+    
+    // Close Modal
+    function closeModal() {
+      document.getElementById('industryModal').classList.remove('visible');
+    }
+    
+    // Close modal on overlay click
+    document.getElementById('industryModal').addEventListener('click', (e) => {
+      if (e.target.classList.contains('modal-overlay')) {
+        closeModal();
+      }
+    });
+    
+    // Close modal on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
