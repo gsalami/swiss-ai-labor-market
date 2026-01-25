@@ -41,7 +41,7 @@
         "Support for markdown, text, and JSON documents",
         "Batch processing with progress logging"
       ],
-      "status": "pending",
+      "status": "done",
       "phase": 1
     },
     {
