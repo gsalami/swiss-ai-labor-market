@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/index.ts",
-    "start": "node dist/index.js",
+    "start": "tsx src/api/server.ts",
     "db:start": "echo 'Starting ruVector...'",
     "db:stop": "echo 'Stopping ruVector...'",
     "mcp:start": "tsx src/mcp/server.ts",
