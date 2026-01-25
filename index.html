@@ -2241,49 +2241,10 @@
       if (e.key === 'Escape') closeModal();
     });
     
-    // Load Learning Stats
+    // Load Learning Stats - prioritize localStorage over JSON file
     async function loadLearningStats() {
-      try {
-        const res = await fetch('./data/learning/stats.json');
-        const data = await res.json();
-        
-        // Update stat cards
-        document.getElementById('statSearches').textContent = data.totalSearches || 0;
-        document.getElementById('statClicks').textContent = data.totalClicks || 0;
-        document.getElementById('statClickRate').textContent = 
-          ((data.avgClickRate || 0) * 100).toFixed(0) + '%';
-        document.getElementById('statFeedback').textContent = 
-          (data.avgFeedbackScore || 0).toFixed(1) + '/5';
-        
-        // Render learning curve chart
-        const chartContainer = document.getElementById('learningChart');
-        if (data.learningCurve && data.learningCurve.length > 0) {
-          const maxRelevance = Math.max(...data.learningCurve.map(d => d.avgRelevance));
-          chartContainer.innerHTML = data.learningCurve.map(day => {
-            const height = (day.avgRelevance / maxRelevance) * 150;
-            const dateLabel = day.date.split('-').slice(1).join('.');
-            return `
-              <div class="chart-bar" style="height: ${height}px;">
-                <span class="chart-bar-value">${(day.avgRelevance * 100).toFixed(0)}%</span>
-                <span class="chart-bar-label">${dateLabel}</span>
-              </div>
-            `;
-          }).join('');
-        }
-        
-        // Render top queries
-        const queriesContainer = document.getElementById('topQueries');
-        if (data.topQueries && data.topQueries.length > 0) {
-          queriesContainer.innerHTML = data.topQueries.slice(0, 5).map(q => `
-            <div class="query-item">
-              <span class="query-text">${q.query}</span>
-              <span class="query-count">${q.count}x</span>
-            </div>
-          `).join('');
-        }
-      } catch (err) {
-        console.log('Learning stats not available yet');
-      }
+      // Always use localStorage data via LearningTracker
+      LearningTracker.updateDisplay();
     }
   </script>
 </body>
