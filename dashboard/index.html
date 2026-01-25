@@ -772,6 +772,63 @@
       to { transform: rotate(360deg); }
     }
     
+    /* Info Icons with Tooltips */
+    .info-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      color: var(--text-secondary);
+      font-size: 10px;
+      font-style: normal;
+      cursor: help;
+      margin-left: 6px;
+      position: relative;
+      vertical-align: middle;
+    }
+
+    .info-icon:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      white-space: nowrap;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: all 0.2s;
+      border: 1px solid var(--border-color);
+    }
+
+    .tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: var(--bg-card);
+    }
+
+    .stat-label .info-icon,
+    .chart-title .info-icon {
+      vertical-align: middle;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .header-content {
@@ -837,22 +894,22 @@
       <h2 class="section-title">📊 Schweizer Arbeitsmarkt Übersicht</h2>
       <div class="stats-grid" id="statsGrid">
         <div class="stat-card">
-          <div class="stat-label">Beschäftigte</div>
+          <div class="stat-label">Beschäftigte<span class="info-icon">i<span class="tooltip">Quelle: BFS Erwerbstätigenstatistik Q4 2024</span></span></div>
           <div class="stat-value" id="statEmployment">-</div>
           <div class="stat-change up" id="statEmploymentChange">↑ -</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Arbeitslosenquote</div>
+          <div class="stat-label">Arbeitslosenquote<span class="info-icon">i<span class="tooltip">Quelle: SECO Arbeitslosenstatistik, registrierte Arbeitslose</span></span></div>
           <div class="stat-value" id="statUnemployment">-</div>
           <div class="stat-change" id="statUnemploymentChange">-</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">AI-Adoption</div>
+          <div class="stat-label">AI-Adoption<span class="info-icon">i<span class="tooltip">Basiert auf: Stanford HAI AI Index 2024, Schweizer Durchschnitt geschätzt</span></span></div>
           <div class="stat-value" id="statAIAdoption">-</div>
           <div class="stat-change up" id="statAIAdoptionChange">↑ -</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Medianlohn</div>
+          <div class="stat-label">Medianlohn<span class="info-icon">i<span class="tooltip">Quelle: BFS Lohnstrukturerhebung 2022</span></span></div>
           <div class="stat-value" id="statWages">-</div>
           <div class="stat-change up" id="statWagesChange">↑ -</div>
         </div>
@@ -899,7 +956,7 @@
       <div class="charts-section">
         <!-- AI Adoption Chart -->
         <div class="chart-card">
-          <h4 class="chart-title">🚀 AI-Adoption nach Jahr</h4>
+          <h4 class="chart-title">🚀 AI-Adoption nach Jahr<span class="info-icon">i<span class="tooltip">Daten: Stanford HAI AI Index, McKinsey Global Survey, Schweizer Schätzungen</span></span></h4>
           <div class="chart-container">
             <div class="bar-chart" id="aiAdoptionChart"></div>
           </div>
@@ -907,7 +964,7 @@
         
         <!-- Industry Impact Ranking -->
         <div class="chart-card">
-          <h4 class="chart-title">⚡ AI Impact nach Branche</h4>
+          <h4 class="chart-title">⚡ AI Impact nach Branche<span class="info-icon">i<span class="tooltip">Berechnet aus: Automatisierungspotenzial, AI-Adoption, Job-Trends, Skills-Gap. Skala 1-10.</span></span></h4>
           <div class="chart-container">
             <div class="horizontal-bars" id="impactRankingChart"></div>
           </div>
@@ -1018,7 +1075,10 @@
               <div class="industry-name">${industry.name}</div>
               <div class="industry-description">${industry.description}</div>
             </div>
-            <div class="impact-badge ${industry.riskLevel}">${industry.aiImpactScore.toFixed(1)}</div>
+            <div class="impact-badge ${industry.riskLevel}" style="position: relative;">
+              ${industry.aiImpactScore.toFixed(1)}
+              <span class="info-icon" style="position: absolute; top: -8px; right: -8px; width: 14px; height: 14px; font-size: 9px;">i<span class="tooltip">Berechnet aus: Automatisierungspotenzial, AI-Adoption, Job-Trends, Skills-Gap. Skala 1-10.</span></span>
+            </div>
           </div>
           <div class="industry-metrics">
             <div class="metric">
