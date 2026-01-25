@@ -982,6 +982,178 @@
     }
     
     /* ================================
+       LEARNING STATS
+       ================================ */
+    .learning-section {
+      padding: 5rem 2rem;
+      background: var(--bg-darker);
+    }
+    
+    .learning-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .learning-header h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .learning-header h2 span {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .learning-header p {
+      color: var(--text-secondary);
+    }
+    
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto 3rem;
+    }
+    
+    .learning-stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .learning-stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .learning-stat-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+    
+    .learning-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .learning-chart {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    
+    .learning-chart h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+    
+    .chart-container {
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      padding: 1rem 0;
+    }
+    
+    .chart-bar {
+      flex: 1;
+      background: var(--gradient-primary);
+      border-radius: 4px 4px 0 0;
+      position: relative;
+      min-height: 10px;
+      transition: all 0.3s;
+    }
+    
+    .chart-bar:hover {
+      opacity: 0.8;
+    }
+    
+    .chart-bar-label {
+      position: absolute;
+      bottom: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    
+    .chart-bar-value {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.75rem;
+      color: var(--accent-primary);
+      font-weight: 600;
+    }
+    
+    .learning-queries {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    
+    .learning-queries h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+    
+    .query-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    
+    .query-item:last-child {
+      border-bottom: none;
+    }
+    
+    .query-text {
+      color: var(--text-primary);
+      font-size: 0.9rem;
+    }
+    
+    .query-count {
+      color: var(--accent-primary);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    
+    @media (max-width: 1024px) {
+      .learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .learning-content {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .learning-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ================================
        FOOTER
        ================================ */
     .footer {
@@ -1298,6 +1470,7 @@
         <a href="#search">Suche</a>
         <a href="#industries">Branchen</a>
         <a href="#sources">Quellen</a>
+        <a href="#learning">Learning</a>
         <a href="log.html">Log</a>
       </nav>
       
@@ -1473,6 +1646,49 @@
     </div>
   </section>
 
+  <!-- Learning Stats Section -->
+  <section class="learning-section" id="learning">
+    <div class="learning-header">
+      <h2>Self-Learning <span>Intelligence</span></h2>
+      <p>Die Datenbank lernt kontinuierlich aus Suchanfragen und Nutzerverhalten</p>
+    </div>
+    
+    <div class="learning-grid" id="learningStats">
+      <div class="learning-stat-card">
+        <div class="learning-stat-value" id="statSearches">--</div>
+        <div class="learning-stat-label">Suchanfragen</div>
+      </div>
+      <div class="learning-stat-card">
+        <div class="learning-stat-value" id="statClicks">--</div>
+        <div class="learning-stat-label">Klicks</div>
+      </div>
+      <div class="learning-stat-card">
+        <div class="learning-stat-value" id="statClickRate">--</div>
+        <div class="learning-stat-label">Click-Rate</div>
+      </div>
+      <div class="learning-stat-card">
+        <div class="learning-stat-value" id="statFeedback">--</div>
+        <div class="learning-stat-label">Ø Feedback</div>
+      </div>
+    </div>
+    
+    <div class="learning-content">
+      <div class="learning-chart">
+        <h3>📈 Relevanz-Entwicklung (letzte 7 Tage)</h3>
+        <div class="chart-container" id="learningChart">
+          <!-- Bars will be inserted here -->
+        </div>
+      </div>
+      
+      <div class="learning-queries">
+        <h3>🔍 Top Suchanfragen</h3>
+        <div id="topQueries">
+          <!-- Queries will be inserted here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
@@ -1561,6 +1777,7 @@
       await loadStats();
       await loadIndustries();
       await loadSources();
+      await loadLearningStats();
       setupSearch();
       setupFilterChips();
       setupSourceTabs();
@@ -1885,6 +2102,51 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeModal();
     });
+    
+    // Load Learning Stats
+    async function loadLearningStats() {
+      try {
+        const res = await fetch('./data/learning/stats.json');
+        const data = await res.json();
+        
+        // Update stat cards
+        document.getElementById('statSearches').textContent = data.totalSearches || 0;
+        document.getElementById('statClicks').textContent = data.totalClicks || 0;
+        document.getElementById('statClickRate').textContent = 
+          ((data.avgClickRate || 0) * 100).toFixed(0) + '%';
+        document.getElementById('statFeedback').textContent = 
+          (data.avgFeedbackScore || 0).toFixed(1) + '/5';
+        
+        // Render learning curve chart
+        const chartContainer = document.getElementById('learningChart');
+        if (data.learningCurve && data.learningCurve.length > 0) {
+          const maxRelevance = Math.max(...data.learningCurve.map(d => d.avgRelevance));
+          chartContainer.innerHTML = data.learningCurve.map(day => {
+            const height = (day.avgRelevance / maxRelevance) * 150;
+            const dateLabel = day.date.split('-').slice(1).join('.');
+            return `
+              <div class="chart-bar" style="height: ${height}px;">
+                <span class="chart-bar-value">${(day.avgRelevance * 100).toFixed(0)}%</span>
+                <span class="chart-bar-label">${dateLabel}</span>
+              </div>
+            `;
+          }).join('');
+        }
+        
+        // Render top queries
+        const queriesContainer = document.getElementById('topQueries');
+        if (data.topQueries && data.topQueries.length > 0) {
+          queriesContainer.innerHTML = data.topQueries.slice(0, 5).map(q => `
+            <div class="query-item">
+              <span class="query-text">${q.query}</span>
+              <span class="query-count">${q.count}x</span>
+            </div>
+          `).join('');
+        }
+      } catch (err) {
+        console.log('Learning stats not available yet');
+      }
+    }
   </script>
 </body>
 </html>
