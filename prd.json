@@ -69,7 +69,7 @@
         "Extract article content and metadata",
         "Ingest into ruVector with source attribution"
       ],
-      "status": "pending",
+      "status": "done",
       "phase": 2
     },
     {
