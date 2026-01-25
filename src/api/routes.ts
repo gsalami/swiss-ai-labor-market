@@ -5,6 +5,7 @@
 
 import { Router, Request, Response } from 'express';
 import * as db from '../db/ruvector.js';
+import { RESEARCH_SOURCES, SOURCE_STATS } from './research-sources.js';
 
 const router = Router();
 
@@ -422,145 +423,38 @@ router.get('/cantons', async (req: Request, res: Response) => {
   }
 });
 
-// Research Sources with verified URLs
-const RESEARCH_SOURCES = [
-  {
-    id: 'research-mckinsey-genai-2023',
-    title: 'The economic potential of generative AI',
-    institution: 'McKinsey Global Institute',
-    year: 2023,
-    abstract: 'Comprehensive analysis of how generative AI could transform productivity across industries. Estimates generative AI could add $2.6-4.4 trillion annually to the global economy.',
-    url: 'https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier',
-    topics: ['generative ai', 'automation', 'productivity', 'labor market'],
-  },
-  {
-    id: 'research-wef-future-jobs-2023',
-    title: 'Future of Jobs Report 2023',
-    institution: 'World Economic Forum',
-    year: 2023,
-    abstract: 'Global report on labor market transformation through 2027. Projects 23% of jobs to change in next 5 years, with 69M new jobs created and 83M displaced.',
-    url: 'https://www.weforum.org/publications/the-future-of-jobs-report-2023/',
-    topics: ['future of work', 'skills', 'job creation', 'displacement'],
-  },
-  {
-    id: 'research-bfs-arbeitsmarkt-2024',
-    title: 'Arbeitsmarktindikatoren Schweiz',
-    institution: 'BFS',
-    year: 2024,
-    abstract: 'Offizielle Schweizer Arbeitsmarktstatistiken. Umfasst Erwerbstätigkeit, Arbeitslosigkeit, Löhne, Arbeitsbedingungen und Branchenentwicklung.',
-    url: 'https://www.bfs.admin.ch/bfs/de/home/statistiken/arbeit-erwerb.html',
-    topics: ['arbeitsmarkt', 'statistik', 'beschäftigung', 'löhne'],
-  },
-  {
-    id: 'research-seco-konjunktur-2024',
-    title: 'Konjunkturprognosen',
-    institution: 'SECO',
-    year: 2024,
-    abstract: 'Offizielle Konjunkturprognosen der Schweizer Regierung. Vierteljährliche Analysen zu BIP-Entwicklung, Arbeitsmarkt und Wirtschaftsaussichten.',
-    url: 'https://www.seco.admin.ch/seco/de/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/konjunkturprognosen.html',
-    topics: ['konjunktur', 'prognose', 'wirtschaft', 'arbeitsmarkt'],
-  },
-  {
-    id: 'research-stanford-hai-2024',
-    title: 'AI Index Report 2024',
-    institution: 'Stanford HAI',
-    year: 2024,
-    abstract: 'Annual comprehensive report tracking AI progress across research, industry, policy and public perception. Covers model capabilities, investment trends, and labor market impacts.',
-    url: 'https://aiindex.stanford.edu/report/',
-    topics: ['ai research', 'ai policy', 'ai investment', 'ai capabilities'],
-  },
-  {
-    id: 'research-oecd-employment-2024',
-    title: 'OECD Employment Outlook 2024',
-    institution: 'OECD',
-    year: 2024,
-    abstract: 'Annual flagship publication on labor markets in OECD countries including Switzerland. Analyzes AI impact on jobs, skills requirements, and policy responses.',
-    url: 'https://www.oecd.org/employment/outlook/',
-    topics: ['employment', 'ai impact', 'skills', 'policy'],
-  },
-  {
-    id: 'research-imf-weo-2024',
-    title: 'World Economic Outlook',
-    institution: 'IMF',
-    year: 2024,
-    abstract: 'Global economic analysis examining macroeconomic trends, growth forecasts, and AI impact on productivity and labor markets across advanced economies.',
-    url: 'https://www.imf.org/en/Publications/WEO',
-    topics: ['global economy', 'productivity', 'ai impact', 'economic growth'],
-  },
-  {
-    id: 'research-deloitte-ai-enterprise-2024',
-    title: 'State of AI in the Enterprise',
-    institution: 'Deloitte',
-    year: 2024,
-    abstract: 'Enterprise AI adoption survey examining implementation, scaling challenges, ROI metrics, and workforce transformation strategies.',
-    url: 'https://www2.deloitte.com/us/en/pages/consulting/articles/state-of-ai-in-the-enterprise.html',
-    topics: ['enterprise ai', 'adoption', 'digital transformation', 'roi'],
-  },
-  {
-    id: 'research-pwc-global-ai-2024',
-    title: 'Global AI Study: Sizing the Prize',
-    institution: 'PwC',
-    year: 2024,
-    abstract: 'Economic impact analysis projecting AI contribution to global GDP, sector-specific opportunities, and regional variations in AI readiness.',
-    url: 'https://www.pwc.com/gx/en/issues/artificial-intelligence.html',
-    topics: ['ai economics', 'gdp impact', 'productivity', 'regional analysis'],
-  },
-  {
-    id: 'research-gartner-ai-hype-2023',
-    title: 'Gartner Hype Cycle for Artificial Intelligence',
-    institution: 'Gartner',
-    year: 2023,
-    abstract: 'Technology maturity assessment tracking generative AI, foundation models, and emerging AI technologies through the hype cycle phases.',
-    url: 'https://www.gartner.com/en/articles/what-s-new-in-artificial-intelligence-from-the-2023-gartner-hype-cycle',
-    topics: ['ai maturity', 'technology trends', 'hype cycle', 'generative ai'],
-  },
-  {
-    id: 'research-snb-stability-2024',
-    title: 'Financial Stability Report',
-    institution: 'SNB',
-    year: 2024,
-    abstract: 'Swiss National Bank assessment of financial sector stability covering banks, insurance, fintech, and AI adoption in financial services.',
-    url: 'https://www.snb.ch/en/publications/financial-stability-report',
-    topics: ['financial stability', 'fintech', 'digitalization', 'banking'],
-  },
-  {
-    id: 'research-kof-forecast-2024',
-    title: 'KOF Konjunkturprognose',
-    institution: 'KOF ETH Zürich',
-    year: 2024,
-    abstract: 'Quarterly economic forecasts from ETH Zürich covering GDP growth, employment trends, and structural changes including technology adoption.',
-    url: 'https://kof.ethz.ch/en/forecasts-and-indicators.html',
-    topics: ['konjunktur', 'prognose', 'beschäftigung', 'wirtschaftswachstum'],
-  },
-  {
-    id: 'research-avenir-suisse-digital-2024',
-    title: 'Digitalisierung der Schweizer Wirtschaft',
-    institution: 'Avenir Suisse',
-    year: 2024,
-    abstract: 'Think tank analysis of Swiss digitalization progress, regulatory environment, innovation ecosystem, and competitiveness recommendations.',
-    url: 'https://www.avenir-suisse.ch/themen/digitalisierung/',
-    topics: ['digitalisierung', 'innovation', 'regulierung', 'wettbewerbsfähigkeit'],
-  },
-  {
-    id: 'research-ilo-future-work-2024',
-    title: 'Future of Work - Global Commission Report',
-    institution: 'ILO',
-    year: 2024,
-    abstract: 'UN agency analysis of global labor market transformation with framework for human-centered approach including social protection and lifelong learning.',
-    url: 'https://www.ilo.org/global/topics/future-of-work/lang--en/index.htm',
-    topics: ['future of work', 'social protection', 'skills', 'decent work'],
-  },
-];
+// RESEARCH_SOURCES imported from ./research-sources.ts (181 sources)
 
 /**
  * GET /api/sources - List all research sources with URLs
  */
 router.get('/sources', async (req: Request, res: Response) => {
   try {
+    const category = req.query.category as string;
+    const year = req.query.year ? parseInt(req.query.year as string) : null;
+    
+    let filtered = RESEARCH_SOURCES;
+    
+    // Filter by category if provided
+    if (category) {
+      // Simple category matching based on institution or topics
+      filtered = filtered.filter(s => 
+        s.institution.toLowerCase().includes(category.toLowerCase()) ||
+        s.topics.some(t => t.toLowerCase().includes(category.toLowerCase()))
+      );
+    }
+    
+    // Filter by year if provided
+    if (year) {
+      filtered = filtered.filter(s => s.year === year);
+    }
+    
     res.json({
       success: true,
-      count: RESEARCH_SOURCES.length,
-      data: RESEARCH_SOURCES,
+      count: filtered.length,
+      total: SOURCE_STATS.total,
+      stats: SOURCE_STATS.byCategory,
+      data: filtered,
     });
   } catch (error) {
     res.status(500).json({ success: false, error: (error as Error).message });
