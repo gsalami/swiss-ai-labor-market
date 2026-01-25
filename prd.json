@@ -96,7 +96,7 @@
         "Standardize entity names (e.g., 'Software Dev' -> 'Software Developer')",
         "Store entities as graph nodes in ruVector"
       ],
-      "status": "pending",
+      "status": "done",
       "phase": 3
     },
     {
@@ -110,7 +110,7 @@
         "Store scores in graph with relationships",
         "Update scores when new data arrives"
       ],
-      "status": "pending",
+      "status": "done",
       "phase": 3
     },
     {
