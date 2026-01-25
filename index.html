@@ -2078,16 +2078,27 @@
         LearningTracker.trackSearch(query, count);
         
         resultsContainer.innerHTML = data.map(result => `
-          <div class="result-card" onclick="LearningTracker.trackClick()">
+          <div class="result-card">
             <div class="result-title">${result.title}</div>
             <div class="result-snippet">${result.snippet}</div>
             <div class="result-meta">
               <span class="result-tag">${result.source}</span>
               ${result.industry ? `<span class="result-tag">${result.industry}</span>` : ''}
-              ${result.sourceUrl ? `<a href="${result.sourceUrl}" target="_blank" class="result-link" onclick="LearningTracker.trackClick()">Quelle öffnen →</a>` : ''}
+              ${result.sourceUrl ? `<a href="${result.sourceUrl}" target="_blank" class="result-link">Quelle öffnen →</a>` : ''}
             </div>
           </div>
         `).join('');
+        
+        // Add click tracking via event delegation
+        resultsContainer.querySelectorAll('.result-card').forEach(card => {
+          card.addEventListener('click', () => LearningTracker.trackClick());
+        });
+        resultsContainer.querySelectorAll('.result-link').forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.stopPropagation(); // Don't double-count
+            LearningTracker.trackClick();
+          });
+        });
       } catch (err) {
         resultsContainer.innerHTML = '<div class="result-card"><p style="color: var(--accent-secondary);">Fehler bei der Suche.</p></div>';
       }
