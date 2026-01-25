@@ -2054,6 +2054,8 @@
       const query = document.getElementById('searchQuery').value;
       if (!query.trim()) return;
       
+      console.log('[Search] Starting search for:', query);
+      
       const resultsContainer = document.getElementById('searchResults');
       resultsContainer.innerHTML = '<div class="loading"><div class="spinner"></div>Suche...</div>';
       resultsContainer.classList.add('visible');
@@ -2062,8 +2064,10 @@
         const params = new URLSearchParams({ q: query });
         if (currentSearchFilter) params.append('source', currentSearchFilter);
         
+        console.log('[Search] Fetching from:', `${API_BASE}/search?${params}`);
         const res = await fetch(`${API_BASE}/search?${params}`);
         const { data, count } = await res.json();
+        console.log('[Search] Got results:', count);
         
         if (count === 0) {
           resultsContainer.innerHTML = `
@@ -2076,7 +2080,9 @@
         }
         
         // Track search
+        console.log('[Search] Tracking search:', query, count);
         LearningTracker.trackSearch(query, count);
+        console.log('[Search] Tracked!');
         
         resultsContainer.innerHTML = data.map(result => `
           <div class="result-card">
