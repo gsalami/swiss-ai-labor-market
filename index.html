@@ -861,6 +861,46 @@
       transition: color 0.2s;
     }
     
+    .result-feedback {
+      margin-left: auto;
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .feedback-btn {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      color: var(--text-muted);
+    }
+    
+    .feedback-btn:hover {
+      border-color: var(--accent-primary);
+      color: var(--text-primary);
+    }
+    
+    .feedback-btn.active {
+      background: var(--accent-primary);
+      border-color: var(--accent-primary);
+      color: white;
+    }
+    
+    .feedback-btn.positive:hover,
+    .feedback-btn.positive.active {
+      background: var(--accent-green);
+      border-color: var(--accent-green);
+    }
+    
+    .feedback-btn.negative:hover,
+    .feedback-btn.negative.active {
+      background: var(--accent-red);
+      border-color: var(--accent-red);
+    }
+    
     .result-link:hover {
       color: var(--accent-secondary);
     }
@@ -1970,6 +2010,18 @@
         this.updateDisplay();
       },
       
+      trackFeedback(rating) {
+        const data = this.getData();
+        if (!data.feedbackScores) data.feedbackScores = [];
+        data.feedbackScores.push(rating);
+        // Keep last 100 feedback scores
+        if (data.feedbackScores.length > 100) {
+          data.feedbackScores = data.feedbackScores.slice(-100);
+        }
+        this.saveData(data);
+        this.updateDisplay();
+      },
+      
       updateDisplay() {
         const data = this.getData();
         
@@ -1978,11 +2030,17 @@
         const clicksEl = document.getElementById('statClicks');
         const rateEl = document.getElementById('statClickRate');
         
+        const feedbackEl = document.getElementById('statFeedback');
+        
         if (searchEl) searchEl.textContent = data.totalSearches;
         if (clicksEl) clicksEl.textContent = data.totalClicks;
         if (rateEl) {
           const rate = data.totalSearches > 0 ? (data.totalClicks / data.totalSearches * 100) : 0;
           rateEl.textContent = rate.toFixed(0) + '%';
+        }
+        if (feedbackEl && data.feedbackScores && data.feedbackScores.length > 0) {
+          const avg = data.feedbackScores.reduce((a, b) => a + b, 0) / data.feedbackScores.length;
+          feedbackEl.textContent = avg.toFixed(1) + '/5';
         }
         
         // Update top queries
@@ -2077,26 +2135,51 @@
         // Track search
         LearningTracker.trackSearch(query, count);
         
-        resultsContainer.innerHTML = data.map(result => `
-          <div class="result-card">
+        resultsContainer.innerHTML = data.map((result, idx) => `
+          <div class="result-card" data-id="${result.id || idx}">
             <div class="result-title">${result.title}</div>
             <div class="result-snippet">${result.snippet}</div>
             <div class="result-meta">
               <span class="result-tag">${result.source}</span>
               ${result.industry ? `<span class="result-tag">${result.industry}</span>` : ''}
               ${result.sourceUrl ? `<a href="${result.sourceUrl}" target="_blank" class="result-link">Quelle öffnen →</a>` : ''}
+              <div class="result-feedback">
+                <button class="feedback-btn positive" data-rating="5" title="Hilfreich">👍</button>
+                <button class="feedback-btn negative" data-rating="1" title="Nicht hilfreich">👎</button>
+              </div>
             </div>
           </div>
         `).join('');
         
         // Add click tracking via event delegation
         resultsContainer.querySelectorAll('.result-card').forEach(card => {
-          card.addEventListener('click', () => LearningTracker.trackClick());
+          card.addEventListener('click', (e) => {
+            if (!e.target.closest('.feedback-btn')) {
+              LearningTracker.trackClick();
+            }
+          });
         });
         resultsContainer.querySelectorAll('.result-link').forEach(link => {
           link.addEventListener('click', (e) => {
-            e.stopPropagation(); // Don't double-count
+            e.stopPropagation();
             LearningTracker.trackClick();
+          });
+        });
+        
+        // Add feedback tracking
+        resultsContainer.querySelectorAll('.feedback-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const rating = parseInt(btn.dataset.rating);
+            const card = btn.closest('.result-card');
+            const docId = card?.dataset.id;
+            
+            // Visual feedback
+            card.querySelectorAll('.feedback-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Track feedback
+            LearningTracker.trackFeedback(rating);
           });
         });
       } catch (err) {
