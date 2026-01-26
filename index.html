@@ -1670,6 +1670,12 @@
           <button type="button" class="filter-chip" data-filter="bfs">BFS Statistik</button>
           <button type="button" class="filter-chip" data-filter="research">Forschung</button>
           <button type="button" class="filter-chip" data-filter="news">News</button>
+          <span style="margin-left: auto; display: flex; align-items: center; gap: 0.5rem;">
+            <label style="color: var(--text-muted); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+              <input type="checkbox" id="semanticToggle" style="accent-color: var(--accent-primary);">
+              🧠 Semantische Suche
+            </label>
+          </span>
         </div>
         
         <div class="search-results" id="searchResults"></div>
@@ -2116,10 +2122,12 @@
       resultsContainer.classList.add('visible');
       
       try {
+        const useSemantic = document.getElementById('semanticToggle')?.checked;
         const params = new URLSearchParams({ q: query });
         if (currentSearchFilter) params.append('source', currentSearchFilter);
         
-        const res = await fetch(`${API_BASE}/search?${params}`);
+        const endpoint = useSemantic ? '/semantic-search' : '/search';
+        const res = await fetch(`${API_BASE}${endpoint}?${params}`);
         const { data, count } = await res.json();
         
         if (count === 0) {

@@ -5,6 +5,7 @@
 
 import { Router, Request, Response } from 'express';
 import * as db from '../db/ruvector.js';
+import * as semantic from '../db/semantic.js';
 import { RESEARCH_SOURCES, SOURCE_STATS } from './research-sources.js';
 
 const router = Router();
@@ -494,5 +495,104 @@ function getCantonName(code: string): string {
   };
   return names[code] || code;
 }
+
+/**
+ * Semantic Search (using OpenAI embeddings)
+ * GET /api/semantic-search?q=query&limit=10
+ */
+router.get('/semantic-search', async (req: Request, res: Response) => {
+  try {
+    const query = req.query.q as string;
+    const limit = parseInt(req.query.limit as string) || 10;
+    
+    if (!query || query.length < 2) {
+      return res.json({
+        success: true,
+        count: 0,
+        data: [],
+        message: 'Please enter a search query (min 2 characters)',
+      });
+    }
+    
+    // Initialize semantic search
+    await semantic.initSemanticSearch();
+    
+    // Get all documents from db
+    const allDocs = await db.getAll();
+    const searchableDocs = allDocs
+      .filter(d => !d.id.startsWith('entity:') && !d.id.startsWith('impact:'))
+      .map(d => ({
+        id: d.id,
+        content: d.content,
+        metadata: d.metadata,
+      }));
+    
+    // Perform semantic search
+    const results = await semantic.semanticSearch(query, searchableDocs, limit);
+    
+    // Transform results for frontend
+    const transformed = results.map(r => {
+      const titleLower = (r.metadata.title || '').toLowerCase();
+      const source = RESEARCH_SOURCES.find(s => 
+        s.title.toLowerCase() === titleLower ||
+        titleLower.includes(s.title.toLowerCase().split(' ')[0])
+      );
+      
+      return {
+        id: r.id,
+        title: r.metadata.title || r.id,
+        snippet: r.content.slice(0, 300) + (r.content.length > 300 ? '...' : ''),
+        source: r.metadata.source || 'unknown',
+        sourceUrl: source?.url || r.metadata.sourceUrl,
+        industry: r.metadata.industry,
+        relevance: (r.score * 100).toFixed(1),
+      };
+    });
+    
+    res.json({
+      success: true,
+      query,
+      mode: 'semantic',
+      count: transformed.length,
+      data: transformed,
+    });
+  } catch (err: any) {
+    console.error('[Semantic Search Error]', err.message);
+    res.status(500).json({ 
+      success: false, 
+      error: err.message,
+      hint: 'Make sure OPENAI_API_KEY is set and documents are indexed',
+    });
+  }
+});
+
+/**
+ * Index all documents for semantic search
+ * POST /api/semantic-index
+ */
+router.post('/semantic-index', async (req: Request, res: Response) => {
+  try {
+    await semantic.initSemanticSearch();
+    
+    const allDocs = await db.getAll();
+    const searchableDocs = allDocs
+      .filter(d => !d.id.startsWith('entity:') && !d.id.startsWith('impact:'))
+      .map(d => ({
+        id: d.id,
+        content: d.content,
+      }));
+    
+    await semantic.indexDocuments(searchableDocs);
+    
+    const stats = semantic.getStats();
+    res.json({
+      success: true,
+      message: 'Indexing complete',
+      stats,
+    });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
 
 export default router;
