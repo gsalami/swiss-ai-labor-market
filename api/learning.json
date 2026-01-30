@@ -1,0 +1,10 @@
+{
+  "data": {
+    "searches": 0,
+    "clicks": 0,
+    "clickRate": 0,
+    "avgFeedback": null,
+    "topQueries": [],
+    "relevanceHistory": []
+  }
+}

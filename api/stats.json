@@ -1,0 +1,13 @@
+{
+  "data": {
+    "employed": 5420000,
+    "employedChange": 1.2,
+    "unemploymentRate": 2.3,
+    "unemploymentChange": -0.2,
+    "aiAdoption": 47,
+    "aiAdoptionChange": 8.5,
+    "medianWage": 6788,
+    "medianWageChange": 1.8,
+    "lastUpdated": "2026-01-30T20:36:11.925Z"
+  }
+}

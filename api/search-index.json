@@ -1,0 +1,2337 @@
+{
+  "data": [
+    {
+      "id": "research-80000hours-ai-2024",
+      "title": "80,000 Hours - AI Safety",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://80000hours.org/problem-profiles/artificial-intelligence/"
+    },
+    {
+      "id": "research-accenture-future-workforce-2024",
+      "title": "Future Workforce",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.accenture.com/us-en/insights/future-workforce-index"
+    },
+    {
+      "id": "research-accenture-genai-2024",
+      "title": "Generative AI: A New Era of Enterprise Intelligence",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.accenture.com/us-en/insights/generative-ai"
+    },
+    {
+      "id": "research-accenture-tech-vision-2024",
+      "title": "Technology Vision 2024",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.accenture.com/us-en/insights/technology/technology-trends"
+    },
+    {
+      "id": "research-ai-impacts-2024",
+      "title": "AI Impacts",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://aiimpacts.org/"
+    },
+    {
+      "id": "research-ai-now-2024",
+      "title": "AI Now Institute",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://ainowinstitute.org/"
+    },
+    {
+      "id": "research-alignment-forum-2024",
+      "title": "AI Alignment Forum",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.alignmentforum.org/"
+    },
+    {
+      "id": "research-amazon-science-2024",
+      "title": "Amazon Science",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.amazon.science/"
+    },
+    {
+      "id": "research-anthropic-claude-2024",
+      "title": "Claude Model Card",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.anthropic.com/claude"
+    },
+    {
+      "id": "research-anthropic-research-2024",
+      "title": "Anthropic Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.anthropic.com/research"
+    },
+    {
+      "id": "research-arxiv-ai-2024",
+      "title": "arXiv AI/ML Papers",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
+      "id": "research-aspen-ai-2024",
+      "title": "Aspen Digital",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.aspeninstitute.org/programs/aspen-digital/"
+    },
+    {
+      "id": "research-asut-telecom-2024",
+      "title": "asut Telekommunikation",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://asut.ch/"
+    },
+    {
+      "id": "research-avenir-suisse-arbeitsmarkt-2024",
+      "title": "Arbeitsmarkt Schweiz",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.avenir-suisse.ch/themen/arbeitsmarkt/"
+    },
+    {
+      "id": "research-avenir-suisse-bildung-2024",
+      "title": "Bildung und Weiterbildung",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.avenir-suisse.ch/themen/bildung/"
+    },
+    {
+      "id": "research-avenir-suisse-digital-2024",
+      "title": "Digitalisierung der Schweizer Wirtschaft",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.avenir-suisse.ch/themen/digitalisierung/"
+    },
+    {
+      "id": "research-bain-automation-2024",
+      "title": "Automation and AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bain.com/insights/topics/artificial-intelligence/"
+    },
+    {
+      "id": "research-bain-future-work-2024",
+      "title": "The Working Future",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bain.com/insights/topics/future-of-work/"
+    },
+    {
+      "id": "research-bak-economics-2024",
+      "title": "BAK Economics Prognosen",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bak-economics.com/"
+    },
+    {
+      "id": "research-bakom-digital-2024",
+      "title": "Strategie Digitale Schweiz",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bakom.admin.ch/bakom/de/home/digital-und-internet/strategie-digitale-schweiz.html"
+    },
+    {
+      "id": "research-bcg-ai-scale-2024",
+      "title": "AI at Scale",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bcg.com/publications/2024/ai-at-scale"
+    },
+    {
+      "id": "research-bcg-future-work-2024",
+      "title": "The Future of Work Is Now",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bcg.com/capabilities/people-strategy/future-of-work"
+    },
+    {
+      "id": "research-bcg-genai-productivity-2024",
+      "title": "How Generative AI Boosts Productivity",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bcg.com/publications/2024/how-generative-ai-boosts-productivity"
+    },
+    {
+      "id": "research-berkeley-ai-2024",
+      "title": "Berkeley AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://bair.berkeley.edu/"
+    },
+    {
+      "id": "research-bfs-arbeitsmarkt-2024",
+      "title": "Arbeitsmarktindikatoren Schweiz",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bfs.admin.ch/bfs/de/home/statistiken/arbeit-erwerb.html"
+    },
+    {
+      "id": "research-bfs-bildung-2024",
+      "title": "Bildungsstatistik Schweiz",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bfs.admin.ch/bfs/de/home/statistiken/bildung-wissenschaft.html"
+    },
+    {
+      "id": "research-bfs-ict-2024",
+      "title": "Informationsgesellschaft - Indikatoren",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bfs.admin.ch/bfs/de/home/statistiken/kultur-medien-informationsgesellschaft-sport/informationsgesellschaft.html"
+    },
+    {
+      "id": "research-bfs-innovation-2024",
+      "title": "Forschung und Entwicklung Schweiz",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bfs.admin.ch/bfs/de/home/statistiken/bildung-wissenschaft/technologie.html"
+    },
+    {
+      "id": "research-bis-fintech-2024",
+      "title": "BIS Innovation Hub",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bis.org/about/bisih/about.htm"
+    },
+    {
+      "id": "research-brookings-ai-2024",
+      "title": "Brookings AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.brookings.edu/topic/artificial-intelligence/"
+    },
+    {
+      "id": "research-brookings-future-work-2024",
+      "title": "Future of Work Initiative",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.brookings.edu/projects/workforce-of-the-future/"
+    },
+    {
+      "id": "research-bruegel-ai-2024",
+      "title": "Bruegel AI Policy",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bruegel.org/topic/artificial-intelligence"
+    },
+    {
+      "id": "research-bruegel-digital-2024",
+      "title": "Bruegel Digital Economy",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.bruegel.org/topic/digital-economy"
+    },
+    {
+      "id": "research-cais-safety-2024",
+      "title": "Center for AI Safety",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.safe.ai/"
+    },
+    {
+      "id": "research-cambridge-ai-2024",
+      "title": "Cambridge Centre for AI in Medicine",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.cam.ac.uk/research/research-at-cambridge/artificial-intelligence"
+    },
+    {
+      "id": "research-capgemini-ai-2024",
+      "title": "AI in Business",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.capgemini.com/insights/research-library/artificial-intelligence/"
+    },
+    {
+      "id": "research-capgemini-world-report-2024",
+      "title": "World Report Series",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.capgemini.com/insights/research-institute/"
+    },
+    {
+      "id": "research-ceps-ai-2024",
+      "title": "CEPS Digital Policy",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ceps.eu/topics/digital-economy/"
+    },
+    {
+      "id": "research-cmu-ai-2024",
+      "title": "CMU AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.cmu.edu/ai/"
+    },
+    {
+      "id": "research-conjecture-2024",
+      "title": "Conjecture AI Safety",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.conjecture.dev/"
+    },
+    {
+      "id": "research-cset-ai-2024",
+      "title": "CSET AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://cset.georgetown.edu/"
+    },
+    {
+      "id": "research-deepmind-research-2024",
+      "title": "DeepMind Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://deepmind.google/research/"
+    },
+    {
+      "id": "research-deepmind-safety-2024",
+      "title": "DeepMind Safety Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://deepmind.google/safety-research/"
+    },
+    {
+      "id": "research-deloitte-ai-enterprise-2024",
+      "title": "State of AI in the Enterprise",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www2.deloitte.com/us/en/pages/consulting/articles/state-of-ai-in-the-enterprise.html"
+    },
+    {
+      "id": "research-deloitte-ai-governance-2024",
+      "title": "Trustworthy AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www2.deloitte.com/us/en/pages/deloitte-analytics/solutions/ethics-of-ai-framework.html"
+    },
+    {
+      "id": "research-deloitte-human-capital-2024",
+      "title": "Human Capital Trends",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html"
+    },
+    {
+      "id": "research-deloitte-tech-trends-2024",
+      "title": "Tech Trends 2024",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www2.deloitte.com/us/en/insights/focus/tech-trends.html"
+    },
+    {
+      "id": "research-digitale-verwaltung-2024",
+      "title": "Digitale Verwaltung Schweiz",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.digitale-verwaltung-schweiz.ch/"
+    },
+    {
+      "id": "research-digitalswitzerland-2024",
+      "title": "Digital Switzerland",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://digitalswitzerland.com/"
+    },
+    {
+      "id": "research-economiesuisse-arbeitsmarkt-2024",
+      "title": "Arbeitsmarktpolitik",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.economiesuisse.ch/de/dossier-politik/arbeitsmarkt"
+    },
+    {
+      "id": "research-economiesuisse-digital-2024",
+      "title": "Digitalisierung und Innovation",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.economiesuisse.ch/de/dossier-politik/digitalisierung"
+    },
+    {
+      "id": "research-edoeb-datenschutz-2024",
+      "title": "Datenschutz und AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.edoeb.admin.ch/edoeb/de/home/datenschutz/arbeit_wirtschaft/kuenstliche-intelligenz.html"
+    },
+    {
+      "id": "research-epfl-ai-2024",
+      "title": "EPFL AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.epfl.ch/research/domains/artificial-intelligence/"
+    },
+    {
+      "id": "research-epoch-ai-2024",
+      "title": "Epoch AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://epochai.org/"
+    },
+    {
+      "id": "research-eth-ai-center-2024",
+      "title": "ETH AI Center",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://ai.ethz.ch/"
+    },
+    {
+      "id": "research-eth-digital-2024",
+      "title": "ETH Digital Transformation",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://ethz.ch/en/industry/industry-4-0.html"
+    },
+    {
+      "id": "research-eu-ai-act-2024",
+      "title": "EU AI Act",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "id": "research-eu-digital-decade-2024",
+      "title": "Digital Decade 2030",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/europes-digital-decade"
+    },
+    {
+      "id": "research-eu-digital-economy-2024",
+      "title": "Digital Economy and Society Index",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/desi"
+    },
+    {
+      "id": "research-ey-ai-survey-2024",
+      "title": "AI Survey",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ey.com/en_gl/ai"
+    },
+    {
+      "id": "research-ey-future-work-2024",
+      "title": "Work Reimagined",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ey.com/en_gl/workforce/work-reimagined"
+    },
+    {
+      "id": "research-fhnw-ai-2024",
+      "title": "FHNW AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.fhnw.ch/de/forschung-und-dienstleistungen/technik/digital-technologies"
+    },
+    {
+      "id": "research-finma-annual-2024",
+      "title": "FINMA Annual Report",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.finma.ch/en/documentation/finma-publications/annual-reports/"
+    },
+    {
+      "id": "research-gartner-ai-hype-2023",
+      "title": "Gartner Hype Cycle for Artificial Intelligence",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.gartner.com/en/articles/what-s-new-in-artificial-intelligence-from-the-2023-gartner-hype-cycle"
+    },
+    {
+      "id": "research-gartner-top-tech-2024",
+      "title": "Top Strategic Technology Trends",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.gartner.com/en/articles/gartner-top-10-strategic-technology-trends-for-2024"
+    },
+    {
+      "id": "research-gastrosuisse-2024",
+      "title": "GastroSuisse Digitalisierung",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.gastrosuisse.ch/"
+    },
+    {
+      "id": "research-glassdoor-economic-2024",
+      "title": "Glassdoor Economic Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.glassdoor.com/research/"
+    },
+    {
+      "id": "research-google-ai-2024",
+      "title": "Google AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://ai.google/research/"
+    },
+    {
+      "id": "research-google-responsible-ai-2024",
+      "title": "Responsible AI Practices",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://ai.google/responsibility/responsible-ai-practices/"
+    },
+    {
+      "id": "research-hbs-ai-2024",
+      "title": "Harvard Business Review - AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://hbr.org/topic/subject/ai-and-machine-learning"
+    },
+    {
+      "id": "research-hotelleriesuisse-2024",
+      "title": "HotellerieSuisse",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.hotelleriesuisse.ch/"
+    },
+    {
+      "id": "research-huggingface-blog-2024",
+      "title": "Hugging Face Blog",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://huggingface.co/blog"
+    },
+    {
+      "id": "research-huggingface-leaderboard-2024",
+      "title": "Open LLM Leaderboard",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard"
+    },
+    {
+      "id": "research-iab-arbeitsmarkt-2024",
+      "title": "IAB Arbeitsmarktforschung",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.iab.de/"
+    },
+    {
+      "id": "research-ibm-ai-ethics-2024",
+      "title": "IBM AI Ethics",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ibm.com/artificial-intelligence/ethics"
+    },
+    {
+      "id": "research-ibm-institute-2024",
+      "title": "IBM Institute for Business Value",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ibm.com/thought-leadership/institute-business-value/"
+    },
+    {
+      "id": "research-ict-switzerland-2024",
+      "title": "ICT Switzerland",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ict-switzerland.ch/"
+    },
+    {
+      "id": "research-idiap-2024",
+      "title": "Idiap Research Institute",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.idiap.ch/"
+    },
+    {
+      "id": "research-ifo-digital-2024",
+      "title": "ifo Digitalisierung",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ifo.de/forschung/digitalisierung"
+    },
+    {
+      "id": "research-ilo-ai-work-2024",
+      "title": "Generative AI and Jobs",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ilo.org/global/topics/artificial-intelligence/lang--en/index.htm"
+    },
+    {
+      "id": "research-ilo-future-work-2024",
+      "title": "Future of Work - Global Commission Report",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ilo.org/global/topics/future-of-work/lang--en/index.htm"
+    },
+    {
+      "id": "research-ilo-skills-2024",
+      "title": "Skills and Employability",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ilo.org/global/topics/skills-knowledge-and-employability/lang--en/index.htm"
+    },
+    {
+      "id": "research-imf-ai-labor-2024",
+      "title": "AI and the Future of Work",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.imf.org/en/Topics/AI"
+    },
+    {
+      "id": "research-imf-switzerland-2024",
+      "title": "IMF Country Report: Switzerland",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.imf.org/en/Countries/CHE"
+    },
+    {
+      "id": "research-imf-weo-2024",
+      "title": "World Economic Outlook",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.imf.org/en/Publications/WEO"
+    },
+    {
+      "id": "research-indeed-hiring-2024",
+      "title": "Indeed Hiring Lab",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.hiringlab.org/"
+    },
+    {
+      "id": "research-innosuisse-report-2024",
+      "title": "Innosuisse Jahresbericht",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.innosuisse.ch/inno/de/home/ueber-uns/zahlen-und-fakten.html"
+    },
+    {
+      "id": "research-intel-ai-2024",
+      "title": "Intel AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html"
+    },
+    {
+      "id": "research-kof-digitalbarometer-2024",
+      "title": "KOF Digitalbarometer",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-digitalisation-barometer.html"
+    },
+    {
+      "id": "research-kof-forecast-2024",
+      "title": "KOF Konjunkturprognose",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://kof.ethz.ch/en/forecasts-and-indicators.html"
+    },
+    {
+      "id": "research-kpmg-ai-adoption-2024",
+      "title": "AI Adoption Survey",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://kpmg.com/xx/en/home/insights/2024/artificial-intelligence.html"
+    },
+    {
+      "id": "research-kpmg-future-work-2024",
+      "title": "Future of Work",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://kpmg.com/xx/en/home/insights/future-of-work.html"
+    },
+    {
+      "id": "research-lesswrong-ai-2024",
+      "title": "LessWrong AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.lesswrong.com/tag/ai"
+    },
+    {
+      "id": "research-linkedin-economic-2024",
+      "title": "Economic Graph",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://economicgraph.linkedin.com/"
+    },
+    {
+      "id": "research-linkedin-future-work-2024",
+      "title": "Future of Work Report",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.linkedin.com/business/talent/blog/talent-strategy/future-of-work"
+    },
+    {
+      "id": "research-linkedin-jobs-rise-2024",
+      "title": "Jobs on the Rise",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.linkedin.com/pulse/linkedin-jobs-rise-2024/"
+    },
+    {
+      "id": "research-mckinsey-automation-2023",
+      "title": "Jobs lost, jobs gained: Workforce transitions",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.mckinsey.com/featured-insights/future-of-work/jobs-lost-jobs-gained-what-the-future-of-work-will-mean-for-jobs-skills-and-wages"
+    },
+    {
+      "id": "research-mckinsey-future-work-2024",
+      "title": "The future of work after COVID-19",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.mckinsey.com/featured-insights/future-of-work/the-future-of-work-after-covid-19"
+    },
+    {
+      "id": "research-mckinsey-genai-2023",
+      "title": "The economic potential of generative AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier"
+    },
+    {
+      "id": "research-mckinsey-skills-2024",
+      "title": "Skill shift: Automation and the future of the workforce",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.mckinsey.com/featured-insights/future-of-work/skill-shift-automation-and-the-future-of-the-workforce"
+    },
+    {
+      "id": "research-mckinsey-state-ai-2024",
+      "title": "The state of AI in 2024",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
+    },
+    {
+      "id": "research-meta-ai-research-2024",
+      "title": "Meta AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://ai.meta.com/research/"
+    },
+    {
+      "id": "research-microsoft-ai-research-2024",
+      "title": "Microsoft Research - AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.microsoft.com/en-us/research/research-area/artificial-intelligence/"
+    },
+    {
+      "id": "research-microsoft-responsible-ai-2024",
+      "title": "Responsible AI Standard",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.microsoft.com/en-us/ai/responsible-ai"
+    },
+    {
+      "id": "research-microsoft-worklab-2024",
+      "title": "Work Trend Index",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/"
+    },
+    {
+      "id": "research-miri-2024",
+      "title": "MIRI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://intelligence.org/research/"
+    },
+    {
+      "id": "research-mit-csail-ai-2024",
+      "title": "MIT CSAIL AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.csail.mit.edu/research/artificial-intelligence"
+    },
+    {
+      "id": "research-mit-sloan-ai-2024",
+      "title": "MIT Sloan AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://mitsloan.mit.edu/ideas-made-to-matter/topic/artificial-intelligence"
+    },
+    {
+      "id": "research-mit-work-future-2024",
+      "title": "MIT Work of the Future",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://workofthefuture.mit.edu/"
+    },
+    {
+      "id": "research-nber-ai-2024",
+      "title": "NBER AI Economics",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.nber.org/topics/artificial-intelligence"
+    },
+    {
+      "id": "research-nesta-ai-2024",
+      "title": "Nesta AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.nesta.org.uk/project/future-skills/"
+    },
+    {
+      "id": "research-nvidia-ai-2024",
+      "title": "NVIDIA AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.nvidia.com/en-us/research/"
+    },
+    {
+      "id": "research-oecd-ai-policy-2024",
+      "title": "OECD AI Policy Observatory",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://oecd.ai/"
+    },
+    {
+      "id": "research-oecd-digital-economy-2024",
+      "title": "OECD Digital Economy Outlook",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.oecd.org/digital/oecd-digital-economy-outlook/"
+    },
+    {
+      "id": "research-oecd-education-2024",
+      "title": "Education at a Glance",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.oecd.org/education/education-at-a-glance/"
+    },
+    {
+      "id": "research-oecd-employment-2024",
+      "title": "OECD Employment Outlook 2024",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.oecd.org/employment/outlook/"
+    },
+    {
+      "id": "research-oecd-future-work-2024",
+      "title": "The Future of Work",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.oecd.org/future-of-work/"
+    },
+    {
+      "id": "research-oecd-skills-2024",
+      "title": "OECD Skills Outlook",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.oecd.org/education/oecd-skills-outlook/"
+    },
+    {
+      "id": "research-oliver-wyman-ai-2024",
+      "title": "The AI Imperative",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.oliverwyman.com/our-expertise/insights/artificial-intelligence.html"
+    },
+    {
+      "id": "research-openai-economic-2024",
+      "title": "GPTs are GPTs: Economic Impacts of AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://openai.com/research/gpts-are-gpts"
+    },
+    {
+      "id": "research-openai-research-2024",
+      "title": "OpenAI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://openai.com/research/"
+    },
+    {
+      "id": "research-oracle-ai-2024",
+      "title": "Oracle AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.oracle.com/artificial-intelligence/"
+    },
+    {
+      "id": "research-our-world-data-ai-2024",
+      "title": "Our World in Data - AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://ourworldindata.org/artificial-intelligence"
+    },
+    {
+      "id": "research-oxford-automation-2024",
+      "title": "The Future of Employment",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.oxfordmartin.ox.ac.uk/publications/the-future-of-employment/"
+    },
+    {
+      "id": "research-oxford-future-humanity-2024",
+      "title": "Future of Humanity Institute",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.fhi.ox.ac.uk/"
+    },
+    {
+      "id": "research-oxford-martin-2024",
+      "title": "Oxford Martin School",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.oxfordmartin.ox.ac.uk/"
+    },
+    {
+      "id": "research-paperswithcode-2024",
+      "title": "Papers With Code",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://paperswithcode.com/"
+    },
+    {
+      "id": "research-pwc-ceo-survey-2024",
+      "title": "Annual Global CEO Survey",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.pwc.com/gx/en/issues/c-suite-insights/ceo-survey.html"
+    },
+    {
+      "id": "research-pwc-global-ai-2024",
+      "title": "Global AI Study: Sizing the Prize",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence.html"
+    },
+    {
+      "id": "research-pwc-responsible-ai-2024",
+      "title": "Responsible AI Toolkit",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.pwc.com/gx/en/issues/data-and-analytics/artificial-intelligence/what-is-responsible-ai.html"
+    },
+    {
+      "id": "research-pwc-workforce-2024",
+      "title": "Workforce of the Future",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.pwc.com/gx/en/issues/workforce.html"
+    },
+    {
+      "id": "research-raiffeisen-research-2024",
+      "title": "Raiffeisen Economic Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.raiffeisen.ch/rch/de/ueber-uns/raiffeisen-gruppe/publikationen/economic-research.html"
+    },
+    {
+      "id": "research-rand-ai-2024",
+      "title": "RAND AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.rand.org/topics/artificial-intelligence.html"
+    },
+    {
+      "id": "research-redwood-research-2024",
+      "title": "Redwood Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.redwoodresearch.org/"
+    },
+    {
+      "id": "research-roland-berger-ai-2024",
+      "title": "AI for Business",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.rolandberger.com/en/Insights/Artificial-Intelligence.html"
+    },
+    {
+      "id": "research-salesforce-research-2024",
+      "title": "Salesforce AI Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.salesforce.com/company/news-press/stories/ai-research/"
+    },
+    {
+      "id": "research-salesforce-state-ai-2024",
+      "title": "State of AI Report",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.salesforce.com/resources/research-reports/"
+    },
+    {
+      "id": "research-sap-insights-2024",
+      "title": "SAP Insights",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.sap.com/insights.html"
+    },
+    {
+      "id": "research-sav-arbeitgeber-2024",
+      "title": "Schweizerischer Arbeitgeberverband",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.arbeitgeber.ch/"
+    },
+    {
+      "id": "research-sba-banking-2024",
+      "title": "Swiss Bankers Association",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.swissbanking.ch/en/topics"
+    },
+    {
+      "id": "research-sbfi-berufsbildung-2024",
+      "title": "Berufsbildung in der Schweiz",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.sbfi.admin.ch/sbfi/de/home/bildung/berufsbildungssteuerung-und--politik/berufsbildung-in-der-schweiz.html"
+    },
+    {
+      "id": "research-sbfi-forschung-2024",
+      "title": "Forschung und Innovation in der Schweiz",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.sbfi.admin.ch/sbfi/de/home/forschung-und-innovation.html"
+    },
+    {
+      "id": "research-scienceindustries-2024",
+      "title": "scienceindustries",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.scienceindustries.ch/"
+    },
+    {
+      "id": "research-seco-arbeitslosenstatistik-2024",
+      "title": "Arbeitslosenstatistik",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.seco.admin.ch/seco/de/home/Arbeit/Arbeitslosenversicherung/arbeitslosenzahlen.html"
+    },
+    {
+      "id": "research-seco-fachkraefte-2024",
+      "title": "Fachkräfteinitiative",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.seco.admin.ch/seco/de/home/Arbeit/Fachkraefteinitiative.html"
+    },
+    {
+      "id": "research-seco-konjunktur-2024",
+      "title": "Konjunkturprognosen",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.seco.admin.ch/seco/de/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/konjunkturprognosen.html"
+    },
+    {
+      "id": "research-sfti-innovation-2024",
+      "title": "Swiss Finance + Technology Association",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://swissfinte.ch/"
+    },
+    {
+      "id": "research-sgb-gewerkschaft-2024",
+      "title": "SGB Digitalisierung",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.sgb.ch/"
+    },
+    {
+      "id": "research-sgv-arbeitsmarkt-2024",
+      "title": "Schweizerischer Gewerbeverband",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.sgv-usam.ch/"
+    },
+    {
+      "id": "research-sif-fintech-2024",
+      "title": "Swiss Fintech Report",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.sif.admin.ch/sif/en/home/finanzmarktpolitik/digit-finanzsektor.html"
+    },
+    {
+      "id": "research-snb-stability-2024",
+      "title": "Financial Stability Report",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.snb.ch/en/publications/financial-stability-report"
+    },
+    {
+      "id": "research-snf-forschung-2024",
+      "title": "Forschungsförderung Schweiz",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.snf.ch/de"
+    },
+    {
+      "id": "research-stanford-hai-2024",
+      "title": "AI Index Report 2024",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://aiindex.stanford.edu/report/"
+    },
+    {
+      "id": "research-stanford-hai-genai-2024",
+      "title": "Generative AI and the Labor Market",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://hai.stanford.edu/research/generative-ai"
+    },
+    {
+      "id": "research-stanford-hai-policy-2024",
+      "title": "AI Policy and Governance",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://hai.stanford.edu/policy"
+    },
+    {
+      "id": "research-swico-ict-2024",
+      "title": "Swico ICT Report",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.swico.ch/"
+    },
+    {
+      "id": "research-swiss-digital-initiative-2024",
+      "title": "Swiss Digital Initiative",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.swiss-digital-initiative.org/"
+    },
+    {
+      "id": "research-swiss-medtech-2024",
+      "title": "Swiss Medtech",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.swiss-medtech.ch/"
+    },
+    {
+      "id": "research-swiss-re-ai-2024",
+      "title": "Swiss Re AI and Insurance",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.swissre.com/institute/research/topics-and-risk-dialogues/digital-technology.html"
+    },
+    {
+      "id": "research-swiss-re-sigma-2024",
+      "title": "Swiss Re Sigma",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.swissre.com/institute/research/sigma-research.html"
+    },
+    {
+      "id": "research-swisscom-digital-2024",
+      "title": "Digital Switzerland Report",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.swisscom.ch/de/business/enterprise/themen/digital-business.html"
+    },
+    {
+      "id": "research-swissmem-arbeitsmarkt-2024",
+      "title": "Swissmem Arbeitsmarkt",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.swissmem.ch/de/themen/arbeitswelt.html"
+    },
+    {
+      "id": "research-swissmem-industrie-2024",
+      "title": "Swissmem Industrie 4.0",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.swissmem.ch/de/themen/industrie-40.html"
+    },
+    {
+      "id": "research-travail-suisse-2024",
+      "title": "Travail.Suisse Digitalisierung",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.travailsuisse.ch/"
+    },
+    {
+      "id": "research-ubs-ai-2024",
+      "title": "UBS AI in Finance",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ubs.com/global/en/wealth-management/chief-investment-office/life-goals/technology.html"
+    },
+    {
+      "id": "research-ubs-research-2024",
+      "title": "UBS Global Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ubs.com/global/en/wealth-management/insights.html"
+    },
+    {
+      "id": "research-ubs-switzerland-2024",
+      "title": "UBS Switzerland Economic Analysis",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.ubs.com/ch/de/wealth-management/insights.html"
+    },
+    {
+      "id": "research-un-digital-cooperation-2024",
+      "title": "Roadmap for Digital Cooperation",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.un.org/en/content/digital-cooperation-roadmap/"
+    },
+    {
+      "id": "research-unctad-digital-2024",
+      "title": "Digital Economy Report",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://unctad.org/topic/ecommerce-and-digital-economy/digital-economy-report"
+    },
+    {
+      "id": "research-unesco-ai-ethics-2024",
+      "title": "Recommendation on the Ethics of AI",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics"
+    },
+    {
+      "id": "research-unisg-ai-2024",
+      "title": "HSG AI and Business",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://ics.unisg.ch/"
+    },
+    {
+      "id": "research-uzh-digital-2024",
+      "title": "UZH Digital Society Initiative",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.dsi.uzh.ch/"
+    },
+    {
+      "id": "research-wef-competitiveness-2024",
+      "title": "Global Competitiveness Report",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.weforum.org/publications/the-global-competitiveness-report/"
+    },
+    {
+      "id": "research-wef-davos-ai-2024",
+      "title": "AI Governance Alliance",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.weforum.org/communities/ai-governance-alliance/"
+    },
+    {
+      "id": "research-wef-future-jobs-2023",
+      "title": "Future of Jobs Report 2023",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2023/"
+    },
+    {
+      "id": "research-wef-global-risks-2024",
+      "title": "Global Risks Report 2024",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.weforum.org/publications/global-risks-report-2024/"
+    },
+    {
+      "id": "research-worldbank-digital-2024",
+      "title": "Digital Development",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.worldbank.org/en/topic/digitaldevelopment"
+    },
+    {
+      "id": "research-worldbank-jobs-2024",
+      "title": "World Development Report: Jobs",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.worldbank.org/en/topic/jobsanddevelopment"
+    },
+    {
+      "id": "research-zhaw-digitalisation-2024",
+      "title": "ZHAW Digitalisierung",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.zhaw.ch/de/forschung/forschungsschwerpunkte/digitalisierung/"
+    },
+    {
+      "id": "research-zkb-research-2024",
+      "title": "ZKB Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.zkb.ch/de/ueber-uns/medien/publikationen.html"
+    },
+    {
+      "id": "research-zurich-insurance-2024",
+      "title": "Zurich Insurance Research",
+      "description": "",
+      "content": "",
+      "type": "research",
+      "source": "Research",
+      "url": "https://www.zurich.com/knowledge"
+    },
+    {
+      "id": "news-nzz-aHR0cHM6Ly93",
+      "title": "Beflügelt durch KI-Boom: Nvidia erreicht als erste Firma die 5-Billionen-Dollar-Bewertung",
+      "description": "Erneut stellt der Chipkonzern einen Rekord an den Börsen auf. Auch Alphabet, Meta und Microsoft profitieren vom KI-Boom im zurückliegenden Quartal. Doch allmählich zeichnet sich ab, dass die milliardenschweren KI-Investitionen manchen Anlegern zu viel werden.",
+      "content": "Erneut stellt der Chipkonzern einen Rekord an den Börsen auf. Auch Alphabet, Meta und Microsoft profitieren vom KI-Boom im zurückliegenden Quartal. Doch allmählich zeichnet sich ab, dass die milliardenschweren KI-Investitionen manchen Anlegern zu viel werden.",
+      "type": "news",
+      "source": "nzz",
+      "url": "#"
+    },
+    {
+      "id": "search-1ekns5",
+      "title": "Arbeitsmarkt: Warum KI im Job für mehr menschliche Konkurrenz sorgt | FAZ",
+      "description": "Weil KI die Einstiegshürde in vielen Jobs senkt, wächst der Bewerberkreis im Durchschnitt um zehn Prozent. Damit sinken auch die Löhne. Es sei denn, man gehört zu den Topexperten seines Metiers. Dann erhöht KI das Gehalt.",
+      "content": "Die große KI-Frage am Arbeitsmarkt lautet nicht mehr: Welche Berufe verschwinden? Sondern: Wer bekommt plötzlich Konkurrenz? Eine neue Studie zeigt, dass KI zwar einzelne Tätigkeiten ganz ersetzt, aber die große Mehrheit so viel leichter macht, dass auch weniger Erfahrung reicht. FAZ+ Zugriff auf alle Inhalte inklusive FAZ+ (Originalpreis: 13,80 €) jetzt nur 0,99 € Zugriff auf alle Inhalte inkl. FAZ+ (Originalpreis: 13,80 €) jetzt nur 0,99 € Mit einem Klick online kündbar WEITER WEITER Login Das",
+      "type": "news",
+      "source": "faz.net",
+      "url": "https://www.faz.net/pro/digitalwirtschaft/zukunft-der-arbeit/arbeitsmarkt-warum-ki-im-job-fuer-mehr-menschliche-konkurrenz-sorgt-accg-200457717.html",
+      "date": "2026-01-26T12:11:04"
+    },
+    {
+      "id": "search-1thr8g",
+      "title": "Amazon Stellenabbau: streicht 16.000 Arbeitsplätze weltweit | DWN",
+      "description": "Der Onlinehändler Amazon baut in einer zweiten Entlassungswelle Tausende Stellen ab. Künstliche Intelligenz und Automatisierung spielen eine...",
+      "content": "<iframe src=\"//www.googletagmanager.com/ns.html?id=GTM-MMHB4WB\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe> Politik Finanzen Wirtschaft Unternehmen Technologie Immobilien Abo Benutzername oder Email-Adresse Passwort vergessen Passwort Neu registrieren 2FA code RUBRIKEN Politik Finanzen Wirtschaft Unternehmen Technologie Immobilien AKTUELL Aktuell MEIN PROFIL Mein DWN Gespeicherte Artikel Persönliche Daten Abonnement Newsletter RUBRIKEN Politik Finanzen Wirtschaft Untern",
+      "type": "news",
+      "source": "deutsche-wirtschafts-nachrichten.de",
+      "url": "https://deutsche-wirtschafts-nachrichten.de/718776/stellenabbau-amazon-streicht-weltweit-16000-arbeitsplaetze",
+      "date": "2026-01-28T13:09:52"
+    },
+    {
+      "id": "search-1xy1l8",
+      "title": "Campus 42 schafft neue Ausbildungswege: Wels wird zum Hotspot für KI und Digitalisierung - Wels & Wels Land",
+      "description": "Das Ziel: Die Ausbildung hoch qualifizierter Fachkräfte für Informationstechnologie (IT) und digitale Entwicklungen der nächsten Generation. So möchte man einem prognostizierten Fachkräftemangel in puncto Digitalisierung in den Bereichen Forschung und Entwicklung entgegenwirken.",
+      "content": "Mit der Einrichtung des Ausbildungszentrums Campus 42 in Wels wollen die Stadt sowie heimische Wirtschaftsunternehmen ein neues Kapitel für Oberösterreichs Digitalzukunft aufschlagen. Schon jetzt kann man sich für einen Platz qualifizieren. WELS. Eine ganz neue Ausbildungsform verspricht die Ansiedelung von Campus 42 in Wels. Diese soll Spezialfachkräfte für die Wirtschaft hervorbringen. „Wir investieren gezielt in die Zukunft\", so Bürgermeister Andreas Rabl (FPÖ) \"Hier wird ein Ort geschaffen, ",
+      "type": "news",
+      "source": "meinbezirk.at",
+      "url": "https://www.meinbezirk.at/wels-wels-land/c-wirtschaft/wels-wird-zum-hotspot-fuer-ki-und-digitalisierung_a7985281",
+      "date": "2026-01-23T08:45:44"
+    },
+    {
+      "id": "search-32pybv",
+      "title": "Mehr Kündigungen auf Schweizer Arbeitsmarkt – diese Branchen sind besonders betroffen",
+      "description": "Ein unerwartetes Bild habe sich derweil bei der Branchenmobilität gezeigt. Mit 53 Prozent der Gekündigten wechselten über die Hälfte in eine andere Branche. Im Vorjahr 2024 waren es nur 44 Prozent gewesen.",
+      "content": "SchweizWirtschaftVor allem Banken und Pharma: Mehr Kündigungen auf Schweizer ArbeitsmarktMehr Kündigungen auf Schweizer Arbeitsmarkt – diese Branchen sind besonders betroffenAm Schweizer Arbeitsmarkt sind im letzten Jahr die Anzahl Kündigungen gestiegen. Vor allem betroffen waren die Pharma- und Bankenbranche.2729.01.2026, 06:2429.01.2026, 06:24Zu diesem Schluss kommt der am Mittwoch veröffentlichte Arbeitsmarkt-Barometer des Personaldienstleisters Alixio. Die Analyse basiert auf Daten von 2668 ",
+      "type": "news",
+      "source": "watson.ch",
+      "url": "https://www.watson.ch/schweiz/wirtschaft/840167870-vor-allem-banken-und-pharma-mehr-kuendigungen-auf-schweizer-arbeitsmarkt",
+      "date": "2026-01-29T05:24:03"
+    },
+    {
+      "id": "search-38ylxd",
+      "title": "Infosys erweitert seine Präsenz in der Schweiz mit neuem Büro in Zürich - Fokus liegt darauf, Enterprise-AI schneller in Unternehmen einzuführen",
+      "description": "Durch den Einsatz von Infosys Topaz, einem AI-first-Angebot auf Basis generativer KI-Technologien, und Infosys Cobalt, einer Reihe von Dienstleistungen, Lösungen und Plattformen, um die Cloud-Einführung für Unternehmen zu beschleunigen, ...",
+      "content": "Neues Büro stärkt die 25-jährige Präsenz von Infosys in der Schweiz und vertieft die Zusammenarbeit mit KundenZÜRICH, 23. Januar 2026 /PRNewswire/ -- Infosys (NSE: INFY) (BSE: INFY) (NYSE: INFY), ein weltweit führender Anbieter von digitalen Dienstleistungen und Beratung der nächsten Generation, eröffnet sein neues Büro in Zürich. Der Umzug des Schweizer Hauptsitzes in den Komplex „The Circle\" am Flughafen Zürich ist ein wichtiger Meilenstein in der 25-jährigen Präsenz von Infosys in diesem Land",
+      "type": "news",
+      "source": "prnewswire.com",
+      "url": "https://www.prnewswire.com/news-releases/infosys-erweitert-seine-prasenz-in-der-schweiz-mit-neuem-buro-in-zurich--fokus-liegt-darauf-enterprise-ai-schneller-in-unternehmen-einzufuhren-302668949.html",
+      "date": "2026-01-23T12:58:08"
+    },
+    {
+      "id": "search-3j7p4e",
+      "title": "Nordwest und Rhenus verlängern Partnerschaft in Alsfeld",
+      "description": "„Wir werden unseren Servicegrad weiter erhöhen – unter anderem durch verlängerte Auftragsannahmezeiten, modernes Tracking und Tracing sowie zusätzliche logistische Dienstleistungen“, sagt Bastian Wolfgarten, Geschäftsbereichsleiter Logistik bei Nordwest. Bei der Gestaltung der Arbeitsplätze habe man besonderen Wert auf Ergonomie gelegt, um körperliche Belastungen zu reduzieren. Automatisierung, moderne Technologien und smarte Systeme sollen die Arbeit effizienter und attraktiver machen.",
+      "content": "Home Nachrichten Lager + Umschlag Nordwest und Rhenus verlängern Partnerschaft in Alsfeld Nordwest und Rhenus verlängern Partnerschaft in Alsfeld 26.01.2026 13:37 Uhr | Lesezeit: 3 min Rhenus übernimmt den Betrieb des neuen Nordwest-Zentrallagers © Foto: Nordwest & Rhenus Logistics Mit dem neuen Logistikzentrum in Hessen schaffen Nordwest und Rhenus moderne Arbeitsplätze und zusätzliche Kapazitäten. von Stefanie Schuhmacher Kommentare Teilen Folgen auf: #Nordwest #Rhenus Logistics #Logistikimmob",
+      "type": "news",
+      "source": "verkehrsrundschau.de",
+      "url": "https://www.verkehrsrundschau.de/nachrichten/lager-umschlag/nordwest-und-rhenus-verlaengern-partnerschaft-in-alsfeld-3760979",
+      "date": "2026-01-26T12:45:04"
+    },
+    {
+      "id": "search-3l7che",
+      "title": "OpenAI: Amazon will mit bis zu 50 Milliarden Dollar bei ChatGPT ...",
+      "description": "Nach Informationen des Wirtschaftssenders CNBC könnte die Investition in den kommenden Wochen festgezurrt werden. Amazon will stärker auf künstliche Intelligenz setzen und baut in zwei Wellen 30.000 Arbeitsplätze in der Verwaltung ab.",
+      "content": "Zur Merkliste hinzufügen Artikel anhören (3 Minuten) 3 Min X.com Facebook E-Mail Link kopieren Weitere Optionen zum Teilen X.com Facebook E-Mail Messenger WhatsApp Link kopieren Bild vergrößern OpenAI-Schriftzug Foto: Dado Ruvic / REUTERS Amazon verhandelt Medienberichten zufolge über eine Investition von bis zu 50 Milliarden US-Dollar in den ChatGPT-Entwickler OpenAI. Zu dem Deal könne auch dazugehören, dass OpenAI Rechenleistung bei Amazon bezieht, schrieb der Finanzdienst Bloomberg. Der weltg",
+      "type": "news",
+      "source": "spiegel.de",
+      "url": "https://www.spiegel.de/wirtschaft/geld-und-rechenleistung-amazon-will-mit-bis-zu-50-milliarden-dollar-bei-chatgpt-einsteigen-a-15763fe9-8cbf-4140-ab24-c809a8cbfe74",
+      "date": "2026-01-30T10:32:00"
+    },
+    {
+      "id": "search-3tmed9",
+      "title": "Automatisierung beschleunigt Umbau: Amazon plant weiteren Stellenabbau – KI rückt ins Zentrum der Organisation",
+      "description": "Insgesamt lag die Zahl der Beschäftigten damit bei rund 1,55 Millionen. Der aktuelle Stellenabbau betrifft vor allem Funktionen, die zunehmend automatisiert oder durch KI-gestützte Prozesse ersetzt werden können.",
+      "content": "News Automatisierung beschleunigt Umbau Amazon plant weiteren Stellenabbau – KI rückt ins Zentrum der Organisation 23.01.2026, 18:53 Uhr Jetzt kommentieren: 0 © Bild von Alexa auf Pixabay Der Technologiekonzern Amazon bereitet offenbar eine neue Entlassungsrunde vor. Nach Medienberichten sollen rund 14.000 Arbeitsplätze wegfallen, da Künstliche Intelligenz zunehmend Aufgaben übernimmt, die bislang von Menschen erledigt wurden. Die Maßnahmen sollen bereits in der kommenden Woche anlaufen und betr",
+      "type": "news",
+      "source": "boersennews.de",
+      "url": "https://www.boersennews.de/nachrichten/artikel/boersennews/automatisierung-beschleunigt-umbau-amazon-plant-weiteren-stellenabbau-ki-rueckt-ins-zentrum-der-organisation/5018247/",
+      "date": "2026-01-23T16:53:18"
+    },
+    {
+      "id": "search-4xsd6f",
+      "title": "IT-Arbeitsmarkt trübt sich weiter ein",
+      "description": "Based on data from the staffing agency Hays, IT specialists are still in demand, but not as much as before. The number of job advertisements continues to fall.",
+      "content": "<img src=\"https://heise.cloudimg.io/width/16/q50.png-lossy-50.webp-lossy-50.foil1/_www-heise-de_/$%7Bimage%7D\" srcset=\" https://heise.cloudimg.io/width/336/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 336w, https://heise.cloudimg.io/width/1008/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 1008w, https://heise.cloudimg.io/width/16/q30.png-lossy-30.webp-lossy-30.foil1/_www-heise-de_/$%7Bimage%7D 16w, https://heise.cloudimg.io/width/32/q30.png-lossy-30.webp-lo",
+      "type": "news",
+      "source": "heise.de",
+      "url": "https://www.heise.de/en/news/IT-job-market-continues-to-cool-down-11158867.html",
+      "date": "2026-01-29T12:46:00"
+    },
+    {
+      "id": "search-5dn3gd",
+      "title": "How AI could transform work by 2030 4 possible scenarios | World Economic Forum",
+      "description": "AI is here. Its rapid development has carried it from experiments to a key part of the everyday economy in the blink of an eye. But does the explosion in AI spell a new era of better #jobs, higher productivity and stable growth?",
+      "content": "",
+      "type": "news",
+      "source": "weforum.org",
+      "url": "https://www.weforum.org/videos/work-2030/",
+      "date": "2026-01-16T11:05:48"
+    },
+    {
+      "id": "search-64mlzl",
+      "title": "Dataforce-Studie zu großen Dienstwagenflotten: Warum große Pkw-Flotten weiter expandieren",
+      "description": "Nur zehn Prozent gehen von einer Reduzierung aus.Treiber dieser Entwicklung ist vor allem das Unternehmenswachstum selbst. Steigende Mitarbeiterzahlen erhöhen den Mobilitätsbedarf – der Dienstwagen bleibt dabei ein zentrales Instrument, um Fachkräfte zu gewinnen und zu binden.",
+      "content": "StartseiteBrancheDataforce-Studie: Große Pkw-Flotten im WandelDataforce-Studie zu großen Dienstwagenflotten : Warum große Pkw-Flotten weiter expandierenEin Drittel der großen Pkw-Flotten plant Wachstum, nur wenige reduzieren. Die Dataforce-Studie zeigt, wo Fuhrparks unter Druck stehen – und wo neue Anbieter Chancen finden. Der Überblick.Nicole Holzer27.01.2026Foto: BilobabaVladimirvonAviavlad@viaCanvaWachsen oder zumindest stabil bleiben – so lautet die strategische Marschrichtung vieler großer ",
+      "type": "news",
+      "source": "firmenauto.de",
+      "url": "https://www.firmenauto.de/branche/dataforce-studie-grosse-pkw-flotten-wachstum-elektrifizierung-beschaffung/",
+      "date": "2026-01-27T10:19:38"
+    },
+    {
+      "id": "search-6y35rp",
+      "title": "Weiterbildung mit Perspektive: Die FAIN Bildungs-GmbH als Partner für Fachkräfte - Mittelstand Cafe",
+      "description": "Die sorgfältig konzipierten Lehrgänge sind darauf ausgelegt, Fachkräfte optimal für aktuelle und zukünftige Anforderungen zu qualifizieren. Zukunftsrelevante Themen wie Digitalisierung, Nachhaltigkeit oder moderne Personalführung sind fest und systematisch in den Curricula verankert und werden kontinuierlich aktualisiert.",
+      "content": "Weiterbildung mit Perspektive: Die FAIN Bildungs-GmbH als Partner für Fachkräfte von Presse am 27. Januar 2026Kein Kommentar Auf Facebook teilen Follow on Facebook Add to Google+ Verbindung zu Linked in Subscribe by Email Drucken Perspektive und Erfahrungen mit der FAIN Bildungs-GmbH (Die Bildrechte liegen bei dem Verfasser der Mitteilung.) Mit seinem breit gefächerten und durchdachten Weiterbildungsangebot schafft FAIN eine solide und verlässliche Grundlage für die langfristige berufliche Weite",
+      "type": "news",
+      "source": "mittelstandcafe.de",
+      "url": "https://www.mittelstandcafe.de/weiterbildung-mit-perspektive-die-fain-bildungs-gmbh-als-partner-f-r-fachkr-fte-2227139.html",
+      "date": "2026-01-27T12:50:28"
+    },
+    {
+      "id": "search-7h4buz",
+      "title": "McKinsey Boss Says AI Is Reshaping Its Workforce With Cuts and New Jobs - Business Insider",
+      "description": "McKinsey chief Bob Sternfels said AI had led to a shift in its workforce, with half the business adding jobs and the other half shrinking.",
+      "content": "<img class=\"no-script\" src=\"/public/assets/logos/placeholder.png\" /> Business Insider tells the innovative stories you want to know <img class=\"no-script\" src=\"/public/assets/logos/placeholder.png\" /> Business Insider tells the innovative stories you want to know <img class=\"no-script\" src=\"/public/assets/logos/placeholder.png\" /> Business Insider tells the innovative stories you want to know <img class=\"no-script\" src=\"/public/assets/logos/placeholder.png\" /> Business Insider tells the innovati",
+      "type": "news",
+      "source": "businessinsider.com",
+      "url": "https://www.businessinsider.com/mckinsey-chief-ai-cutting-adding-jobs-growth-ai-agents-2026-1",
+      "date": "2026-01-07T21:18:10"
+    },
+    {
+      "id": "search-7kzkkh",
+      "title": "WEF mapped out 4 AI-driven futures for jobs by 2030, and only one looks good for humanity",
+      "description": "The World Economic Forum found that AI will reshape most jobs by 2030, with only one path limiting major displacement.",
+      "content": "<img class=\"no-script\" src=\"/public/assets/logos/placeholder.png\" /> Business Insider tells the innovative stories you want to know <img class=\"no-script\" src=\"/public/assets/logos/placeholder.png\" /> Business Insider tells the innovative stories you want to know <img class=\"no-script\" src=\"/public/assets/logos/placeholder.png\" /> Business Insider tells the innovative stories you want to know <img class=\"no-script\" src=\"/public/assets/logos/placeholder.png\" /> Business Insider tells the innovati",
+      "type": "news",
+      "source": "businessinsider.com",
+      "url": "https://www.businessinsider.com/wef-sees-4-ai-futures-for-jobs-by-2030-only-one-limits-disruption-2026-1",
+      "date": "2026-01-09T12:11:45"
+    },
+    {
+      "id": "search-7m9kut",
+      "title": "Große Studie aus 3 Ländern zeigt: KI vernichtet keine Jobs – aber verändert sie komplett",
+      "description": "Der Arbeitsmarkt ordnet sich neu, ohne zu schrumpfen. Weiterbildung wird damit zur Schlüsselressource. Handwerk, Pflege und andere körperlich geprägte Berufe zeigen sich bislang robust. Diese Tätigkeiten erfordern Präsenz, Kraft und direkten Kontakt. KI greift hier kaum ein.",
+      "content": "Mannheim24WeltSorge vor KI als Jobkiller – obwohl kaum Arbeitsplätze verloren gehenStand: 30.01.2026, 10:23 UhrKommentareDruckenTeilenText- und sprachbasierte KI übernehmen mittlerweile Teile klassischer Büroarbeit. Anders sieht es bei körpernahen Berufen aus. © IMAGO / Funke Foto ServicesDie Angst vor Jobverlust durch KI beunruhigt viele Arbeitnehmer – und hat sogar politische Folgen. Eine Studie zeigt nun, welche Auswirkungen Künstliche Intelligenz wirklich auf die Arbeitswelt hat.Künstliche I",
+      "type": "news",
+      "source": "mannheim24.de",
+      "url": "https://www.mannheim24.de/welt/sorge-vor-ki-als-jobkiller-obwohl-kaum-arbeitsplaetze-verloren-gehen-zr-94146761.html",
+      "date": "2026-01-30T09:23:48"
+    },
+    {
+      "id": "search-886bzv",
+      "title": "Große Studie aus 3 Ländern zeigt: KI vernichtet keine Jobs – aber verändert sie komplett",
+      "description": "Künstliche Intelligenz vernichtet kaum Arbeitsplätze, verändert aber Aufgaben und Jobprofile deutlich; entscheidend ist nicht der Wegfall von Stellen, sondern der steigende Bedarf an neuen Qualifikationen.",
+      "content": "StartseiteWissenSorge vor KI als Jobkiller – obwohl kaum Arbeitsplätze verloren gehenStand: 30.01.2026, 10:23 UhrKommentareDruckenTeilenText- und sprachbasierte KI übernehmen mittlerweile Teile klassischer Büroarbeit. Anders sieht es bei körpernahen Berufen aus. © IMAGO / Funke Foto ServicesDie Angst vor Jobverlust durch KI beunruhigt viele Arbeitnehmer – und hat sogar politische Folgen. Eine Studie zeigt nun, welche Auswirkungen Künstliche Intelligenz wirklich auf die Arbeitswelt hat.Künstliche",
+      "type": "news",
+      "source": "fr.de",
+      "url": "https://www.fr.de/wissen/sorge-vor-ki-als-jobkiller-obwohl-kaum-arbeitsplaetze-verloren-gehen-zr-94146761.html",
+      "date": "2026-01-30T09:23:48"
+    },
+    {
+      "id": "search-8ilfcs",
+      "title": "\"Wer mit KI erfolgreich sein will, sollte nicht über Tools, sondern über Führung, Beteiligung und Fairness sprechen\" | Itwelt",
+      "description": "Produktivität durch intelligente Automatisierung, nicht durch Tool-Flut. Viele Unternehmen haben technisch alles, was sie brauchen – sie scheitern aber an schlechter Integration, unklaren Prozessen und mangelnder Akzeptanz.",
+      "content": "Im Interview mit ITWelt.at gibt Joerg Spreitzer, Managing Partner von Great Place To Work Österreich, einen Ausblick auf die wichtigsten IT-Trends 2026 und erklärt, warum KI-Readiness keine reine Kompetenzfrage, sondern vor allem eine Vertrauensfrage ist. [...] <img src=\"https://d020f13e.delivery.rocketcdn.me/wp-content/uploads/Joerg-Spreitzer-Presse2-678x509.jpg\" alt=\"\"/> Joerg Spreitzer ist Managing Partner von Great Place To Work Österreich. (c) Great Place To Work Welche IT-Trends werden 202",
+      "type": "news",
+      "source": "itwelt.at",
+      "url": "https://itwelt.at/news/interview/wer-mit-ki-erfolgreich-sein-will-sollte-nicht-ueber-tools-sondern-ueber-fuehrung-beteiligung-und-fairness-sprechen/",
+      "date": "2026-01-29T15:33:02"
+    },
+    {
+      "id": "search-9ze7bt",
+      "title": "KI und Jobs: Was kommt auf die Schweiz zu?",
+      "description": "Anders sehe es aber in spezifischen ... Schweiz sieht die Konjunkturforschungsstelle KOF einen Rückgang der Stellenausschreibungen in Berufen mit hoher KI-Exponierung....",
+      "content": "Von Andreas Cassee | Gesellschaft & Technik | 27.11.2025 KI und Jobs: Was kommt auf die Schweiz zu? Welchen Einfluss hat KI bereits heute auf den Arbeitsmarkt? Mit welchen Veränderungen ist in Zukunft zu rechnen? Und wie können wir auf diese Entwicklungen politisch reagieren? Darüber sprach Moritz Zumbühl (Mitgründer und Verwaltungsrat Feinheit) im Rahmen eines Online-FeinTalks mit Danny Bürkli (Windfall Trust, Mitgründer staatslabor). Danny unterscheidet zu Beginn der Veranstaltung drei Faktore",
+      "type": "news",
+      "source": "feinheit.ch",
+      "url": "https://feinheit.ch/blog/ki-und-jobs-was-kommt-auf-die-schweiz-zu/",
+      "date": "2026-01-26T06:17:42"
+    },
+    {
+      "id": "search-a6js8c",
+      "title": "56% of companies getting nothing out of AI, PwC research says; chairman blames forgetting the basics | Fortune",
+      "description": "The transformation of the CEO role is trickling down to the workforce, necessitating a reimagining of career paths. Kande warned that the traditional “apprenticeship model”—where entry-level employees learn by doing basic tasks—is being ...",
+      "content": "<iframe class=\"\" height=\"0\" src=\"https://www.googletagmanager.com/ns.html?id=GTM-N68KRG3&amp;gtm_auth=vyyzgXnL2OSk1qxPfrdxWw&amp;gtm_preview=env-2\" style=\"display:none;visibility:hidden\" title=\"fortune-gtm\" width=\"0\"></iframe>C-SuiteConsultingPwC’s global chairman says most leaders have forgotten ‘the basics’ as new research shows 56% are still getting ‘nothing’ out of AI adoptionBy Diane BradyDiane Brady and Nick LichtenbergNick LichtenbergDown Arrow Button IconBy Diane BradyDiane Brady and Nic",
+      "type": "news",
+      "source": "fortune.com",
+      "url": "https://fortune.com/2026/01/19/pwc-global-chairman-mohamed-kande-ai-nothing-basics-29th-ceo-survey-davos-world-economic-forum/",
+      "date": "2026-01-20T22:57:48"
+    },
+    {
+      "id": "search-abkxrq",
+      "title": "Davos 2026: Investing in women is the smartest bet for an AI driven global economy, says WEF - BusinessToday",
+      "description": "he WEF’s Future of Jobs Report 2023 estimates that 22% of today’s jobs will be transformed by AI over the next five years. While 69 million new roles are expected to emerge, 83 million jobs could be displaced — resulting in a net loss ...",
+      "content": "<img src=\"https://sb.scorecardresearch.com/p?c1=2&amp;c2=8549097&amp;cv=3.6.0&amp;cj=1\" loading=\"lazy\"/>Business TodayBT BazaarIndia TodayNortheastIndia Today GamingCosmopolitanHarper's BazaarBrides TodayIshq FMAaj TakGNTTVKisan TakLallantopMalyalamBanglaSports TakCrime TakAajtak CampusAstro takFollow Us On:SearchAdvertisement HomeMarketBT TVReelsMenuBusiness Newswef-2026Davos 2026: Investing in women is the smartest bet for an AI-driven global economy, says WEFDavos 2026: Investing in women is ",
+      "type": "news",
+      "source": "businesstoday.in",
+      "url": "https://www.businesstoday.in/wef-2026/story/wef-summit-davos-2026-women-ai-global-economy-women-workforce-511374-2026-01-18",
+      "date": "2026-01-18T12:43:33"
+    },
+    {
+      "id": "search-bp1rr4",
+      "title": "McKinsey CEO says 25000 \"employees\" in his company are AI agents and around 40000 are humans",
+      "description": "Sternfels revealed that at McKinsey, ... model. Under this model, the company is growing its client-facing roles by about 25 per cent, while cutting non-client-facing jobs by roughly the same amount....",
+      "content": "McKinsey CEO says 25000 \"employees\" in his company are AI agents and around 40000 are humans Bob Sternfels, CEO of McKinsey & Company, revealed that the company has around 60,000 employees, including 25,000 AI agents and 40,000 human employees.AdvertisementRepresentative image created using AI Divya BhatiNew Delhi,UPDATED: Jan 14, 2026 14:14 ISTThe global consulting giant McKinsey & Company currently has a workforce of over 60,000. Out of this, around 25,000 “employees” are AI agents working alo",
+      "type": "news",
+      "source": "indiatoday.in",
+      "url": "https://www.indiatoday.in/technology/news/story/mckinsey-ceo-says-25000-employees-in-his-company-are-ai-agents-and-around-40000-are-humans-2851734-2026-01-14",
+      "date": "2026-01-14T08:44:45"
+    },
+    {
+      "id": "search-bxvjq0",
+      "title": "A US productivity unlock: Investing in frontline workers’ AI skills",
+      "description": "For years, employers in frontline-heavy industries have battled to find, hire, engage, and retain talent. Now employers say it’s not just a matter of having enough workers—it’s having workers with the right skills as AI and related technologies transform frontline jobs.",
+      "content": "",
+      "type": "news",
+      "source": "mckinsey.com",
+      "url": "https://www.mckinsey.com/capabilities/operations/our-insights/a-us-productivity-unlock-investing-in-frontline-workers-ai-skills",
+      "date": "2026-01-15T00:00:00"
+    },
+    {
+      "id": "search-cga8wm",
+      "title": "KI vernichtet keine Jobs, sondern verändert sie | Computerworld",
+      "description": "Eine Studie des Kiel Instituts für Weltwirtschaft sieht Know-how-Bedarf bei höherqualifizierter Arbeit. Künstliche Intelligenz (KI) vernichtet keine Arbeitsplätze, sondern verändert sie.",
+      "content": "Anzeige Anzeige Anzeige Anzeige Patrick Hediger Florian Fügemann 27. Jan 2026 Lesedauer 2 Min. KI vernichtet keine Jobs, sondern verändert sie Studie Eine Studie des Kiel Instituts für Weltwirtschaft sieht Know-how-Bedarf bei höherqualifizierter Arbeit. Künstliche Intelligenz (KI) vernichtet keine Arbeitsplätze, sondern verändert sie. © DALL-E Teilen Laut einer neuen Analyse unter Beteiligung des Kiel Instituts für Weltwirtschaft stellen Unternehmen mit starker KI-Nutzung häufiger Fachkräfte ein",
+      "type": "news",
+      "source": "computerworld.ch",
+      "url": "https://www.computerworld.ch/themen/kuenstliche-intelligenz-ki/ki-vernichtet-keine-jobs-sondern-veraendert-sie",
+      "date": "2026-01-27T09:58:42"
+    },
+    {
+      "id": "search-d5bfvd",
+      "title": "Young will suffer most when AI ‘tsunami’ hits jobs, says head of IMF | AI (artificial intelligence) | The Guardian",
+      "description": "“We expect over the next years, in advanced economies, 60% of jobs to be affected by AI, either enhanced or eliminated or transformed – 40% globally,” she said. “This is like a tsunami hitting the labour market.”",
+      "content": "Kristalina Georgieva said AI would wipe out many roles traditionally taken up by younger workers. Photograph: Denis Balibouse/ReutersView image in fullscreenKristalina Georgieva said AI would wipe out many roles traditionally taken up by younger workers. Photograph: Denis Balibouse/ReutersYoung will suffer most when AI ‘tsunami’ hits jobs, says head of IMFKristalina Georgieva says research suggests 60% of jobs in advanced economies will be affected, with many entry-level roles wiped outArtificia",
+      "type": "news",
+      "source": "theguardian.com",
+      "url": "https://www.theguardian.com/technology/2026/jan/23/ai-tsunami-labour-market-youth-employment-says-head-of-imf-davos",
+      "date": "2026-01-24T08:27:38"
+    },
+    {
+      "id": "search-ddux51",
+      "title": "Jobsuche Schweiz: So optimieren Sie Ihre Bewerbung für KI | Beobachter",
+      "description": "Künstliche Intelligenz spielt eine wichtige Rolle bei Stellenbewerbungen in der Schweiz. Experten empfehlen, sich eng am Stelleninserat zu orientieren und alle relevanten Zertifikate einzureichen.",
+      "content": "Fünf TippsJobsuche mit KI – so optimieren Sie Ihre BewerbungImmer häufiger entscheidet eine künstliche Intelligenz über Stellenbewerbungen. Der Beobachter verrät, wie man das zu seinem Vorteil nutzen kann.Katharina SiegristVeröffentlicht am 27. Januar 2026 - 06:00 UhrWenn eine künstliche Intelligenz die Bewerbung beurteilt, verliert das Motivationsschreiben an Wichtigkeit. Bild: Freepik; Gemini / KI generiert – Illustration: Joël BorterAnhörenTeilenDruckenMerkenKommentareVorlesenfunktion nicht v",
+      "type": "news",
+      "source": "beobachter.ch",
+      "url": "https://www.beobachter.ch/arbeit-bildung/stellensuche/jobsuche-mit-ki-so-optimieren-sie-ihre-bewerbung-874239",
+      "date": "2026-01-27T05:00:00"
+    },
+    {
+      "id": "search-dhgxfb",
+      "title": "Die juristische Zeitfalle: Wie ein Gesetz von 1976 jede Online-Weiterbildung abwürgt - DOCMA",
+      "description": "Täglich frisches Wissen für Kreative, Fotografen, Bildbearbeiter und KI-Künstler - von Profis, aber nicht nur für Profis",
+      "content": "Haben Sie vor, Ihr Wissen über Bildbearbeitung, Fotografie oder KI-gestützte Workflows in einem Online-Kurs gegen Honorar zu teilen? Wer heute digitale Weiterbildung gegen Geld anbieten will, sollte besser einen Seminarraum mieten – alles andere ist gerade ein juristisches Glücksspiel mit Spielregeln aus der Zeit der ersten Taschenrechner.Ein Urteil des Bundesgerichtshofs katapultiert die digitale Bildungslandschaft mit Anlauf zurück in eine Zeit, in der das Internet noch eine vage Idee in den K",
+      "type": "news",
+      "source": "docma.info",
+      "url": "https://www.docma.info/blog/die-juristische-zeitfalle-wie-ein-gesetz-von-1976-die-online-weiterbildung-abwurgt",
+      "date": "2026-01-27T15:32:13"
+    },
+    {
+      "id": "search-dr29e7",
+      "title": "Schweizer Arbeitsmarkt: Gewinner- und Verliererbranchen | Handelszeitung",
+      "description": "Rundstedt-Manager Scheiwiller macht Mut: «Der Arbeitsmarkt wird auch in diesem Jahr ausgeglichen und im Lot bleiben.» Selbst Personen mit herausfordernden Profilen suchen im Schnitt «nur» 10 Monate nach einem neuen Job – fast gleich lang ...",
+      "content": "HomeKonjunkturSchweizer Arbeitsmarkt: Gewinner- und VerliererbranchenSchweizer Jobmarkt unter DruckWarum nicht überall Schwarzmalen angesagt istStellensuchende nehmen zu, vor allem Pharma, Banken und IT bauen Jobs ab. Trotzdem bleibt der Arbeitsmarkt aufnahmefähig.Lesezeit: 3 MinutenTeilenMerkenDruckenKommentareGoogle NewsArtikel teilenIn der Pharma- und Life-Sciences-Branche häufen sich die Kündigungen. So baut Novartis im Kanton Aargau mehrere Hundert Stellen ab bis 2027.Quelle: Getty ImagesVo",
+      "type": "news",
+      "source": "handelszeitung.ch",
+      "url": "https://www.handelszeitung.ch/konjunktur/warum-nicht-uberall-schwarzmalen-angesagt-ist-903602",
+      "date": "2026-01-30T14:34:01"
+    },
+    {
+      "id": "search-eacicg",
+      "title": "Unlocking the Future: PwC's Insights on AI and Its Transformative Impact - Oreate AI Blog",
+      "description": "In its 2024 Global AI Jobs Barometer, PwC highlights a staggering growth in job openings related to artificial intelligence—three-and-a-half times faster than other sectors since 2012.",
+      "content": "HomeContentUnlocking the Future: PwC's Insights on AI and Its Transformative Impact Artificial Intelligence (AI) is no longer just a buzzword; it’s becoming an integral part of our business landscape. According to recent reports from PwC, we are standing at the precipice of a revolution that could redefine industries and reshape economies worldwide. In their 2026 AI Business Predictions, PwC outlines how focused strategies and responsible innovation can drive transformative value for businesses.",
+      "type": "news",
+      "source": "oreateai.com",
+      "url": "https://www.oreateai.com/blog/unlocking-the-future-pwcs-insights-on-ai-and-its-transformative-impact/5c730bb07bfed61959fc47f2fb661a58",
+      "date": "2026-01-07T02:20:39"
+    },
+    {
+      "id": "search-f877hu",
+      "title": "Pearson and Deloitte announce new alliance to equip enterprises and government organizations with AI-powered learning and address the global skills gap",
+      "description": "13, 2026 /PRNewswire/ -- Pearson (FTSE: PSON.L) and Deloitte today announced an alliance to co-develop and deliver end-to-end talent, leadership, and workforce development solutions for global enterprises and government organizations.",
+      "content": "(PRNewsfoto/Pearson Education, Inc.) NEW YORK and LONDON, Jan. 13, 2026 /PRNewswire/ -- Pearson (FTSE: PSON.L) and Deloitte today announced an alliance to co-develop and deliver end-to-end talent, leadership, and workforce development solutions for global enterprises and government organizations. The collaboration will draw upon Deloitte and Pearson's distinctive, industry-specific experience and breadth of capabilities to develop products and services that address immediate market needs includi",
+      "type": "news",
+      "source": "prnewswire.com",
+      "url": "https://www.prnewswire.com/news-releases/pearson-and-deloitte-announce-new-alliance-to-equip-enterprises-and-government-organizations-with-ai-powered-learning-and-address-the-global-skills-gap-302659558.html",
+      "date": "2026-01-13T11:00:00"
+    },
+    {
+      "id": "search-fn8ciy",
+      "title": "Evidence of AI-driven job losses remains limited, says Oxford Economics report - Workplace Insight",
+      "description": "While the authors acknowledge that AI could lead to more significant labour market disruption in the future, they stress that this is a risk rather than an inevitability. For now, they conclude, the macroeconomic impact of AI on jobs remains limited...",
+      "content": "January 13, 2026 Evidence of AI-driven job losses remains limited, says Oxford Economics report by Neil Franklin • AI, News Claims that artificial intelligence is already driving large-scale job losses appear to be overstated, according to a new global research briefing from Oxford Economics [registration], which suggests that the impact of AI on labour markets so far has been uneven and modest. The report argues that while there is anecdotal evidence of job losses in sectors most exposed to aut",
+      "type": "news",
+      "source": "workplaceinsight.net",
+      "url": "https://workplaceinsight.net/evidence-of-ai-driven-job-losses-remains-limited-says-oxford-economics-report/",
+      "date": "2026-01-13T07:39:31"
+    },
+    {
+      "id": "search-fweosk",
+      "title": "Schwere Berichtssaison und Arbeitsmarktdaten stellen US-Aktien nach Microsoft-Einbruch auf die Probe | MarketScreener Schweiz",
+      "description": "Da sich der Aktienmarkt im vierten Jahr eines Bullenmarktes befindet, zeigen sich Anleger angesichts steigender Bewertungen vorsichtig, insbesondere bei den Highflyern, die von der Euphorie um künstliche Intelligenz getriebene Gewinne profitieren.",
+      "content": "WALT DISNEY COMPANY (THE)Zu einer Liste hinzufügenPDF-Bericht Walt Disney Company (The) Aktien 855686 US2546871060 DIS Audiovisuell Realtime-Estimate Cboe BZX Andere Börsenplätze 21:23:51 30.01.2026 % 5 Tage Veränd. 1. Jan. 112.20 USD +0.56% +1.27% -1.21% 18:04 Tagebuch – US-Unternehmensgewinne in der kommenden Woche RE 17:57 Optimismus auf den europäischen Märkten: Der CAC 40 nähert sich der Marke von 8.130 Punkten Schwere Berichtssaison und Arbeitsmarktdaten stellen US-Aktien nach Microsoft-Ei",
+      "type": "news",
+      "source": "ch.marketscreener.com",
+      "url": "https://ch.marketscreener.com/boerse-nachrichten/schwere-berichtssaison-und-arbeitsmarktdaten-stellen-us-aktien-nach-microsoft-einbruch-auf-die-probe-ce7e5bdcda8bf52d",
+      "date": "2026-01-30T11:06:39"
+    },
+    {
+      "id": "search-g4h0rs",
+      "title": "Cognizant Technology Solutions und Adobe kooperieren zur Skalierung von Generativer KI für Unternehmen | MarketScreener Schweiz",
+      "description": "Cognizant Technology Solutions gab am Freitag bekannt, dass das Unternehmen mit Adobe zusammenarbeitet, um Unternehmen dabei zu unterstützen, generative künstliche Intelligenz für die...",
+      "content": "ADOBE INC.Zu einer Liste hinzufügenPDF-Bericht Adobe Inc. Aktien 871981 US00724F1012 ADBE Software Realtime-Estimate Cboe BZX Andere Börsenplätze 21:24:11 30.01.2026 % 5 Tage Veränd. 1. Jan. 292.64 USD +0.34% -2.75% -16.35% 16:22 Cognizant Technology Solutions beschleunigt KI-gesteuerte Kreativität und Transformation von Kundenerlebnissen im Unternehmensmaßstab mit Adobe CI 16:16 Cognizant Technology Solutions und Adobe kooperieren zur Skalierung von Generativer KI für Unternehmen MT Cognizant T",
+      "type": "news",
+      "source": "ch.marketscreener.com",
+      "url": "https://ch.marketscreener.com/boerse-nachrichten/cognizant-technology-solutions-und-adobe-kooperieren-zur-skalierung-von-generativer-ki-fuer-unternehm-ce7e5bdcdf8bff20",
+      "date": "2026-01-30T15:16:38"
+    },
+    {
+      "id": "search-h7g3ry",
+      "title": "McKinsey boss Bob Sternfels breaks down how AI is changing consulting jobs: Non-client-facing roles are shrinking, and jobs that are growing are… - The Times of India",
+      "description": "McKinsey is experiencing a workforce transformation driven by AI, with its top boss revealing that the consulting giant now employs 25,000 AI agents alongside 40,000 human employees—and expects those numbers to match by year&#x27;s end.Bob Sternfels, ...",
+      "content": "EditionININUSEnglishEnglishहिन्दीमराठीಕನ್ನಡதமிழ்বাংলাമലയാളംతెలుగుગુજરાતીWeatherSign InTOIToday's ePaperNewsTechnology NewsTech NewsMcKinsey boss Bob Sternfels breaks down how AI is changing consulting jobs: Non-client-facing roles are shrinking, and jobs that are growing are…TrendingNYT Connections HintsJeff BezosWordle Today CluesNvidiaSam AltmanCES 2026Mustafa SuleymanJensen HuangDeepinder GoyalMark ZuckerbergNYT Connections HintsJeff BezosWordle Today CluesNvidiaSam AltmanCES 2026Mustafa Sule",
+      "type": "news",
+      "source": "timesofindia.indiatimes.com",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/mckinsey-boss-bob-sternfels-breaks-down-how-ai-is-changing-consulting-jobs-non-client-facing-roles-are-shrinking-and-jobs-that-are-growing-are/articleshow/126461541.cms",
+      "date": "2026-01-11T05:02:00"
+    },
+    {
+      "id": "search-he3uif",
+      "title": "OpenAI startet Prism: KI-Workspace für wissenschaftliches Arbeiten",
+      "description": "OpenAI hat Prism gelauncht, einen neuen Workspace für wissenschaftliches Schreiben. Die Plattform ist kostenlos für alle mit einem ChatGPT-Account verfügbar und integriert das Sprachmodell GPT-5.2 direkt in den Arbeitsablauf. Prism soll Textverarbeitung, Literaturrecherche und Kollaboration in einer cloudbasierten Umgebung vereinen.",
+      "content": "OpenAI Prism. © OpenAI OpenAI hat Prism gelauncht, einen neuen Workspace für wissenschaftliches Schreiben. Die Plattform ist kostenlos für alle mit einem ChatGPT-Account verfügbar und integriert das Sprachmodell GPT-5.2 direkt in den Arbeitsablauf. Prism soll Textverarbeitung, Literaturrecherche und Kollaboration in einer cloudbasierten Umgebung vereinen. Das Tool baut auf Crixet auf, einer LaTeX-Plattform, die OpenAI übernommen und zu Prism weiterentwickelt hat. Damit reagiert das AI-Unternehme",
+      "type": "news",
+      "source": "trendingtopics.eu",
+      "url": "https://www.trendingtopics.eu/openai-startet-prism-ki-workspace-fuer-wissenschaftliches-arbeiten/",
+      "date": "2026-01-28T09:22:04"
+    },
+    {
+      "id": "search-hfux1w",
+      "title": "KI und Arbeitsmarkt: Was uns die Geschichte lehrt",
+      "description": "Gerade die Schweiz hat es mit ihren Institutionen jeweils gut geschafft, gesellschaftliche Spannungen abzufedern, ohne den Fortschritt abzuklemmen. Während Firmen dank dem liberalen Arbeitsmarkt auf Technologien rasch reagieren konnten, wurden soziale Härten durch das funktionierende soziale Sicherheitsnetz abgefedert. Diese Ausgangslage dürfte auch bei KI ...",
+      "content": "Die Schweizer Arbeitslosigkeit liegt bei 3,1 Prozent, ein Arbeitsmarktexperte sagt: «Eine Tertiärausbildung schützt heute weniger vor Arbeitslosigkeit als früher»Christin Severin 09.01.20263 minDatenanalyse«Das ging überraschend schnell»: Eine KOF-Studie zeigt erstmals, wie Chat-GPT den Schweizer Arbeitsmarkt umkrempeltMalin Hunziker, Florian Seliger (Text), Olivia Fischer (Illustrationen) 31.10.20258 minChat-GPT und Googles «Bard» werden kein Massensterben von Wissens- und Kreativjobs auslösen ",
+      "type": "news",
+      "source": "nzz.ch",
+      "url": "https://www.nzz.ch/wirtschaft/was-macht-ki-mit-dem-arbeitsmarkt-zweieinhalb-lektionen-aus-der-geschichte-ld.1921100",
+      "date": "2026-01-25T05:30:00"
+    },
+    {
+      "id": "search-hmz923",
+      "title": "Silicon Saxony: Die Mikroelektronik- und IKT-Branche als Fels im Arbeitsmarkt - Silicon Saxony",
+      "description": "Die Menge der unbesetzten Jobs hat sich branchenübergreifend und im Vergleich zur Hochzeit des Fachkräftemangels 2022 halbiert. Es werden zudem so wenig neue Stellen gemeldet wie nie zuvor.",
+      "content": "FachkräfteSilicon Saxony: Die Mikroelektronik- und IKT-Branche als Fels im Arbeitsmarkt29. Januar 2026. Der Arbeitsmarkt hat sich gedreht. Saßen in den vergangenen Jahren noch die Arbeitnehmenden am längeren Hebel, sind es inzwischen wieder die Arbeitgebenden. Selbst in den Silicon Saxony Branchen setzte 2024 eine Stagnation ein, die sich erst aufzulösen scheint. Der Arbeitsmarkt nimmt nun wieder an Fahrt auf, wie zuletzt auch die Job-, Ausbildungs- und Gründungsmesse KarriereStart oder der „Bra",
+      "type": "news",
+      "source": "silicon-saxony.de",
+      "url": "https://silicon-saxony.de/silicon-saxony-die-mikroelektronik-und-ikt-branche-als-fels-im-arbeitsmarkt",
+      "date": "2026-01-29T10:01:48"
+    },
+    {
+      "id": "search-ii4xcb",
+      "title": "Pearson, Deloitte Alliance Targets AI-driven Workforce Learning",
+      "description": "Pearson and Deloitte announce a strategic alliance to co-develop and deliver end-to-end talent, leadership, and workforce development solutions for global enterprises and government organizations, as demand grows for skills that can keep pace with rapid technological change. The collaboration combines Pearson’s science, digital content, and AI-powered learning tools with Deloitte’s experience in transformation, engineering, and workforce design.",
+      "content": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-5WWQWJG\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe> Our Categories Entrepreneurs Tech Talent Energy Oil & Gas Mining Health Automotive Aerospace Finance & Fintech Infrastructure Sustainability Professional Services E-Commerce & Retail Agribusiness & Food Logistics Mobility Trade & Investment Policy & Economy Cybersecurity AI, Cloud & Data Chemicals Entrepreneurs Tech Talent Energy Oil & Gas Mining Health Auto",
+      "type": "news",
+      "source": "mexicobusiness.news",
+      "url": "https://mexicobusiness.news/talent/news/pearson-deloitte-alliance-targets-ai-driven-workforce-learning",
+      "date": "2026-01-13T15:59:40"
+    },
+    {
+      "id": "search-iihhhu",
+      "title": "Medienmitteilung: Der Job Index zeigt eine leichte Stabilisierung des Schweizer Arbeitsmarktes",
+      "description": "Der Adecco Group Swiss Job Market Index verzeichnet gegenüber dem Vorquartal (Q3 2025) einen leichten Anstieg der offenen Stellen um 1.8 Prozent sowie ein moderates Plus von 2.4 Prozent im Vergleich zum Vorjahresquartal (Q4 2024).",
+      "content": "Alle Storys FolgenKeine Story von Adecco Group mehr verpassen.Warum muss ich meine Email-Adresse eingeben? 29.01.2026 – 06:30 Adecco Group Medienmitteilung: Der Job Index zeigt eine leichte Stabilisierung des Schweizer Arbeitsmarktes Bild-Infos Download 8 weitere Medieninhalte Ein DokumentJob_Index_Medienmitteilung_2025_Q4_.pdfPDF - 460 kB Job Index Q4 2025 MedienmitteilungSwiss Job Market Index Q4 2025: Leichte Stabilisierung des Schweizer ArbeitsmarktesZürich, 29.01.2026 - Im vierten Quartal 2",
+      "type": "news",
+      "source": "presseportal.ch",
+      "url": "https://www.presseportal.ch/de/pm/100054020/100938141",
+      "date": "2026-01-29T06:30:22"
+    },
+    {
+      "id": "search-krlm3z",
+      "title": "Majority of CEOs report zero payoff from AI splurge • The Register",
+      "description": "Last year, a separate PwC study found that only 14 percent of workers indicated they were using generative AI daily in their work.",
+      "content": "AI + ML 77 Majority of CEOs report zero payoff from AI splurge 77 PwC survey finds more than half of 4,500+ biz leaders see no revenue growth nor cost savings Dan Robinson Tue 20 Jan 2026 // 14:31 UTC More than half of CEOs report seeing neither increased revenue nor decreased costs from AI, despite massive investments in the technology, according to a PwC survey of 4,454 business leaders. The findings pour more cold water on the hyperbole surrounding AI and the benefits it supposedly brings to ",
+      "type": "news",
+      "source": "theregister.com",
+      "url": "https://www.theregister.com/2026/01/20/pwc_ai_ceo_survey/",
+      "date": "2026-01-20T14:04:20"
+    },
+    {
+      "id": "search-lrv724",
+      "title": "Amazon streicht 16.000 Stellen: Ist auch die Pfalz betroffen? - Unternehmen - DIE RHEINPFALZ",
+      "description": "Der weltgrößte Onlinehändler Amazon will in einer zweiten Entlassungswelle innerhalb von drei Monaten weitere rund 16.000 Arbeitsplätze abbauen. Der Konzern setzt damit auf die zunehmende Bedeutung künstlicher Intelligenz in der Verwaltungsarbeit, auf Automatisierung, weniger Hierarchiestufen und weniger Bürokratie.",
+      "content": "Das Amazon-Logistikzentrum in Kaiserslautern.Der weltgrößte Onlinehändler Amazon will in einer zweiten Entlassungswelle innerhalb von drei Monaten weitere rund 16.000 Arbeitsplätze abbauen.Der Konzern setzt damit auf die zunehmende Bedeutung künstlicher Intelligenz in der Verwaltungsarbeit, auf Automatisierung, weniger Hierarchiestufen und weniger Bürokratie. Das Unternehmen werde seinen Mitarbeitern in den USA 90 Tage Zeit geben, um intern nach einer neuen StelleDer weltgrößte Onlinehändler Ama",
+      "type": "news",
+      "source": "rheinpfalz.de",
+      "url": "https://www.rheinpfalz.de/wirtschaft_artikel,-amazon-streicht-16-000-stellen-ist-auch-die-pfalz-betroffen-_arid,5855376.html",
+      "date": "2026-01-28T16:41:00"
+    },
+    {
+      "id": "search-maocun",
+      "title": "KI und Arbeitsmarkt: Wie sich Jobs grundlegend verändern",
+      "description": "KI verändert den Arbeitsmarkt schneller als erwartet. Im BIG BANG Tech Report erklärt Alvin Wang Graylin, warum neue Denkweisen nötig sind.",
+      "content": "TechnologieCybersecurityKI & Big DataInfrastrukturInnovationManagementKarriereUnternehmensnachfolgeMarketing & VertriebNew Work & LeadershipStart-upsStrategieFinanzenFinanzierenInvestierenVorsorgeLifestyleMobilitätReisenWatchesE-HealthEventsPräventionenTechnologieGesundheit im UnternehmenDUP UNTERNEHMER KI COMMUNITYUnternehmensverzeichnisSiegel & MoreVoicesBIG BANG TECH REPORT PODCASTKI, Roboter, Jobs: Warum wir ein neues Mindset für die Zukunft brauchenKünstliche Intelligenz verändert Wirtschaf",
+      "type": "news",
+      "source": "dup-magazin.de",
+      "url": "https://www.dup-magazin.de/podcast/ki-roboter-jobs-warum-wir-ein-neues-mindset-fuer-die-zukunft-brauchen",
+      "date": "2026-01-29T07:06:35"
+    },
+    {
+      "id": "search-mbojuw",
+      "title": "McKinsey report reveals 5 jobs AI will take and 6 skills that can save you from falling prey - Technology News | The Financial Express",
+      "description": "Data-focused roles — Structured database queries, SQL-based reporting, and data extraction are prime targets, as AI generates reports and insights rapidly. Detail-oriented back-office roles — Verification, consistency checks, and repetitive precision work are performed more reliably by machines. McKinsey says that these positions, built primarily on routine execution, will need significant adaptation as AI takes over predictable components. Conversely, skills rooted in judgment, human interaction, and complex decision-making show lower automation exposure and are expected to grow in importance.",
+      "content": "",
+      "type": "news",
+      "source": "financialexpress.com",
+      "url": "https://www.financialexpress.com/life/technology-mckinsey-report-reveals-5-jobs-ai-will-take-and-6-skills-that-can-save-you-from-falling-prey-4117465/",
+      "date": "2026-01-23T15:33:41"
+    },
+    {
+      "id": "search-momnun",
+      "title": "McKinsey trials AI-led job interviews as 20,000 AI agents reshape its workforce | HRD America",
+      "description": "McKinsey &amp; Company is reportedly piloting a new component in recruitment where candidates are being asked to use the consulting firm&#x27;s AI assistant as part of evaluating talent. The Financial Times reported that McKinsey is asking job candidates to utilise its AI tool, Lilli, to replicate how ...",
+      "content": "The new AI-driven interview stage tests candidates’ ability to collaborate with its in-house AI assistant By Dexter Tilo 14 Jan 2026 Share McKinsey & Company is reportedly piloting a new component in recruitment where candidates are being asked to use the consulting firm's AI assistant as part of evaluating talent. The Financial Times reported that McKinsey is asking job candidates to utilise its AI tool, Lilli, to replicate how it is expecting its consultants to use the technology. The new recr",
+      "type": "news",
+      "source": "hcamag.com",
+      "url": "https://www.hcamag.com/us/specialization/hr-technology/mckinsey-trials-ai-led-job-interviews-as-20000-ai-agents-reshape-its-workforce/562007",
+      "date": "2026-01-15T00:11:02"
+    },
+    {
+      "id": "search-mycygo",
+      "title": "Pearson and Deloitte announce new alliance to equip enterprises and government organizations with AI-powered learning and address the global skills gap | Pearson plc",
+      "description": "13, 2026 — Pearson (FTSE: PSON.L) and Deloitte today announced an alliance to co-develop and deliver end-to-end talent, leadership, and workforce development solutions for global enterprises and government organizations.",
+      "content": "main html Pearson and Deloitte announce new alliance to equip enterprises and government organizations with AI-powered learning and address the global skills gap 13 Jan 2026 published at 11:00 AM GMT NEW YORK and LONDON – Jan. 13, 2026 — Pearson (FTSE: PSON.L) and Deloitte today announced an alliance to co-develop and deliver end-to-end talent, leadership, and workforce development solutions for global enterprises and government organizations. The collaboration will draw upon Deloitte and Pearso",
+      "type": "news",
+      "source": "plc.pearson.com",
+      "url": "https://plc.pearson.com/en-GB/news-and-insights/news/pearson-and-deloitte-announce-new-alliance-equip-enterprises-and-government",
+      "date": "2026-01-13T11:00:00"
+    },
+    {
+      "id": "search-o0arpq",
+      "title": "KI-Skepsis schwächt Vertrauen in die Demokratie | Arbeitsschutz | Haufe",
+      "description": "Studienautor Armin Granulo von der LMU Munich School of Management erklärt: &quot;Die tatsächlichen Auswirkungen von KI auf den Arbeitsmarkt sind derzeit noch begrenzt.",
+      "content": "Haufe Online Redaktion Bild: Getty Images Wenn KI Jobs klaut, klaut sie gleich auch das Vertrauen in die Demokratie – sagt eine Studie mit über 37.000 Befragten. Je eher Menschen davon überzeugt sind, dass Künstliche Intelligenz Arbeitsplätze vernichtet, umso unzufriedener sind sie mit dem Funktionieren der Demokratie. Diesen Zusammenhang zeigt eine Studie, für die mehr als 37.000 Personen aus 38 europäische Ländern befragt wurden. Künstliche Intelligenz (KI) verändert die Wirtschafts- und Arbei",
+      "type": "news",
+      "source": "haufe.de",
+      "url": "https://www.haufe.de/arbeitsschutz/gesundheit-umwelt/ki-skepsis-schwaecht-vertrauen-in-die-demokratie_94_672716.html",
+      "date": "2026-01-28T06:00:00"
+    },
+    {
+      "id": "search-o5um6",
+      "title": "#56: SMC eröffnet IAC in Dresden, Micron-Fab in Singapur und Speicherknappheit, Europäischer Chip für Raumfahrtanwendung - Silicon Saxony",
+      "description": "Die Anlage ist Teil eines rund 24 Milliarden US-Dollar schweren Investitionsprogramms über zehn Jahre und soll die lokalen NAND-Kapazitäten mehr als verdoppeln. Der Produktionsstart ist für 2028 geplant, bis zu 3.000 direkte und indirekte Arbeitsplätze sollen entstehen.",
+      "content": "Silicon Saxony#56: SMC eröffnet IAC in Dresden, Micron-Fab in Singapur und Speicherknappheit, Europäischer Chip für RaumfahrtanwendungAußerdem: Griechenland baut Galliumproduktion aus, Nvidia investiert 2 Mrd. USD in CoreWeave, Microsoft Azure kündigt KI-Beschleuniger Maia 200 an Diesen Beitrag teilen Kategorien Silicon SaxonySchlagworte Förderung·Halbleiter·Künstliche Intelligenz (KI)·Neuromorphes Computing·Podcast·Silicon Saxony·Technologische Souveränität Kontakt Silicon Saxony Marketing, Kom",
+      "type": "news",
+      "source": "silicon-saxony.de",
+      "url": "https://silicon-saxony.de/56-smc-eroeffnet-iac-in-dresden-micron-fab-in-singapur-und-speicherknappheit-europaeischer-chip-fuer-raumfahrtanwendung",
+      "date": "2026-01-30T11:12:25"
+    },
+    {
+      "id": "search-ol3x42",
+      "title": "Technik als Standortfaktor: Wie digitale Ausstattung den Arbeitsalltag erleichtert - Presseportal Magdeburg",
+      "description": "Wer digitale Ausstattung als Standortfaktor für moderne Arbeitsplätze versteht, baut nicht nur technologische Hürden ab, sondern schafft echte Möglichkeiten für Wachstum, Innovation und Mitarbeiterzufriedenheit. Jedes Element trägt dazu bei, Unternehmen attraktiv, wettbewerbsfähig und zukunftsfest aufzustellen: von der zuverlässigen Infrastruktur über intelligente Automatisierung bis hin zu nachhaltiger IT und digital gestützten Weiterbildungen.",
+      "content": "26 Jan. 2026 Unternehmen stehen heute wie nie zuvor im Wettbewerb um die besten Arbeitskräfte und die attraktivsten Standorte. Nicht mehr nur die geografische Lage zählt. Digitale Infrastruktur, smarte Tools und zukunftsfähige Technologien entscheiden maßgeblich über die Zukunftsfähigkeit eines Arbeitsplatzes. Wer digitale Ausstattung als Standortfaktor für moderne Arbeitsplätze begreift, schafft nicht nur bessere Bedingungen für Mitarbeitende, sondern erhöht die Wettbewerbsfähigkeit gesamter Or",
+      "type": "news",
+      "source": "magdeburg-klickt.de",
+      "url": "https://www.magdeburg-klickt.de/technik-als-standortfaktor-wie-digitale-ausstattung-den-arbeitsalltag-erleichtert/",
+      "date": "2026-01-26T16:57:46"
+    },
+    {
+      "id": "search-p5m84d",
+      "title": "Konjunkturschwäche und KI: Warum steigt die Arbeitslosigkeit in Hamburg besonders stark an? - WELT",
+      "description": "Das sei nicht finanzierbar, weil der Beitrag zur Arbeitslosenversicherung nicht erhöht werden solle. Die Arbeitsagentur setzt auf Automatisierung, um die zusätzliche Arbeitslast zu bewältigen.",
+      "content": "0Sönke Fock, Chef der Hamburger Agentur für Arbeit, benennt mehrere Gründe für den AnstiegQuelle: Marcus Brandt/dpaDie Arbeitslosenquote in Hamburg steigt und steigt. Der Leiter der Hamburger Agentur für Arbeit ordnet die Entwicklung ein.0AnzeigeDie Arbeitslosenquote in Hamburg ist in den vergangenen drei Jahren bundesweit am zweitstärksten gestiegen. Die Quote nahm seit Dezember 2022 um 1,3 Prozentpunkte zu. Sie lag zum vergangenen Dezember bei 8,2 Prozent, wie aus der Statistik der Bundesagent",
+      "type": "news",
+      "source": "welt.de",
+      "url": "https://www.welt.de/regionales/hamburg/article69707997568b91954b0e9a0e/konjunkturschwaeche-und-ki-warum-steigt-die-arbeitslosigkeit-in-hamburg-besonders-stark-an.html",
+      "date": "2026-01-23T13:36:48"
+    },
+    {
+      "id": "search-qgc7v7",
+      "title": "Human skills will matter more than ever in the age of AI | McKinsey",
+      "description": "According to the study, existing technologies could automate tasks that make up more than half of U.S. work hours today. It’s a big number, but it does not translate into a wholesale disappearance of jobs.",
+      "content": "",
+      "type": "news",
+      "source": "mckinsey.com",
+      "url": "https://www.mckinsey.com/mgi/media-center/human-skills-will-matter-more-than-ever-in-the-age-of-ai",
+      "date": "2026-01-06T00:00:00"
+    },
+    {
+      "id": "search-qoh3gz",
+      "title": "Schweizer Arbeitsmarkt: Gewinner- und Verliererbranchen - Blick",
+      "description": "Rundstedt-Manager Scheiwiller macht Mut: «Der Arbeitsmarkt wird auch in diesem Jahr ausgeglichen und im Lot bleiben.» Selbst Personen mit herausfordernden Profilen suchen im Schnitt «nur» 10 Monate nach einem neuen Job – fast gleich lang ...",
+      "content": "",
+      "type": "news",
+      "source": "blick.ch",
+      "url": "https://www.blick.ch/wirtschaft/schweizer-jobmarkt-unter-druck-warum-schwarzmalen-nicht-ueberall-angesagt-ist-id21640977.html",
+      "date": "2026-01-29T04:00:07"
+    },
+    {
+      "id": "search-qtyghg",
+      "title": "r/ChatGPT on Reddit: 20,000 McKinsey Workforce is Actually AI Agents",
+      "description": "AI could replace 40% of American jobs, says report | McKinsey report finds that with today’s technology, AI agents and robots are ready to automate about 57 per cent of work hours in the United States",
+      "content": "Go to ChatGPT r/ChatGPT • ImpressiveContest283 हिन्दी日本語繁體中文FilipinoไทยSrpskiNorsk (Bokmål)ItalianoPortuguês (Portugal)Español (España)УкраїнськаEspañol (Latinoamérica)DeutschRomânăNederlands 20,000 McKinsey Workforce is Actually AI Agents finalroundai.com Open Share",
+      "type": "news",
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1qck530/20000_mckinsey_workforce_is_actually_ai_agents/",
+      "date": "2026-01-14T10:43:57"
+    },
+    {
+      "id": "search-ric6w",
+      "title": "Überraschende Studie: Killt die KI doch keine Jobs? | Leben & Wissen | BILD.de",
+      "description": "Gleichzeitig zeigt die Studie ein Gegenbild. Allgemeine KI auf Basis großer Sprachmodelle wie Chatbots oder KI-Assistenten wirkt sich positiv auf die Beschäftigung aus.",
+      "content": "Überraschende Studie: Killt die KI doch keine Jobs?Foto: Peter Steffen/dpaThomasReichel27.01.2026 - 09:00 Uhr TTS-Player überspringen↵Artikel weiterlesenViele fürchten sie als stillen Jobkiller. Als Maschine, die ganze Berufe frisst. Doch eine neue Studie kommt zu diesem Befund: Künstliche Intelligenz vernichtet keine Jobs. Sie wirbelt sie durcheinander. Forscher vom Kiel Institut für Weltwirtschaft haben den Arbeitsmarkt über Jahre hinweg analysiert. Ihr Ergebnis widerspricht dem gängigen KI-Sc",
+      "type": "news",
+      "source": "bild.de",
+      "url": "https://www.bild.de/leben-wissen/mein-geld-finanzportal/ueberraschende-studie-killt-die-ki-doch-keine-jobs-697760c2fe9fcdf90e7c9fb0",
+      "date": "2026-01-27T08:00:52"
+    },
+    {
+      "id": "search-ryamj7",
+      "title": "Wandel der Arbeitswelt - www.frizz-kassel.de",
+      "description": "Die schon wahrnehmbaren Veränderungen sind in erster Linie auf Automatisierung und Vernetzung zurückzuführen. Das Potenzial von KI geht deutlich darüber hinaus: Ihre fortschreitende Einführung in Unternehmen wird den allermeisten Prognosen zufolge einen deutlich tiefgreifenderen Wandel bewirken, mit entsprechenden Folgen für den Arbeitsmarkt. Der Befürchtung, dass bestimmte Tätigkeiten künftig nicht mehr von Menschen erledigt werden und damit Arbeitsplätze wegfallen, weil KI-gestütze Systeme bestimmte Aufgaben besser, effizienter und damit kostengünstiger erledigen können, steht die Hoffnung gegenüber, dass – wie bei vorangegangenen technologiegetriebenen Transformationen – neue Tätigkeitsfelder, Kooperationsformen und damit eine neue Qualität von Arbeit entstehen werden.",
+      "content": "× Erweitern © Susana Cipriano | Pixabay Die Fortschritte im Bereich der Künstlichen Intelligenz (KI) gehören ohne Zweifel zu den wichtigsten Treibern des Wandels von Arbeit. KI entwickelt sich auf Basis der Digitalisierung, in deren Folge sich etwa Berufsbilder, Tätigkeiten und Arbeitsformen, aber auch Ansprüche an gute Arbeit wandeln. Die schon wahrnehmbaren Veränderungen sind in erster Linie auf Automatisierung und Vernetzung zurückzuführen. Das Potenzial von KI geht deutlich darüber hinaus: I",
+      "type": "news",
+      "source": "frizz-kassel.de",
+      "url": "https://frizz-kassel.de/magazin/wandel-der-arbeitswelt/",
+      "date": "2026-01-28T14:44:32"
+    },
+    {
+      "id": "search-ryrelt",
+      "title": "Spitzenforschung für den europäischen KI-Markt - IT&Production",
+      "description": "Immer mehr Anbieter von Maschinen, Automatisierungstechnik und Industriesoftware integrieren künstliche Intelligenz in ihre Produkte. Das ganze Potenzial spielen selbstlernende Systeme aber erst aus, wenn sie passgenau auf ihren Einsatz in Fertigung und Büro zugeschnitten wurden.",
+      "content": "News placeholder Mehr als 55 Partner beteiligt Spitzenforschung für den europäischen KI-Markt 30. Januar 2026 Ein Blick in das Labor des Fraunhofer IPMS: Prof. Thomas Kämpfe zeigt wie modernste Messtechnik die Entwicklung der neuen Speicher- und KI-Chips unterstützt. – Bild: Fraunhofer-Institut IPM Am 1. Oktober 2025 fiel der Startschuss für das Forschungsprojekt ‚NeAIxt‘, in dem mehr als 55 Partner aus der gesamten EU das Ziel verfolgen, die europäische Position im Bereich der Künstlichen Intel",
+      "type": "news",
+      "source": "it-production.com",
+      "url": "https://it-production.com/kuenstliche-intelligenz-in-der-automation/spitzenforschung-fuer-den-europaeischen-ki-markt/",
+      "date": "2026-01-30T11:30:23"
+    },
+    {
+      "id": "search-sfases",
+      "title": "Hewlett-Packard und 2degrees kündigen Zusammenarbeit bei HPE Private Cloud AI an | MarketScreener Schweiz",
+      "description": "Hewlett-Packard und 2degrees kündigen Zusammenarbeit bei HPE Private Cloud AI an · Alle Transkripte zu über 9000 Unternehmen - am Tag ihrer Veröffentlichung! Jetzt freischalten! Jetzt freischalten! Bitte wählen Sie Ihre Ausgabe · Alle länderspezifischen Finanzinformationen · NORTH AMERICA · United-States · Canada · MIDDLE EAST · Saudi Arabia · United Arab Emirates · EUROPE · France · Deutschland · Suisse · Schweiz ·",
+      "content": "HEWLETT PACKARD ENTERPRISE COMPANYZu einer Liste hinzufügenPDF-Bericht Hewlett Packard Enterprise Company Aktien A140KD US42824C1099 HPE Computer-Hardware Realtime-Estimate Cboe BZX Andere Börsenplätze 21:26:46 30.01.2026 % 5 Tage Veränd. 1. Jan. 21.46 USD -2.52% +2.02% -10.60% 29.01. Iterate.ai, TD SYNNEX und HPE bringen KI-gestützte Lösung auf den Markt, um Krankenhäusern Millionenverluste durch Versicherungsansprüche zurückzuerstatten CI 26.01. Hewlett-Packard und 2degrees kündigen Zusammenar",
+      "type": "news",
+      "source": "ch.marketscreener.com",
+      "url": "https://ch.marketscreener.com/boerse-nachrichten/hewlett-packard-und-2degrees-kuendigen-zusammenarbeit-bei-hpe-private-cloud-ai-an-ce7e5bdbdf80f023",
+      "date": "2026-01-26T21:03:52"
+    },
+    {
+      "id": "search-sutj9n",
+      "title": "Künstliche Intelligenz und Jobs: Vernichtet KI Arbeitsplätze? - 20 Minuten",
+      "description": "Künstliche Intelligenz verändert Jobs in der Schweiz grundlegend. Welche Tätigkeiten verschwinden, welche entstehen neu – und was das für Unternehmen und Mitarbeitende bedeutet.",
+      "content": "Darum gehtsAm diesjährigen WEF drehte sich viel um künstliche Intelligenz.Das Thema beschäftigt auch Marco Huwiler und seine Mitarbeitenden bei der Unternehmensberatung Accenture Schweiz.Die grosse Herausforderung für Unternehmen sei derzeit, KI zu skalieren, unternehmensweit auszurollen, sodass die Wirkung spür- und messbar werde.Zentral sei dabei, die Mitarbeitenden einzubinden und mitzunehmen – denn heute fühlen sich deutlich weniger KI-ready, als ihre Chefs glauben.Herr Huwiler, vernichtet K",
+      "type": "news",
+      "source": "20min.ch",
+      "url": "https://www.20min.ch/story/unternehmensberatung-haengen-chefs-ihre-mitarbeitenden-beim-thema-ki-ab-103491805",
+      "date": "2026-01-24T13:24:22"
+    },
+    {
+      "id": "search-t2bulr",
+      "title": "Sonderthema: Digitalisierung macht Bildung fit für die Jobs der Zukunft - Bruck an der Mur",
+      "description": "Die Entscheidung für den richtigen Bildungsweg ist eine Weichenstellung fürs Leben. Doch die Grenzen zwischen schulischer Höherqualifizierung und betrieblicher Ausbildung verschwimmen zunehmend. Ob im Klassenzimmer einer HAK/HLW oder in der Werkstatt: Digitalisierung und Künstliche Intelligenz (KI) sind längst zum Standard geworden.",
+      "content": "Die Entscheidung für den richtigen Bildungsweg ist eine Weichenstellung fürs Leben. Doch die Grenzen zwischen schulischer Höherqualifizierung und betrieblicher Ausbildung verschwimmen zunehmend. Ob im Klassenzimmer einer HAK/HLW oder in der Werkstatt: Digitalisierung und Künstliche Intelligenz (KI) sind längst zum Standard geworden. Vorige◀︎ Nächste▶︎ BRUCK-MÜRZZUSCHLAG. Die Handelsakademien (HAK) und Höheren Lehranstalten für wirtschaftliche Berufe (HLW) bleiben die Schwergewichte der berufsbil",
+      "type": "news",
+      "source": "meinbezirk.at",
+      "url": "https://www.meinbezirk.at/bruck-an-der-mur/c-profis-aus-der-region/digitalisierung-macht-bildung-fit-fuer-die-jobs-der-zukunft_a7981504",
+      "date": "2026-01-28T09:56:44"
+    },
+    {
+      "id": "search-ta1nzq",
+      "title": "ChatGPT: Aktuelle News und Nachrichten zum Chatbot von OpenAI - WELT",
+      "description": "Sein Chatbot ChatGPT hat die KI in den Alltag von Millionen von Menschen gebracht. Sehen Sie hier die Preisverleihung. ... Künstliche Intelligenz kann menschliches Feingefühl nicht ersetzen – darin sind sich Spitzenköche einig. Dennoch nutzen viele digitale Assistenten, um ihre Rezepte zu optimieren. Die Schwierigkeit dabei sind nicht nur die Mengenangaben. ... KI verändert die Arbeit radikal – doch nicht jeder kommt mit.",
+      "content": "ChatGPT123456Ressort:DeutschlandFinanzunternehmer„Perfekt für KI geeignet“ – Maschmeyer will deutsches Verwaltungspersonal „fast komplett“ streichenFür den TV-Investor Carsten Maschmeyer eignet sich die deutsche Bürokratie perfekt für die Übernahme von KI. Deshalb wirbt er für eine radikale Lösung nach dem Motto: „Routinen automatisieren und Sonderfälle vermenschlichen.“Weltplus ArtikelSAP-Chef Christian Klein„Ein AfD-Erfolg wäre ein fatales Zeichen“Christian Klein ist Chef des einzigen hiesigen",
+      "type": "news",
+      "source": "welt.de",
+      "url": "https://www.welt.de/themen/chatgpt/",
+      "date": "2026-01-28T11:00:50"
+    },
+    {
+      "id": "search-u073wr",
+      "title": "Mit KI – schnell und unkompliziert",
+      "description": "Mittlerweile ist das KMU zu einem der weltweit führenden Anbieter von Sprach- und Textdialogsystemen auf Basis Künstlicher Intelligenz (KI) herangewachsen. Durch die Entwicklung der ersten Schweizer Omnichannel Conversational-AI-Plattform, die ohne grenzüberschreitenden Datentransfer auskommt, werden die Mitarbeitenden kanalübergreifend im Kontaktcenter von repetitiv anfallenden Routinearbeiten entlastet.",
+      "content": "SPITCH AG – Das Zürcher Unternehmen ist seit seiner Gründung zunehmend zu einem führenden Treiber der Revolutionierung des Kontaktcenters und des automatisierten Kundenservice geworden. Das KMU ist auf Collaborative Agentic AI spezialisiert. Virtuelle Assistenten, Sprachbiometrie und Analysefunktionen verbessern dabei das Kundenerlebnis und entlasten das Servicepersonal. (Bilder: zVg) Die Agentic AI automatisiert Standardanfragen und wiederkehrende Aufgaben. So entsteht ein hybrides Ökosystem, i",
+      "type": "news",
+      "source": "zurzacherwoche.ch",
+      "url": "https://zurzacherwoche.ch/news/mit-ki-schnell-und-unkompliziert/",
+      "date": "2026-01-26T21:25:57"
+    },
+    {
+      "id": "search-ua1twx",
+      "title": "Diese fünf Trends stärken die Fertigungssimulation für die Produktion von morgen",
+      "description": "Januar 2026 – Die Weichen sind bereits gestellt: Die Zukunft der Fertigung ist vernetzter, schneller, digitaler. Das Jahr 2026 wird bei dieser Entwicklung eine entscheidende Rolle spielen, weil Fachkräfte, Anlagen, Roboter und Software noch enger aufeinander abgestimmt werden müssen.",
+      "content": "Diese fünf Trends stärken die Fertigungssimulation für die Produktion von morgen von Redaktion am 27. Januar 2026Kein Kommentar Auf Facebook teilen Follow on Facebook Add to Google+ Connect on Linked in Subscribe by Email Bearbeiten München, 27. Januar 2026 – Die Weichen sind bereits gestellt: Die Zukunft der Fertigung ist vernetzter, schneller, digitaler. Das Jahr 2026 wird bei dieser Entwicklung eine entscheidende Rolle spielen, weil Fachkräfte, Anlagen, Roboter und Software noch enger aufeina",
+      "type": "news",
+      "source": "itiko.de",
+      "url": "https://www.itiko.de/artikel/2227062/diese-f-nf-trends-st-rken-die-fertigungssimulation-f-r-die-produktion-von-morgen.html",
+      "date": "2026-01-27T10:21:26"
+    },
+    {
+      "id": "search-uczj51",
+      "title": "Wie Künstliche Intelligenz den Arbeitsmarkt verändert | wissen.de",
+      "description": "Doch wie genau verändert KI den Arbeitsmarkt? Um das herauszufinden, haben Forschende des Kiel Instituts für Weltwirtschaft die Entwicklung künstlicher Intelligenz von 2010 bis 2023 analysiert.",
+      "content": "wissen.de Artikel Wie Künstliche Intelligenz den Arbeitsmarkt verändert Texte verfassen, Sprachen übersetzen oder große Datenmengen auswerten – viele dieser Aufgaben lassen sich heute mithilfe künstlicher Intelligenz effizienter erledigen als früher. Entsprechend groß ist die Sorge, dass KI menschliche Arbeit überflüssig machen könnte. Doch stimmt das wirklich? Und wie genau verändert KI den Arbeitsmarkt? Eine neue Studie liefert Antworten. CMA, 29.01.2026 Bild vergrößern Nicht jeder Job bekommt",
+      "type": "news",
+      "source": "wissen.de",
+      "url": "https://www.wissen.de/wie-kuenstliche-intelligenz-den-arbeitsmarkt-veraendert",
+      "date": "2026-01-29T07:15:52"
+    },
+    {
+      "id": "search-v7rlkv",
+      "title": "15 ChatGPT Prompts, um 15 Stunden pro Woche zu sparen | OnlineMarketing.de",
+      "description": "Wenn du ChatGPT auch gerne einsetzt, um Zeit zu sparen, haben wir einen nützlichen Hinweis für dich. Denn OpenAI hat über den offiziellen ChatGPT Account 15 hilfreiche Prompts vorgestellt, die Usern mehrere Stunden Arbeit pro Woche ersparen können.",
+      "content": "15 ChatGPT Prompts, um 15 Stunden pro Woche zu sparen Niklas Lewanczik | 23.01.26 OpenAI zeigt 15 hilfreiche Prompts, die dir beim Lernen, Entscheiden, Content-Optimieren, Vermeiden von Stress und mehr helfen können – und dir enorm viel Zeit sparen. teilen weiterleiten teilen Wenn du ChatGPT auch gerne einsetzt, um Zeit zu sparen, haben wir einen nützlichen Hinweis für dich. Denn OpenAI hat über den offiziellen ChatGPT Account 15 hilfreiche Prompts vorgestellt, die Usern mehrere Stunden Arbeit p",
+      "type": "news",
+      "source": "onlinemarketing.de",
+      "url": "https://onlinemarketing.de/technologie/15-chatgpt-prompts-um-15-stunden-pro-woche-zu-sparen",
+      "date": "2026-01-23T16:44:17"
+    },
+    {
+      "id": "search-vt9ydk",
+      "title": "Die Zukunft der Arbeit im KI-Zeitalter: 80 Prozent der Menschen werden ihren Job verlieren | Itwelt",
+      "description": "80 Prozent der Jobs werden wegfallen. Und der ausgeübte Beruf wird nicht mehr die Identität bestimmen. Das sind nur zwei Annahmen, zu denen die Ethik Society in ihrem aktuellen Positionspapier zur Zukunft der Arbeit im KI-Zeitalter kommt.",
+      "content": "80 Prozent der Jobs werden wegfallen. Und der ausgeübte Beruf wird nicht mehr die Identität bestimmen. Das sind nur zwei Annahmen, zu denen die Ethik Society in ihrem aktuellen Positionspapier zur Zukunft der Arbeit im KI-Zeitalter kommt. [...] (c) stock.adobe.com/littlepiccie Es wird zukünftig kaum noch sozialversicherungspflichtige Beschäftigungsverhältnisse geben. 80 Prozent der Jobs werden wegfallen. Und der ausgeübte Beruf wird nicht mehr die Identität bestimmen. So lauten drei der Thesen d",
+      "type": "news",
+      "source": "itwelt.at",
+      "url": "https://itwelt.at/news/die-zukunft-der-arbeit-im-ki-zeitalter-80-prozent-der-menschen-werden-ihren-job-verlieren/",
+      "date": "2026-01-28T08:45:21"
+    },
+    {
+      "id": "search-x6jkqx",
+      "title": "Grosse Entlassungswelle: Amazon streicht 16'000 Arbeitsplätze",
+      "description": "Amazon will innerhalb von drei Monaten in einer zweiten Entlassungswelle rund 16’000 Arbeitsplätze abbauen, auch wegen KI in der Verwaltung.",
+      "content": "InternationalWirtschaftAmazon: Der Onlinehändler baut rund 16'000 Arbeitsplätze ab.Grosse Entlassungswelle: Amazon streicht 16'000 Arbeitsplätze2728.01.2026, 13:4828.01.2026, 13:48Der weltgrösste Onlinehändler Amazon will in einer zweiten Entlassungswelle innerhalb von drei Monaten rund 16'000 Arbeitsplätze abbauen. Der Konzern reagiert damit auf die zunehmende Bedeutung Künstlicher Intelligenz in der Verwaltung.Amazon hat seinen Hauptsitz in Seattle, Washington. Bild: APDas Unternehmen werde se",
+      "type": "news",
+      "source": "watson.ch",
+      "url": "https://www.watson.ch/international/wirtschaft/243794078-amazon-der-onlinehaendler-baut-rund-16-000-arbeitsplaetze-ab",
+      "date": "2026-01-28T12:48:57"
+    },
+    {
+      "id": "search-xl8d9",
+      "title": "Future of work: changes, professions and key trends",
+      "description": "Discover how work will change: AI, new profiles, flexibility, and key skills to remain employable.",
+      "content": "The labor market is experiencing a silent but unstoppable revolutionArtificial intelligence, automation, sustainability, and demographic shifts are changing how we work, what skills are needed, and what competencies make the difference. Far from being a distant issue, the future of work is already being shaped by the decisions companies and professionals are making today. Faced with this scenario, many people are wondering if their jobs will disappear or if they will be left out of the game. The",
+      "type": "news",
+      "source": "en.postposmo.com",
+      "url": "https://en.postposmo.com/future-of-work--changes-in-professions/",
+      "date": "2026-01-26T10:38:40"
+    },
+    {
+      "id": "search-yadp0l",
+      "title": "Our 2026 webinars – OECD Education and Skills Today",
+      "description": "As AI reshapes the global workforce, how can we ensure it narrows – rather than widens – gender gaps? This OECD webinar brought together leading experts to examine AI’s impact on women’s employment opportunities, the role of education in closing digital divides, and strategies to make ...",
+      "content": "2025 Webinars 2024 Webinars 2023 & 2022 Webinars 2021 Webinars 2020 Webinars Why should we care? Empathy in education policy, practice and assessment 5 February 14:00 CET Empathy plays a central role in how children interact with others, build relationships and contribute to supportive and inclusive schools. It matters for cohesive, peaceful societies. Yet while many recognise its importance, education systems still struggle to define empathy, teach it and create policies and assessments to supp",
+      "type": "news",
+      "source": "oecdedutoday.com",
+      "url": "https://oecdedutoday.com/webinars/",
+      "date": "2026-01-16T09:38:54"
+    },
+    {
+      "id": "search-zg81b0",
+      "title": "Abacus als Treiber: Schweizer Bauwirtschaft im Fokus digitaler Transformation",
+      "description": "«Sie will das Unternehmen datenbasiert führen und attraktive, moderne Arbeitsplätze bieten, um dem Fachkräftemangel entgegenzuwirken », sagt Silas Schneider. Das Mutterhaus wurde 1985 durch drei Absolventen der Universität St. Gallen (HSG) gegründet, die heute noch im Unternehmen tätig sind. Mittlerweile ist Abacus Research der grösste sowie erfolgreichste unabhängige Schweizer Anbieter von Businesssoftware für KMU.",
+      "content": "Sponsored TopicDigitalisierung einer Branche: Bausoftware für 50 000 Unternehmen in der Schweiz#InnovationGamechanger: Die hiesige Bauindustrie hat Nachholbedarf punkto Digitalisierung. Abacus Business Solutions will mit Schweizer Standards, künstlicher Intelligenz und tiefer Branchenkenntnis einen Wirtschaftszweig in die Zukunft führen.Erstellt im Auftrag von Brand Relations25.01.2026ZusammenfassungTeilenMerkenTreibende Kräfte: Silas Schneider (links), CEO von Abacus Business Solutions, und ",
+      "type": "news",
+      "source": "nzz.ch",
+      "url": "https://www.nzz.ch/themen-dossiers/zukunft-bauen/digitalisierung-einer-branche-bausoftware-fur-50-000-unternehmen-in-der-schweiz-ld.1921437",
+      "date": "2026-01-25T00:28:41"
+    },
+    {
+      "id": "bfs-employment-sectors",
+      "title": "Erwerbstätige nach Wirtschaftsabschnitten",
+      "description": "Beschäftigung nach Wirtschaftssektoren in der Schweiz (BFS Daten)",
+      "type": "bfs",
+      "source": "BFS",
+      "url": "#"
+    },
+    {
+      "id": "bfs-unemployment-cantons",
+      "title": "Arbeitslosigkeit nach Kantonen",
+      "description": "Registrierte Arbeitslose in der Schweiz nach Kantonen (SECO/BFS Daten)",
+      "type": "bfs",
+      "source": "BFS",
+      "url": "#"
+    },
+    {
+      "id": "bfs-wages-sectors",
+      "title": "Lohnstatistik nach Wirtschaftsabschnitten",
+      "description": "Schweizerische Lohnstrukturerhebung",
+      "type": "bfs",
+      "source": "BFS",
+      "url": "#"
+    }
+  ],
+  "count": 252
+}

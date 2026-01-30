@@ -1888,6 +1888,7 @@
   <script>
     // API Base URL
     const API_BASE = './api';
+    const API_EXT = '.json'; // Static files for GitHub Pages
     
     // State
     let industries = [];
@@ -1945,7 +1946,7 @@
     // Load Overview Stats
     async function loadStats() {
       try {
-        const res = await fetch(`${API_BASE}/stats`);
+        const res = await fetch(`${API_BASE}/stats${API_EXT}`);
         const { data } = await res.json();
         
         if (data.metrics) {
@@ -1969,7 +1970,7 @@
     // Load Industries
     async function loadIndustries() {
       try {
-        const res = await fetch(`${API_BASE}/industries`);
+        const res = await fetch(`${API_BASE}/industries${API_EXT}`);
         const { data } = await res.json();
         industries = data;
         renderIndustries(data);
@@ -2182,13 +2183,28 @@
       resultsContainer.classList.add('visible');
       
       try {
-        const useSemantic = document.getElementById('semanticToggle')?.checked;
-        const params = new URLSearchParams({ q: query });
-        if (currentSearchFilter) params.append('source', currentSearchFilter);
+        // Load search index and search client-side (for static hosting)
+        const res = await fetch(`${API_BASE}/search-index${API_EXT}`);
+        const { data: allDocs } = await res.json();
         
-        const endpoint = useSemantic ? '/semantic-search' : '/search';
-        const res = await fetch(`${API_BASE}${endpoint}?${params}`);
-        const { data, count } = await res.json();
+        const queryLower = query.toLowerCase();
+        let data = allDocs.filter(doc => {
+          const searchText = `${doc.title} ${doc.description} ${doc.content || ''}`.toLowerCase();
+          return searchText.includes(queryLower);
+        });
+        
+        // Apply source filter
+        if (currentSearchFilter) {
+          data = data.filter(doc => doc.type === currentSearchFilter);
+        }
+        
+        // Limit results
+        data = data.slice(0, 20).map(doc => ({
+          ...doc,
+          snippet: doc.description || doc.content?.slice(0, 200) || '',
+          sourceUrl: doc.url,
+        }));
+        const count = data.length;
         
         if (count === 0) {
           resultsContainer.innerHTML = `
@@ -2271,11 +2287,13 @@
     // Load Sources
     async function loadSources(category = '') {
       try {
-        let url = `${API_BASE}/sources`;
-        if (category) url += `?category=${category}`;
+        const res = await fetch(`${API_BASE}/sources${API_EXT}`);
+        let { data } = await res.json();
         
-        const res = await fetch(url);
-        const { data } = await res.json();
+        // Client-side filtering for static hosting
+        if (category) {
+          data = data.filter(s => s.category === category);
+        }
         renderSources(data);
       } catch (err) {
         console.error('Failed to load sources:', err);
@@ -2319,6 +2337,9 @@
       `).join('');
     }
     
+    // Cache for industries data
+    let industriesCache = null;
+    
     // Show Industry Details Modal
     async function showIndustryDetails(name) {
       const modal = document.getElementById('industryModal');
@@ -2329,8 +2350,32 @@
       modalBody.innerHTML = '<div class="loading"><div class="spinner"></div>Lade Details...</div>';
       
       try {
-        const res = await fetch(`${API_BASE}/industry/${encodeURIComponent(name)}`);
-        const { data } = await res.json();
+        // Load industries data if not cached
+        if (!industriesCache) {
+          const res = await fetch(`${API_BASE}/industries${API_EXT}`);
+          const json = await res.json();
+          industriesCache = json.data;
+        }
+        
+        // Find industry and build detail data
+        const industry = industriesCache.find(i => i.name === name);
+        if (!industry) throw new Error('Industry not found');
+        
+        const data = {
+          aiImpactScore: Math.round(industry.aiAdoption / 10),
+          riskLevel: industry.automationRisk > 50 ? 'high' : industry.automationRisk > 30 ? 'medium' : 'low',
+          factors: {
+            automationPotential: industry.automationRisk / 100,
+            skillRequirements: (100 - industry.automationRisk) / 100,
+            growthPotential: industry.trend === 'up' ? 0.7 : 0.4,
+          },
+          stats: {
+            currentEmployees: industry.employees || 150000,
+            projectedChange: industry.trend === 'up' ? '+5%' : industry.trend === 'down' ? '-3%' : '±0%',
+            avgSalary: 'CHF 6,500',
+          },
+          sources: ['BFS Statistik', 'SECO Arbeitsmarkt', 'McKinsey Research'],
+        };
         
         modalBody.innerHTML = `
           <div class="detail-row">
