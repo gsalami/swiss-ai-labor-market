@@ -1,0 +1,11 @@
+{
+  "id": "research-kof-forecast-2024",
+  "title": "KOF Konjunkturprognose",
+  "authors": ["ETH Zürich KOF Konjunkturforschungsstelle"],
+  "institution": "KOF ETH Zürich",
+  "year": 2024,
+  "abstract": "Quarterly economic forecasts for Switzerland from ETH Zürich's leading research institute. Covers GDP growth, employment trends, industry outlook, and structural changes including technology adoption impacts.",
+  "url": "https://kof.ethz.ch/en/forecasts-and-indicators.html",
+  "topics": ["konjunktur", "prognose", "beschäftigung", "wirtschaftswachstum"],
+  "industries": ["all sectors", "manufacturing", "services", "construction"]
+}

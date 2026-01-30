@@ -1,0 +1,18 @@
+{
+  "id": "research-arxiv-ai-2024",
+  "title": "arXiv AI/ML Papers",
+  "authors": [
+    "arXiv"
+  ],
+  "institution": "arXiv",
+  "year": 2024,
+  "abstract": "Open access repository for AI and machine learning research papers.",
+  "url": "https://arxiv.org/list/cs.AI/recent",
+  "topics": [
+    "ai research",
+    "machine learning",
+    "papers",
+    "open access"
+  ],
+  "industries": []
+}

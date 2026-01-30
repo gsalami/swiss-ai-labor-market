@@ -1,0 +1,111 @@
+# Lohnstatistik nach Wirtschaftsabschnitten
+
+Schweizerische Lohnstrukturerhebung
+
+## Quelle
+opendata.swiss / BFS
+
+## Letzte Aktualisierung
+2026-01-26
+
+## Kategorie
+wages
+
+## Daten
+[
+  {
+    "sectorCode": "A",
+    "sectorName": "Land- und Forstwirtschaft",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "B",
+    "sectorName": "Bergbau",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "C",
+    "sectorName": "Verarbeitendes Gewerbe",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "D",
+    "sectorName": "Energieversorgung",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "E",
+    "sectorName": "Wasserversorgung",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "F",
+    "sectorName": "Baugewerbe",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "G",
+    "sectorName": "Handel",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "H",
+    "sectorName": "Verkehr und Lagerei",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "I",
+    "sectorName": "Gastgewerbe",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "J",
+    "sectorName": "Information und Kommunikation",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "K",
+    "sectorName": "Finanzdienstleistungen",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "L",
+    "sectorName": "Grundstücks- und Wohnungswesen",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "M",
+    "sectorName": "Freiberufliche Tätigkeiten",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "N",
+    "sectorName": "Sonstige wirtschaftliche DL",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "O",
+    "sectorName": "Öffentliche Verwaltung",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "P",
+    "sectorName": "Erziehung und Unterricht",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "Q",
+    "sectorName": "Gesundheits- und Sozialwesen",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "R",
+    "sectorName": "Kunst, Unterhaltung, Erholung",
+    "category": "wages"
+  },
+  {
+    "sectorCode": "S",
+    "sectorName": "Sonstige Dienstleistungen",
+    "category": "wages"
+  }
+]

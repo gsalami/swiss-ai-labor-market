@@ -1,0 +1,18 @@
+{
+  "id": "research-intel-ai-2024",
+  "title": "Intel AI",
+  "authors": [
+    "Intel"
+  ],
+  "institution": "Intel",
+  "year": 2024,
+  "abstract": "Intel research on AI hardware, edge AI, and enterprise AI deployment.",
+  "url": "https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html",
+  "topics": [
+    "ai hardware",
+    "edge ai",
+    "enterprise ai",
+    "deployment"
+  ],
+  "industries": []
+}

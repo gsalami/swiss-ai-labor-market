@@ -1,0 +1,18 @@
+{
+  "id": "research-anthropic-claude-2024",
+  "title": "Claude Model Card",
+  "authors": [
+    "Anthropic"
+  ],
+  "institution": "Anthropic",
+  "year": 2024,
+  "abstract": "Technical documentation and research on Claude AI assistant capabilities and safety.",
+  "url": "https://www.anthropic.com/claude",
+  "topics": [
+    "llm",
+    "ai assistant",
+    "safety",
+    "capabilities"
+  ],
+  "industries": []
+}

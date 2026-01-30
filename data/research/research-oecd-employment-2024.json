@@ -1,0 +1,11 @@
+{
+  "id": "research-oecd-employment-2024",
+  "title": "OECD Employment Outlook 2024",
+  "authors": ["OECD"],
+  "institution": "OECD",
+  "year": 2024,
+  "abstract": "Annual flagship publication on labor markets in OECD countries including Switzerland. Analyzes AI impact on jobs, skills requirements, wages, and policy responses. Special focus on generative AI implications.",
+  "url": "https://www.oecd.org/employment/outlook/",
+  "topics": ["employment", "ai impact", "skills", "policy"],
+  "industries": ["all sectors"]
+}

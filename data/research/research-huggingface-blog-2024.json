@@ -1,0 +1,18 @@
+{
+  "id": "research-huggingface-blog-2024",
+  "title": "Hugging Face Blog",
+  "authors": [
+    "Hugging Face"
+  ],
+  "institution": "Hugging Face",
+  "year": 2024,
+  "abstract": "Research and developments in open-source AI, transformers, and ML democratization.",
+  "url": "https://huggingface.co/blog",
+  "topics": [
+    "open source ai",
+    "transformers",
+    "democratization",
+    "ml"
+  ],
+  "industries": []
+}

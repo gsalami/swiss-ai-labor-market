@@ -1,0 +1,11 @@
+{
+  "id": "research-seco-konjunktur-2024",
+  "title": "Konjunkturprognosen",
+  "authors": ["SECO - Staatssekretariat für Wirtschaft"],
+  "institution": "SECO",
+  "year": 2024,
+  "abstract": "Offizielle Konjunkturprognosen der Schweizer Regierung. Vierteljährliche Analysen zu BIP-Entwicklung, Arbeitsmarkt, Inflation und Wirtschaftsaussichten. Grundlage für Wirtschaftspolitik.",
+  "url": "https://www.seco.admin.ch/seco/de/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/konjunkturprognosen.html",
+  "topics": ["konjunktur", "prognose", "wirtschaft", "arbeitsmarkt"],
+  "industries": ["macroeconomy"]
+}

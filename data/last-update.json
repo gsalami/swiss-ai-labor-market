@@ -1,0 +1,10 @@
+{
+  "lastUpdate": "2026-01-26T08:01:23.345Z",
+  "type": "weekly-stats",
+  "stats": {
+    "bfsDatasetsCollected": 3,
+    "documentsIngested": 3,
+    "impactScoresUpdated": 0,
+    "errors": []
+  }
+}

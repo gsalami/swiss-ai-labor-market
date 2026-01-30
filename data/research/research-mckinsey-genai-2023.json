@@ -1,0 +1,11 @@
+{
+  "id": "research-mckinsey-genai-2023",
+  "title": "The economic potential of generative AI",
+  "authors": ["McKinsey Global Institute"],
+  "institution": "McKinsey Global Institute",
+  "year": 2023,
+  "abstract": "Comprehensive analysis of how generative AI could transform productivity across industries. Estimates generative AI could add $2.6-4.4 trillion annually to the global economy. Examines impact on 850 occupations and 2,100 work activities.",
+  "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+  "topics": ["generative ai", "automation", "productivity", "labor market"],
+  "industries": ["finance", "technology", "professional services", "manufacturing"]
+}

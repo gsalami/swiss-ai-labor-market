@@ -1,0 +1,11 @@
+{
+  "id": "research-gartner-ai-hype-2023",
+  "title": "Gartner Hype Cycle for Artificial Intelligence",
+  "authors": ["Gartner"],
+  "institution": "Gartner",
+  "year": 2023,
+  "abstract": "Technology maturity assessment of AI innovations. Tracks generative AI, foundation models, and emerging AI technologies through innovation trigger, peak of inflated expectations, trough of disillusionment, and plateau of productivity.",
+  "url": "https://www.gartner.com/en/articles/what-s-new-in-artificial-intelligence-from-the-2023-gartner-hype-cycle",
+  "topics": ["ai maturity", "technology trends", "hype cycle", "generative ai"],
+  "industries": ["technology", "enterprise", "consulting"]
+}

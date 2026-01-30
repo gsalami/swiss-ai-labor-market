@@ -1,0 +1,153 @@
+[
+  {
+    "timestamp": "2026-01-30T20:26:53.000Z",
+    "type": "news",
+    "status": "success",
+    "title": "Web Search News Update (Brave API)",
+    "description": "17 Artikel via Brave Search gesammelt. 6 Rate-Limit-Fehler (429), aber erfolgreiche Collection.",
+    "results": [
+      {
+        "title": "Konjunkturschwäche und KI: Warum steigt die Arbeitslosigkeit",
+        "source": "News"
+      },
+      {
+        "title": "WEF: 4 AI-driven futures for jobs by 2030",
+        "source": "WEF"
+      },
+      {
+        "title": "PwC: 56% of companies getting nothing out of AI",
+        "source": "PwC"
+      },
+      {
+        "title": "Mehr Kündigungen auf Schweizer Arbeitsmarkt",
+        "source": "News"
+      },
+      {
+        "title": "Infosys erweitert Präsenz in der Schweiz",
+        "source": "News"
+      }
+    ],
+    "stats": {
+      "searched": "12 Queries (CH + International)",
+      "found": "17",
+      "added": "17"
+    }
+  },
+  {
+    "timestamp": "2026-01-30T20:11:48.155Z",
+    "type": "news",
+    "status": "success",
+    "title": "Tägliches News Update",
+    "description": "News update completed: 1 articles collected (2.0s)",
+    "results": [],
+    "stats": {
+      "searched": "Schweizer Quellen",
+      "found": "0",
+      "added": "0"
+    }
+  },
+  {
+    "timestamp": "2026-01-30T11:26:30.354Z",
+    "type": "news",
+    "status": "success",
+    "title": "Tägliches News Update",
+    "description": "News update completed: 1 articles collected (2.6s)",
+    "results": [],
+    "stats": {
+      "searched": "Schweizer Quellen",
+      "found": "0",
+      "added": "0"
+    }
+  },
+  {
+    "timestamp": "2026-01-29T07:11:19.119Z",
+    "type": "news",
+    "status": "success",
+    "title": "Tägliches News Update",
+    "description": "News update completed: 1 articles collected (2.0s)",
+    "results": [],
+    "stats": {
+      "searched": "Schweizer Quellen",
+      "found": "0",
+      "added": "0"
+    }
+  },
+  {
+    "timestamp": "2026-01-26T08:01:23.346Z",
+    "type": "stats",
+    "status": "success",
+    "title": "Wöchentliches Stats Update",
+    "description": "Stats update completed: 3 datasets, 3 documents (0.9s)",
+    "results": [],
+    "stats": {
+      "searched": "BFS, SECO Datenquellen",
+      "found": "3",
+      "added": "3"
+    }
+  },
+  {
+    "timestamp": "2026-01-26T07:00:20.165Z",
+    "type": "news",
+    "status": "success",
+    "title": "Tägliches News Update",
+    "description": "News update completed: 1 articles collected (2.2s)",
+    "results": [],
+    "stats": {
+      "searched": "Schweizer Quellen",
+      "found": "0",
+      "added": "0"
+    }
+  },
+  {
+    "timestamp": "2026-01-26T00:30:00Z",
+    "type": "system",
+    "status": "success",
+    "title": "Dashboard Redesign",
+    "description": "Farben und Design an Swiss AI Desk angepasst. Neues cyan/teal Farbschema implementiert.",
+    "results": [],
+    "stats": null
+  },
+  {
+    "timestamp": "2026-01-25T23:00:00Z",
+    "type": "research",
+    "status": "success",
+    "title": "Initiale Quellensammlung",
+    "description": "181 verifizierte Forschungsquellen zur Datenbank hinzugefügt.",
+    "results": [
+      {
+        "title": "McKinsey Global Institute - AI Impact Reports",
+        "source": "McKinsey"
+      },
+      {
+        "title": "World Economic Forum - Future of Jobs Report 2025",
+        "source": "WEF"
+      },
+      {
+        "title": "OECD Employment Outlook 2025",
+        "source": "OECD"
+      },
+      {
+        "title": "ETH Zürich - KI und Arbeitsmarkt Schweiz",
+        "source": "ETH"
+      },
+      {
+        "title": "BFS Arbeitsmarktstatistiken",
+        "source": "Bundesamt für Statistik"
+      }
+    ],
+    "stats": {
+      "searched": "50+ Quellen",
+      "found": "181",
+      "added": "181"
+    }
+  },
+  {
+    "timestamp": "2026-01-25T22:00:00Z",
+    "type": "system",
+    "status": "success",
+    "title": "Projekt initialisiert",
+    "description": "Swiss AI Labor Market Intelligence Plattform erstellt mit ruVector, MCP Server und Web Dashboard.",
+    "results": [],
+    "stats": null
+  }
+]

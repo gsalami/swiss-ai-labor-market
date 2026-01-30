@@ -1,0 +1,11 @@
+{
+  "id": "research-deloitte-ai-enterprise-2024",
+  "title": "State of AI in the Enterprise",
+  "authors": ["Deloitte AI Institute"],
+  "institution": "Deloitte",
+  "year": 2024,
+  "abstract": "Enterprise AI adoption survey examining how businesses implement and scale AI solutions. Covers organizational readiness, implementation challenges, ROI metrics, and workforce transformation strategies.",
+  "url": "https://www2.deloitte.com/us/en/pages/consulting/articles/state-of-ai-in-the-enterprise.html",
+  "topics": ["enterprise ai", "adoption", "digital transformation", "roi"],
+  "industries": ["technology", "finance", "healthcare", "manufacturing"]
+}

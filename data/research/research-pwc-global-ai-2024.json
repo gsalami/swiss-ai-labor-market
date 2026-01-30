@@ -1,0 +1,11 @@
+{
+  "id": "research-pwc-global-ai-2024",
+  "title": "Global AI Study: Sizing the Prize",
+  "authors": ["PwC"],
+  "institution": "PwC",
+  "year": 2024,
+  "abstract": "Economic impact analysis of AI adoption worldwide. Projects AI contribution to global GDP, examines sector-specific opportunities, and analyzes regional variations in AI readiness and economic benefits.",
+  "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence.html",
+  "topics": ["ai economics", "gdp impact", "productivity", "regional analysis"],
+  "industries": ["healthcare", "automotive", "finance", "retail", "technology"]
+}

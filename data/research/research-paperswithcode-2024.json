@@ -1,0 +1,18 @@
+{
+  "id": "research-paperswithcode-2024",
+  "title": "Papers With Code",
+  "authors": [
+    "Papers With Code"
+  ],
+  "institution": "Papers With Code",
+  "year": 2024,
+  "abstract": "Repository linking AI research papers with implementations and benchmarks.",
+  "url": "https://paperswithcode.com/",
+  "topics": [
+    "ai research",
+    "benchmarks",
+    "implementations",
+    "papers"
+  ],
+  "industries": []
+}

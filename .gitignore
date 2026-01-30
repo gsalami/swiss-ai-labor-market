@@ -9,8 +9,8 @@ dist/
 .env.local
 .env.*.local
 
-# Data directory (raw and processed data)
-data/
+# Large generated files (embeddings are regenerated)
+data/embeddings.json
 
 # IDE
 .idea/

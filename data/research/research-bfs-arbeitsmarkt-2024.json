@@ -1,0 +1,11 @@
+{
+  "id": "research-bfs-arbeitsmarkt-2024",
+  "title": "Arbeitsmarktindikatoren Schweiz",
+  "authors": ["Bundesamt für Statistik BFS"],
+  "institution": "BFS",
+  "year": 2024,
+  "abstract": "Offizielle Schweizer Arbeitsmarktstatistiken. Umfasst Erwerbstätigkeit, Arbeitslosigkeit, Löhne, Arbeitsbedingungen und Branchenentwicklung. Basis für politische Entscheidungen und Wirtschaftsanalysen.",
+  "url": "https://www.bfs.admin.ch/bfs/de/home/statistiken/arbeit-erwerb.html",
+  "topics": ["arbeitsmarkt", "statistik", "beschäftigung", "löhne"],
+  "industries": ["all sectors"]
+}

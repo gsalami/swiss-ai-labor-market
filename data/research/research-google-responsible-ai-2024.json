@@ -1,0 +1,18 @@
+{
+  "id": "research-google-responsible-ai-2024",
+  "title": "Responsible AI Practices",
+  "authors": [
+    "Google"
+  ],
+  "institution": "Google",
+  "year": 2024,
+  "abstract": "Google framework for developing and deploying AI responsibly. Fairness, interpretability, and safety guidelines.",
+  "url": "https://ai.google/responsibility/responsible-ai-practices/",
+  "topics": [
+    "responsible ai",
+    "fairness",
+    "safety",
+    "ethics"
+  ],
+  "industries": []
+}

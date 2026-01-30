@@ -1,0 +1,18 @@
+{
+  "id": "research-microsoft-responsible-ai-2024",
+  "title": "Responsible AI Standard",
+  "authors": [
+    "Microsoft"
+  ],
+  "institution": "Microsoft",
+  "year": 2024,
+  "abstract": "Microsoft framework and standards for responsible AI development and deployment.",
+  "url": "https://www.microsoft.com/en-us/ai/responsible-ai",
+  "topics": [
+    "responsible ai",
+    "standards",
+    "governance",
+    "deployment"
+  ],
+  "industries": []
+}

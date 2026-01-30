@@ -1,0 +1,18 @@
+{
+  "id": "research-anthropic-research-2024",
+  "title": "Anthropic Research",
+  "authors": [
+    "Anthropic"
+  ],
+  "institution": "Anthropic",
+  "year": 2024,
+  "abstract": "AI safety research including constitutional AI, interpretability, and alignment.",
+  "url": "https://www.anthropic.com/research",
+  "topics": [
+    "ai safety",
+    "alignment",
+    "interpretability",
+    "research"
+  ],
+  "industries": []
+}

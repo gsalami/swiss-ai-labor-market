@@ -1,0 +1,1464 @@
+{
+  "generated": "2026-01-25T23:11:13.050Z",
+  "count": 181,
+  "categories": {
+    "government": 15,
+    "academic": 27,
+    "industry": 16,
+    "international": 25,
+    "consulting": 31,
+    "tech": 32,
+    "think-tank": 23,
+    "finance": 12
+  },
+  "sources": [
+    {
+      "id": "research-bfs-arbeitsmarkt-2024",
+      "title": "Arbeitsmarktindikatoren Schweiz",
+      "institution": "Bundesamt für Statistik (BFS)",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.bfs.admin.ch/bfs/de/home/statistiken/arbeit-erwerb.html"
+    },
+    {
+      "id": "research-bfs-bildung-2024",
+      "title": "Bildungsstatistik Schweiz",
+      "institution": "Bundesamt für Statistik (BFS)",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.bfs.admin.ch/bfs/de/home/statistiken/bildung-wissenschaft.html"
+    },
+    {
+      "id": "research-bfs-ict-2024",
+      "title": "Informationsgesellschaft - Indikatoren",
+      "institution": "Bundesamt für Statistik (BFS)",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.bfs.admin.ch/bfs/de/home/statistiken/kultur-medien-informationsgesellschaft-sport/informationsgesellschaft.html"
+    },
+    {
+      "id": "research-bfs-innovation-2024",
+      "title": "Forschung und Entwicklung Schweiz",
+      "institution": "Bundesamt für Statistik (BFS)",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.bfs.admin.ch/bfs/de/home/statistiken/bildung-wissenschaft/technologie.html"
+    },
+    {
+      "id": "research-seco-konjunktur-2024",
+      "title": "Konjunkturprognosen",
+      "institution": "SECO",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.seco.admin.ch/seco/de/home/wirtschaftslage---wirtschaftspolitik/Wirtschaftslage/konjunkturprognosen.html"
+    },
+    {
+      "id": "research-seco-arbeitslosenstatistik-2024",
+      "title": "Arbeitslosenstatistik",
+      "institution": "SECO",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.seco.admin.ch/seco/de/home/Arbeit/Arbeitslosenversicherung/arbeitslosenzahlen.html"
+    },
+    {
+      "id": "research-seco-fachkraefte-2024",
+      "title": "Fachkräfteinitiative",
+      "institution": "SECO",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.seco.admin.ch/seco/de/home/Arbeit/Fachkraefteinitiative.html"
+    },
+    {
+      "id": "research-sbfi-berufsbildung-2024",
+      "title": "Berufsbildung in der Schweiz",
+      "institution": "SBFI",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.sbfi.admin.ch/sbfi/de/home/bildung/berufsbildungssteuerung-und--politik/berufsbildung-in-der-schweiz.html"
+    },
+    {
+      "id": "research-sbfi-forschung-2024",
+      "title": "Forschung und Innovation in der Schweiz",
+      "institution": "SBFI",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.sbfi.admin.ch/sbfi/de/home/forschung-und-innovation.html"
+    },
+    {
+      "id": "research-innosuisse-report-2024",
+      "title": "Innosuisse Jahresbericht",
+      "institution": "Innosuisse",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.innosuisse.ch/inno/de/home/ueber-uns/zahlen-und-fakten.html"
+    },
+    {
+      "id": "research-snf-forschung-2024",
+      "title": "Forschungsförderung Schweiz",
+      "institution": "Schweizerischer Nationalfonds (SNF)",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.snf.ch/de"
+    },
+    {
+      "id": "research-digitale-verwaltung-2024",
+      "title": "Digitale Verwaltung Schweiz",
+      "institution": "Digitale Verwaltung Schweiz",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.digitale-verwaltung-schweiz.ch/"
+    },
+    {
+      "id": "research-bakom-digital-2024",
+      "title": "Strategie Digitale Schweiz",
+      "institution": "BAKOM",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.bakom.admin.ch/bakom/de/home/digital-und-internet/strategie-digitale-schweiz.html"
+    },
+    {
+      "id": "research-edoeb-datenschutz-2024",
+      "title": "Datenschutz und AI",
+      "institution": "EDÖB",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.edoeb.admin.ch/edoeb/de/home/datenschutz/arbeit_wirtschaft/kuenstliche-intelligenz.html"
+    },
+    {
+      "id": "research-snb-stability-2024",
+      "title": "Financial Stability Report",
+      "institution": "SNB",
+      "year": 2024,
+      "category": "government",
+      "url": "https://www.snb.ch/en/publications/financial-stability-report"
+    },
+    {
+      "id": "research-kof-forecast-2024",
+      "title": "KOF Konjunkturprognose",
+      "institution": "KOF ETH Zürich",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://kof.ethz.ch/en/forecasts-and-indicators.html"
+    },
+    {
+      "id": "research-kof-digitalbarometer-2024",
+      "title": "KOF Digitalbarometer",
+      "institution": "KOF ETH Zürich",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-digitalisation-barometer.html"
+    },
+    {
+      "id": "research-bak-economics-2024",
+      "title": "BAK Economics Prognosen",
+      "institution": "BAK Economics",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.bak-economics.com/"
+    },
+    {
+      "id": "research-swisscom-digital-2024",
+      "title": "Digital Switzerland Report",
+      "institution": "Swisscom",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.swisscom.ch/de/business/enterprise/themen/digital-business.html"
+    },
+    {
+      "id": "research-swiss-digital-initiative-2024",
+      "title": "Swiss Digital Initiative",
+      "institution": "Swiss Digital Initiative",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.swiss-digital-initiative.org/"
+    },
+    {
+      "id": "research-oecd-employment-2024",
+      "title": "OECD Employment Outlook 2024",
+      "institution": "OECD",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.oecd.org/employment/outlook/"
+    },
+    {
+      "id": "research-oecd-skills-2024",
+      "title": "OECD Skills Outlook",
+      "institution": "OECD",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.oecd.org/education/oecd-skills-outlook/"
+    },
+    {
+      "id": "research-oecd-ai-policy-2024",
+      "title": "OECD AI Policy Observatory",
+      "institution": "OECD",
+      "year": 2024,
+      "category": "international",
+      "url": "https://oecd.ai/"
+    },
+    {
+      "id": "research-oecd-education-2024",
+      "title": "Education at a Glance",
+      "institution": "OECD",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.oecd.org/education/education-at-a-glance/"
+    },
+    {
+      "id": "research-oecd-digital-economy-2024",
+      "title": "OECD Digital Economy Outlook",
+      "institution": "OECD",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.oecd.org/digital/oecd-digital-economy-outlook/"
+    },
+    {
+      "id": "research-oecd-future-work-2024",
+      "title": "The Future of Work",
+      "institution": "OECD",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.oecd.org/future-of-work/"
+    },
+    {
+      "id": "research-wef-future-jobs-2023",
+      "title": "Future of Jobs Report 2023",
+      "institution": "World Economic Forum",
+      "year": 2023,
+      "category": "international",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2023/"
+    },
+    {
+      "id": "research-wef-global-risks-2024",
+      "title": "Global Risks Report 2024",
+      "institution": "World Economic Forum",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.weforum.org/publications/global-risks-report-2024/"
+    },
+    {
+      "id": "research-wef-competitiveness-2024",
+      "title": "Global Competitiveness Report",
+      "institution": "World Economic Forum",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.weforum.org/publications/the-global-competitiveness-report/"
+    },
+    {
+      "id": "research-wef-davos-ai-2024",
+      "title": "AI Governance Alliance",
+      "institution": "World Economic Forum",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.weforum.org/communities/ai-governance-alliance/"
+    },
+    {
+      "id": "research-imf-weo-2024",
+      "title": "World Economic Outlook",
+      "institution": "IMF",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.imf.org/en/Publications/WEO"
+    },
+    {
+      "id": "research-imf-ai-labor-2024",
+      "title": "AI and the Future of Work",
+      "institution": "IMF",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.imf.org/en/Topics/AI"
+    },
+    {
+      "id": "research-imf-switzerland-2024",
+      "title": "IMF Country Report: Switzerland",
+      "institution": "IMF",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.imf.org/en/Countries/CHE"
+    },
+    {
+      "id": "research-worldbank-jobs-2024",
+      "title": "World Development Report: Jobs",
+      "institution": "World Bank",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.worldbank.org/en/topic/jobsanddevelopment"
+    },
+    {
+      "id": "research-worldbank-digital-2024",
+      "title": "Digital Development",
+      "institution": "World Bank",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.worldbank.org/en/topic/digitaldevelopment"
+    },
+    {
+      "id": "research-ilo-future-work-2024",
+      "title": "Future of Work - Global Commission Report",
+      "institution": "ILO",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.ilo.org/global/topics/future-of-work/lang--en/index.htm"
+    },
+    {
+      "id": "research-ilo-ai-work-2024",
+      "title": "Generative AI and Jobs",
+      "institution": "ILO",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.ilo.org/global/topics/artificial-intelligence/lang--en/index.htm"
+    },
+    {
+      "id": "research-ilo-skills-2024",
+      "title": "Skills and Employability",
+      "institution": "ILO",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.ilo.org/global/topics/skills-knowledge-and-employability/lang--en/index.htm"
+    },
+    {
+      "id": "research-eu-ai-act-2024",
+      "title": "EU AI Act",
+      "institution": "European Commission",
+      "year": 2024,
+      "category": "international",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "id": "research-eu-digital-decade-2024",
+      "title": "Digital Decade 2030",
+      "institution": "European Commission",
+      "year": 2024,
+      "category": "international",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/europes-digital-decade"
+    },
+    {
+      "id": "research-eu-digital-economy-2024",
+      "title": "Digital Economy and Society Index",
+      "institution": "European Commission",
+      "year": 2024,
+      "category": "international",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/desi"
+    },
+    {
+      "id": "research-unesco-ai-ethics-2024",
+      "title": "Recommendation on the Ethics of AI",
+      "institution": "UNESCO",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics"
+    },
+    {
+      "id": "research-un-digital-cooperation-2024",
+      "title": "Roadmap for Digital Cooperation",
+      "institution": "United Nations",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.un.org/en/content/digital-cooperation-roadmap/"
+    },
+    {
+      "id": "research-unctad-digital-2024",
+      "title": "Digital Economy Report",
+      "institution": "UNCTAD",
+      "year": 2024,
+      "category": "international",
+      "url": "https://unctad.org/topic/ecommerce-and-digital-economy/digital-economy-report"
+    },
+    {
+      "id": "research-bis-fintech-2024",
+      "title": "BIS Innovation Hub",
+      "institution": "Bank for International Settlements",
+      "year": 2024,
+      "category": "international",
+      "url": "https://www.bis.org/about/bisih/about.htm"
+    },
+    {
+      "id": "research-mckinsey-genai-2023",
+      "title": "The economic potential of generative AI",
+      "institution": "McKinsey Global Institute",
+      "year": 2023,
+      "category": "consulting",
+      "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier"
+    },
+    {
+      "id": "research-mckinsey-automation-2023",
+      "title": "Jobs lost, jobs gained: Workforce transitions",
+      "institution": "McKinsey Global Institute",
+      "year": 2023,
+      "category": "consulting",
+      "url": "https://www.mckinsey.com/featured-insights/future-of-work/jobs-lost-jobs-gained-what-the-future-of-work-will-mean-for-jobs-skills-and-wages"
+    },
+    {
+      "id": "research-mckinsey-skills-2024",
+      "title": "Skill shift: Automation and the future of the workforce",
+      "institution": "McKinsey Global Institute",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.mckinsey.com/featured-insights/future-of-work/skill-shift-automation-and-the-future-of-the-workforce"
+    },
+    {
+      "id": "research-mckinsey-state-ai-2024",
+      "title": "The state of AI in 2024",
+      "institution": "McKinsey & Company",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
+    },
+    {
+      "id": "research-mckinsey-future-work-2024",
+      "title": "The future of work after COVID-19",
+      "institution": "McKinsey Global Institute",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.mckinsey.com/featured-insights/future-of-work/the-future-of-work-after-covid-19"
+    },
+    {
+      "id": "research-bcg-ai-scale-2024",
+      "title": "AI at Scale",
+      "institution": "Boston Consulting Group",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.bcg.com/publications/2024/ai-at-scale"
+    },
+    {
+      "id": "research-bcg-genai-productivity-2024",
+      "title": "How Generative AI Boosts Productivity",
+      "institution": "Boston Consulting Group",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.bcg.com/publications/2024/how-generative-ai-boosts-productivity"
+    },
+    {
+      "id": "research-bcg-future-work-2024",
+      "title": "The Future of Work Is Now",
+      "institution": "Boston Consulting Group",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.bcg.com/capabilities/people-strategy/future-of-work"
+    },
+    {
+      "id": "research-deloitte-ai-enterprise-2024",
+      "title": "State of AI in the Enterprise",
+      "institution": "Deloitte",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www2.deloitte.com/us/en/pages/consulting/articles/state-of-ai-in-the-enterprise.html"
+    },
+    {
+      "id": "research-deloitte-tech-trends-2024",
+      "title": "Tech Trends 2024",
+      "institution": "Deloitte",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www2.deloitte.com/us/en/insights/focus/tech-trends.html"
+    },
+    {
+      "id": "research-deloitte-human-capital-2024",
+      "title": "Human Capital Trends",
+      "institution": "Deloitte",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html"
+    },
+    {
+      "id": "research-deloitte-ai-governance-2024",
+      "title": "Trustworthy AI",
+      "institution": "Deloitte",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www2.deloitte.com/us/en/pages/deloitte-analytics/solutions/ethics-of-ai-framework.html"
+    },
+    {
+      "id": "research-pwc-global-ai-2024",
+      "title": "Global AI Study: Sizing the Prize",
+      "institution": "PwC",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence.html"
+    },
+    {
+      "id": "research-pwc-workforce-2024",
+      "title": "Workforce of the Future",
+      "institution": "PwC",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.pwc.com/gx/en/issues/workforce.html"
+    },
+    {
+      "id": "research-pwc-ceo-survey-2024",
+      "title": "Annual Global CEO Survey",
+      "institution": "PwC",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.pwc.com/gx/en/issues/c-suite-insights/ceo-survey.html"
+    },
+    {
+      "id": "research-pwc-responsible-ai-2024",
+      "title": "Responsible AI Toolkit",
+      "institution": "PwC",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.pwc.com/gx/en/issues/data-and-analytics/artificial-intelligence/what-is-responsible-ai.html"
+    },
+    {
+      "id": "research-ey-ai-survey-2024",
+      "title": "AI Survey",
+      "institution": "EY",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.ey.com/en_gl/ai"
+    },
+    {
+      "id": "research-ey-future-work-2024",
+      "title": "Work Reimagined",
+      "institution": "EY",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.ey.com/en_gl/workforce/work-reimagined"
+    },
+    {
+      "id": "research-kpmg-ai-adoption-2024",
+      "title": "AI Adoption Survey",
+      "institution": "KPMG",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://kpmg.com/xx/en/home/insights/2024/artificial-intelligence.html"
+    },
+    {
+      "id": "research-kpmg-future-work-2024",
+      "title": "Future of Work",
+      "institution": "KPMG",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://kpmg.com/xx/en/home/insights/future-of-work.html"
+    },
+    {
+      "id": "research-accenture-tech-vision-2024",
+      "title": "Technology Vision 2024",
+      "institution": "Accenture",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.accenture.com/us-en/insights/technology/technology-trends"
+    },
+    {
+      "id": "research-accenture-future-workforce-2024",
+      "title": "Future Workforce",
+      "institution": "Accenture",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.accenture.com/us-en/insights/future-workforce-index"
+    },
+    {
+      "id": "research-accenture-genai-2024",
+      "title": "Generative AI: A New Era of Enterprise Intelligence",
+      "institution": "Accenture",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.accenture.com/us-en/insights/generative-ai"
+    },
+    {
+      "id": "research-capgemini-ai-2024",
+      "title": "AI in Business",
+      "institution": "Capgemini",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.capgemini.com/insights/research-library/artificial-intelligence/"
+    },
+    {
+      "id": "research-capgemini-world-report-2024",
+      "title": "World Report Series",
+      "institution": "Capgemini Research Institute",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.capgemini.com/insights/research-institute/"
+    },
+    {
+      "id": "research-gartner-ai-hype-2023",
+      "title": "Gartner Hype Cycle for Artificial Intelligence",
+      "institution": "Gartner",
+      "year": 2023,
+      "category": "consulting",
+      "url": "https://www.gartner.com/en/articles/what-s-new-in-artificial-intelligence-from-the-2023-gartner-hype-cycle"
+    },
+    {
+      "id": "research-gartner-top-tech-2024",
+      "title": "Top Strategic Technology Trends",
+      "institution": "Gartner",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.gartner.com/en/articles/gartner-top-10-strategic-technology-trends-for-2024"
+    },
+    {
+      "id": "research-bain-automation-2024",
+      "title": "Automation and AI",
+      "institution": "Bain & Company",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.bain.com/insights/topics/artificial-intelligence/"
+    },
+    {
+      "id": "research-bain-future-work-2024",
+      "title": "The Working Future",
+      "institution": "Bain & Company",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.bain.com/insights/topics/future-of-work/"
+    },
+    {
+      "id": "research-roland-berger-ai-2024",
+      "title": "AI for Business",
+      "institution": "Roland Berger",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.rolandberger.com/en/Insights/Artificial-Intelligence.html"
+    },
+    {
+      "id": "research-oliver-wyman-ai-2024",
+      "title": "The AI Imperative",
+      "institution": "Oliver Wyman",
+      "year": 2024,
+      "category": "consulting",
+      "url": "https://www.oliverwyman.com/our-expertise/insights/artificial-intelligence.html"
+    },
+    {
+      "id": "research-google-ai-2024",
+      "title": "Google AI Research",
+      "institution": "Google",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://ai.google/research/"
+    },
+    {
+      "id": "research-google-responsible-ai-2024",
+      "title": "Responsible AI Practices",
+      "institution": "Google",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://ai.google/responsibility/responsible-ai-practices/"
+    },
+    {
+      "id": "research-microsoft-worklab-2024",
+      "title": "Work Trend Index",
+      "institution": "Microsoft",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/"
+    },
+    {
+      "id": "research-microsoft-ai-research-2024",
+      "title": "Microsoft Research - AI",
+      "institution": "Microsoft Research",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.microsoft.com/en-us/research/research-area/artificial-intelligence/"
+    },
+    {
+      "id": "research-microsoft-responsible-ai-2024",
+      "title": "Responsible AI Standard",
+      "institution": "Microsoft",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.microsoft.com/en-us/ai/responsible-ai"
+    },
+    {
+      "id": "research-ibm-institute-2024",
+      "title": "IBM Institute for Business Value",
+      "institution": "IBM",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.ibm.com/thought-leadership/institute-business-value/"
+    },
+    {
+      "id": "research-ibm-ai-ethics-2024",
+      "title": "IBM AI Ethics",
+      "institution": "IBM",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.ibm.com/artificial-intelligence/ethics"
+    },
+    {
+      "id": "research-salesforce-research-2024",
+      "title": "Salesforce AI Research",
+      "institution": "Salesforce",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.salesforce.com/company/news-press/stories/ai-research/"
+    },
+    {
+      "id": "research-salesforce-state-ai-2024",
+      "title": "State of AI Report",
+      "institution": "Salesforce",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.salesforce.com/resources/research-reports/"
+    },
+    {
+      "id": "research-linkedin-economic-2024",
+      "title": "Economic Graph",
+      "institution": "LinkedIn",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://economicgraph.linkedin.com/"
+    },
+    {
+      "id": "research-linkedin-future-work-2024",
+      "title": "Future of Work Report",
+      "institution": "LinkedIn",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.linkedin.com/business/talent/blog/talent-strategy/future-of-work"
+    },
+    {
+      "id": "research-linkedin-jobs-rise-2024",
+      "title": "Jobs on the Rise",
+      "institution": "LinkedIn",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.linkedin.com/pulse/linkedin-jobs-rise-2024/"
+    },
+    {
+      "id": "research-indeed-hiring-2024",
+      "title": "Indeed Hiring Lab",
+      "institution": "Indeed",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.hiringlab.org/"
+    },
+    {
+      "id": "research-glassdoor-economic-2024",
+      "title": "Glassdoor Economic Research",
+      "institution": "Glassdoor",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.glassdoor.com/research/"
+    },
+    {
+      "id": "research-meta-ai-research-2024",
+      "title": "Meta AI Research",
+      "institution": "Meta",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://ai.meta.com/research/"
+    },
+    {
+      "id": "research-amazon-science-2024",
+      "title": "Amazon Science",
+      "institution": "Amazon",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.amazon.science/"
+    },
+    {
+      "id": "research-nvidia-ai-2024",
+      "title": "NVIDIA AI Research",
+      "institution": "NVIDIA",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.nvidia.com/en-us/research/"
+    },
+    {
+      "id": "research-intel-ai-2024",
+      "title": "Intel AI",
+      "institution": "Intel",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html"
+    },
+    {
+      "id": "research-sap-insights-2024",
+      "title": "SAP Insights",
+      "institution": "SAP",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.sap.com/insights.html"
+    },
+    {
+      "id": "research-oracle-ai-2024",
+      "title": "Oracle AI",
+      "institution": "Oracle",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.oracle.com/artificial-intelligence/"
+    },
+    {
+      "id": "research-stanford-hai-2024",
+      "title": "AI Index Report 2024",
+      "institution": "Stanford HAI",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://aiindex.stanford.edu/report/"
+    },
+    {
+      "id": "research-stanford-hai-genai-2024",
+      "title": "Generative AI and the Labor Market",
+      "institution": "Stanford HAI",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://hai.stanford.edu/research/generative-ai"
+    },
+    {
+      "id": "research-stanford-hai-policy-2024",
+      "title": "AI Policy and Governance",
+      "institution": "Stanford HAI",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://hai.stanford.edu/policy"
+    },
+    {
+      "id": "research-mit-sloan-ai-2024",
+      "title": "MIT Sloan AI Research",
+      "institution": "MIT Sloan School of Management",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://mitsloan.mit.edu/ideas-made-to-matter/topic/artificial-intelligence"
+    },
+    {
+      "id": "research-mit-work-future-2024",
+      "title": "MIT Work of the Future",
+      "institution": "MIT",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://workofthefuture.mit.edu/"
+    },
+    {
+      "id": "research-mit-csail-ai-2024",
+      "title": "MIT CSAIL AI Research",
+      "institution": "MIT CSAIL",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.csail.mit.edu/research/artificial-intelligence"
+    },
+    {
+      "id": "research-oxford-future-humanity-2024",
+      "title": "Future of Humanity Institute",
+      "institution": "Oxford University",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.fhi.ox.ac.uk/"
+    },
+    {
+      "id": "research-oxford-martin-2024",
+      "title": "Oxford Martin School",
+      "institution": "Oxford University",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.oxfordmartin.ox.ac.uk/"
+    },
+    {
+      "id": "research-oxford-automation-2024",
+      "title": "The Future of Employment",
+      "institution": "Oxford University",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.oxfordmartin.ox.ac.uk/publications/the-future-of-employment/"
+    },
+    {
+      "id": "research-cambridge-ai-2024",
+      "title": "Cambridge Centre for AI in Medicine",
+      "institution": "Cambridge University",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.cam.ac.uk/research/research-at-cambridge/artificial-intelligence"
+    },
+    {
+      "id": "research-hbs-ai-2024",
+      "title": "Harvard Business Review - AI",
+      "institution": "Harvard Business School",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://hbr.org/topic/subject/ai-and-machine-learning"
+    },
+    {
+      "id": "research-berkeley-ai-2024",
+      "title": "Berkeley AI Research",
+      "institution": "UC Berkeley",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://bair.berkeley.edu/"
+    },
+    {
+      "id": "research-cmu-ai-2024",
+      "title": "CMU AI Research",
+      "institution": "Carnegie Mellon University",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.cmu.edu/ai/"
+    },
+    {
+      "id": "research-eth-ai-center-2024",
+      "title": "ETH AI Center",
+      "institution": "ETH Zürich",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://ai.ethz.ch/"
+    },
+    {
+      "id": "research-eth-digital-2024",
+      "title": "ETH Digital Transformation",
+      "institution": "ETH Zürich",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://ethz.ch/en/industry/industry-4-0.html"
+    },
+    {
+      "id": "research-epfl-ai-2024",
+      "title": "EPFL AI Research",
+      "institution": "EPFL",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.epfl.ch/research/domains/artificial-intelligence/"
+    },
+    {
+      "id": "research-uzh-digital-2024",
+      "title": "UZH Digital Society Initiative",
+      "institution": "Universität Zürich",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.dsi.uzh.ch/"
+    },
+    {
+      "id": "research-unisg-ai-2024",
+      "title": "HSG AI and Business",
+      "institution": "Universität St. Gallen",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://ics.unisg.ch/"
+    },
+    {
+      "id": "research-zhaw-digitalisation-2024",
+      "title": "ZHAW Digitalisierung",
+      "institution": "ZHAW",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.zhaw.ch/de/forschung/forschungsschwerpunkte/digitalisierung/"
+    },
+    {
+      "id": "research-fhnw-ai-2024",
+      "title": "FHNW AI Research",
+      "institution": "FHNW",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.fhnw.ch/de/forschung-und-dienstleistungen/technik/digital-technologies"
+    },
+    {
+      "id": "research-idiap-2024",
+      "title": "Idiap Research Institute",
+      "institution": "Idiap",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.idiap.ch/"
+    },
+    {
+      "id": "research-nber-ai-2024",
+      "title": "NBER AI Economics",
+      "institution": "NBER",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://www.nber.org/topics/artificial-intelligence"
+    },
+    {
+      "id": "research-arxiv-ai-2024",
+      "title": "arXiv AI/ML Papers",
+      "institution": "arXiv",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://arxiv.org/list/cs.AI/recent"
+    },
+    {
+      "id": "research-avenir-suisse-digital-2024",
+      "title": "Digitalisierung der Schweizer Wirtschaft",
+      "institution": "Avenir Suisse",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.avenir-suisse.ch/themen/digitalisierung/"
+    },
+    {
+      "id": "research-avenir-suisse-arbeitsmarkt-2024",
+      "title": "Arbeitsmarkt Schweiz",
+      "institution": "Avenir Suisse",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.avenir-suisse.ch/themen/arbeitsmarkt/"
+    },
+    {
+      "id": "research-avenir-suisse-bildung-2024",
+      "title": "Bildung und Weiterbildung",
+      "institution": "Avenir Suisse",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.avenir-suisse.ch/themen/bildung/"
+    },
+    {
+      "id": "research-economiesuisse-digital-2024",
+      "title": "Digitalisierung und Innovation",
+      "institution": "economiesuisse",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.economiesuisse.ch/de/dossier-politik/digitalisierung"
+    },
+    {
+      "id": "research-economiesuisse-arbeitsmarkt-2024",
+      "title": "Arbeitsmarktpolitik",
+      "institution": "economiesuisse",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.economiesuisse.ch/de/dossier-politik/arbeitsmarkt"
+    },
+    {
+      "id": "research-brookings-ai-2024",
+      "title": "Brookings AI Research",
+      "institution": "Brookings Institution",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.brookings.edu/topic/artificial-intelligence/"
+    },
+    {
+      "id": "research-brookings-future-work-2024",
+      "title": "Future of Work Initiative",
+      "institution": "Brookings Institution",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.brookings.edu/projects/workforce-of-the-future/"
+    },
+    {
+      "id": "research-rand-ai-2024",
+      "title": "RAND AI Research",
+      "institution": "RAND Corporation",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.rand.org/topics/artificial-intelligence.html"
+    },
+    {
+      "id": "research-bruegel-digital-2024",
+      "title": "Bruegel Digital Economy",
+      "institution": "Bruegel",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.bruegel.org/topic/digital-economy"
+    },
+    {
+      "id": "research-bruegel-ai-2024",
+      "title": "Bruegel AI Policy",
+      "institution": "Bruegel",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.bruegel.org/topic/artificial-intelligence"
+    },
+    {
+      "id": "research-ai-now-2024",
+      "title": "AI Now Institute",
+      "institution": "AI Now Institute",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://ainowinstitute.org/"
+    },
+    {
+      "id": "research-cais-safety-2024",
+      "title": "Center for AI Safety",
+      "institution": "Center for AI Safety",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.safe.ai/"
+    },
+    {
+      "id": "research-cset-ai-2024",
+      "title": "CSET AI Research",
+      "institution": "Georgetown CSET",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://cset.georgetown.edu/"
+    },
+    {
+      "id": "research-aspen-ai-2024",
+      "title": "Aspen Digital",
+      "institution": "Aspen Institute",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.aspeninstitute.org/programs/aspen-digital/"
+    },
+    {
+      "id": "research-ceps-ai-2024",
+      "title": "CEPS Digital Policy",
+      "institution": "Centre for European Policy Studies",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.ceps.eu/topics/digital-economy/"
+    },
+    {
+      "id": "research-ifo-digital-2024",
+      "title": "ifo Digitalisierung",
+      "institution": "ifo Institut",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.ifo.de/forschung/digitalisierung"
+    },
+    {
+      "id": "research-iab-arbeitsmarkt-2024",
+      "title": "IAB Arbeitsmarktforschung",
+      "institution": "IAB",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.iab.de/"
+    },
+    {
+      "id": "research-nesta-ai-2024",
+      "title": "Nesta AI",
+      "institution": "Nesta",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.nesta.org.uk/project/future-skills/"
+    },
+    {
+      "id": "research-ubs-research-2024",
+      "title": "UBS Global Research",
+      "institution": "UBS",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.ubs.com/global/en/wealth-management/insights.html"
+    },
+    {
+      "id": "research-ubs-ai-2024",
+      "title": "UBS AI in Finance",
+      "institution": "UBS",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.ubs.com/global/en/wealth-management/chief-investment-office/life-goals/technology.html"
+    },
+    {
+      "id": "research-ubs-switzerland-2024",
+      "title": "UBS Switzerland Economic Analysis",
+      "institution": "UBS",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.ubs.com/ch/de/wealth-management/insights.html"
+    },
+    {
+      "id": "research-swiss-re-sigma-2024",
+      "title": "Swiss Re Sigma",
+      "institution": "Swiss Re",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.swissre.com/institute/research/sigma-research.html"
+    },
+    {
+      "id": "research-swiss-re-ai-2024",
+      "title": "Swiss Re AI and Insurance",
+      "institution": "Swiss Re",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.swissre.com/institute/research/topics-and-risk-dialogues/digital-technology.html"
+    },
+    {
+      "id": "research-zurich-insurance-2024",
+      "title": "Zurich Insurance Research",
+      "institution": "Zurich Insurance",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.zurich.com/knowledge"
+    },
+    {
+      "id": "research-raiffeisen-research-2024",
+      "title": "Raiffeisen Economic Research",
+      "institution": "Raiffeisen",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.raiffeisen.ch/rch/de/ueber-uns/raiffeisen-gruppe/publikationen/economic-research.html"
+    },
+    {
+      "id": "research-zkb-research-2024",
+      "title": "ZKB Research",
+      "institution": "Zürcher Kantonalbank",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.zkb.ch/de/ueber-uns/medien/publikationen.html"
+    },
+    {
+      "id": "research-sif-fintech-2024",
+      "title": "Swiss Fintech Report",
+      "institution": "SIF/SFTI",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.sif.admin.ch/sif/en/home/finanzmarktpolitik/digit-finanzsektor.html"
+    },
+    {
+      "id": "research-sfti-innovation-2024",
+      "title": "Swiss Finance + Technology Association",
+      "institution": "SFTI",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://swissfinte.ch/"
+    },
+    {
+      "id": "research-sba-banking-2024",
+      "title": "Swiss Bankers Association",
+      "institution": "SBA",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.swissbanking.ch/en/topics"
+    },
+    {
+      "id": "research-finma-annual-2024",
+      "title": "FINMA Annual Report",
+      "institution": "FINMA",
+      "year": 2024,
+      "category": "finance",
+      "url": "https://www.finma.ch/en/documentation/finma-publications/annual-reports/"
+    },
+    {
+      "id": "research-swissmem-industrie-2024",
+      "title": "Swissmem Industrie 4.0",
+      "institution": "Swissmem",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.swissmem.ch/de/themen/industrie-40.html"
+    },
+    {
+      "id": "research-swissmem-arbeitsmarkt-2024",
+      "title": "Swissmem Arbeitsmarkt",
+      "institution": "Swissmem",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.swissmem.ch/de/themen/arbeitswelt.html"
+    },
+    {
+      "id": "research-digitalswitzerland-2024",
+      "title": "Digital Switzerland",
+      "institution": "digitalswitzerland",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://digitalswitzerland.com/"
+    },
+    {
+      "id": "research-ict-switzerland-2024",
+      "title": "ICT Switzerland",
+      "institution": "ICT Switzerland",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.ict-switzerland.ch/"
+    },
+    {
+      "id": "research-swico-ict-2024",
+      "title": "Swico ICT Report",
+      "institution": "Swico",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.swico.ch/"
+    },
+    {
+      "id": "research-sgv-arbeitsmarkt-2024",
+      "title": "Schweizerischer Gewerbeverband",
+      "institution": "SGV",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.sgv-usam.ch/"
+    },
+    {
+      "id": "research-sav-arbeitgeber-2024",
+      "title": "Schweizerischer Arbeitgeberverband",
+      "institution": "SAV",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.arbeitgeber.ch/"
+    },
+    {
+      "id": "research-travail-suisse-2024",
+      "title": "Travail.Suisse Digitalisierung",
+      "institution": "Travail.Suisse",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.travailsuisse.ch/"
+    },
+    {
+      "id": "research-sgb-gewerkschaft-2024",
+      "title": "SGB Digitalisierung",
+      "institution": "Schweizerischer Gewerkschaftsbund",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.sgb.ch/"
+    },
+    {
+      "id": "research-scienceindustries-2024",
+      "title": "scienceindustries",
+      "institution": "scienceindustries",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.scienceindustries.ch/"
+    },
+    {
+      "id": "research-swiss-medtech-2024",
+      "title": "Swiss Medtech",
+      "institution": "Swiss Medtech",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.swiss-medtech.ch/"
+    },
+    {
+      "id": "research-asut-telecom-2024",
+      "title": "asut Telekommunikation",
+      "institution": "asut",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://asut.ch/"
+    },
+    {
+      "id": "research-gastrosuisse-2024",
+      "title": "GastroSuisse Digitalisierung",
+      "institution": "GastroSuisse",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.gastrosuisse.ch/"
+    },
+    {
+      "id": "research-hotelleriesuisse-2024",
+      "title": "HotellerieSuisse",
+      "institution": "HotellerieSuisse",
+      "year": 2024,
+      "category": "industry",
+      "url": "https://www.hotelleriesuisse.ch/"
+    },
+    {
+      "id": "research-openai-research-2024",
+      "title": "OpenAI Research",
+      "institution": "OpenAI",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://openai.com/research/"
+    },
+    {
+      "id": "research-openai-economic-2024",
+      "title": "GPTs are GPTs: Economic Impacts of AI",
+      "institution": "OpenAI",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://openai.com/research/gpts-are-gpts"
+    },
+    {
+      "id": "research-anthropic-research-2024",
+      "title": "Anthropic Research",
+      "institution": "Anthropic",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.anthropic.com/research"
+    },
+    {
+      "id": "research-anthropic-claude-2024",
+      "title": "Claude Model Card",
+      "institution": "Anthropic",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.anthropic.com/claude"
+    },
+    {
+      "id": "research-deepmind-research-2024",
+      "title": "DeepMind Research",
+      "institution": "DeepMind",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://deepmind.google/research/"
+    },
+    {
+      "id": "research-deepmind-safety-2024",
+      "title": "DeepMind Safety Research",
+      "institution": "DeepMind",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://deepmind.google/safety-research/"
+    },
+    {
+      "id": "research-huggingface-blog-2024",
+      "title": "Hugging Face Blog",
+      "institution": "Hugging Face",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://huggingface.co/blog"
+    },
+    {
+      "id": "research-huggingface-leaderboard-2024",
+      "title": "Open LLM Leaderboard",
+      "institution": "Hugging Face",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard"
+    },
+    {
+      "id": "research-paperswithcode-2024",
+      "title": "Papers With Code",
+      "institution": "Papers With Code",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://paperswithcode.com/"
+    },
+    {
+      "id": "research-epoch-ai-2024",
+      "title": "Epoch AI",
+      "institution": "Epoch",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://epochai.org/"
+    },
+    {
+      "id": "research-our-world-data-ai-2024",
+      "title": "Our World in Data - AI",
+      "institution": "Our World in Data",
+      "year": 2024,
+      "category": "academic",
+      "url": "https://ourworldindata.org/artificial-intelligence"
+    },
+    {
+      "id": "research-ai-impacts-2024",
+      "title": "AI Impacts",
+      "institution": "AI Impacts",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://aiimpacts.org/"
+    },
+    {
+      "id": "research-alignment-forum-2024",
+      "title": "AI Alignment Forum",
+      "institution": "Alignment Forum",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.alignmentforum.org/"
+    },
+    {
+      "id": "research-lesswrong-ai-2024",
+      "title": "LessWrong AI",
+      "institution": "LessWrong",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://www.lesswrong.com/tag/ai"
+    },
+    {
+      "id": "research-80000hours-ai-2024",
+      "title": "80,000 Hours - AI Safety",
+      "institution": "80,000 Hours",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://80000hours.org/problem-profiles/artificial-intelligence/"
+    },
+    {
+      "id": "research-miri-2024",
+      "title": "MIRI Research",
+      "institution": "Machine Intelligence Research Institute",
+      "year": 2024,
+      "category": "think-tank",
+      "url": "https://intelligence.org/research/"
+    },
+    {
+      "id": "research-redwood-research-2024",
+      "title": "Redwood Research",
+      "institution": "Redwood Research",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.redwoodresearch.org/"
+    },
+    {
+      "id": "research-conjecture-2024",
+      "title": "Conjecture AI Safety",
+      "institution": "Conjecture",
+      "year": 2024,
+      "category": "tech",
+      "url": "https://www.conjecture.dev/"
+    }
+  ]
+}

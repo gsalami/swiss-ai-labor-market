@@ -1,0 +1,18 @@
+{
+  "id": "research-miri-2024",
+  "title": "MIRI Research",
+  "authors": [
+    "Machine Intelligence Research Institute"
+  ],
+  "institution": "Machine Intelligence Research Institute",
+  "year": 2024,
+  "abstract": "Technical AI alignment research focused on mathematical foundations of safety.",
+  "url": "https://intelligence.org/research/",
+  "topics": [
+    "ai alignment",
+    "safety",
+    "mathematics",
+    "research"
+  ],
+  "industries": []
+}

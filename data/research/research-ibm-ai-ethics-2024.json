@@ -1,0 +1,18 @@
+{
+  "id": "research-ibm-ai-ethics-2024",
+  "title": "IBM AI Ethics",
+  "authors": [
+    "IBM"
+  ],
+  "institution": "IBM",
+  "year": 2024,
+  "abstract": "IBM framework for trustworthy AI including fairness, explainability, and robustness.",
+  "url": "https://www.ibm.com/artificial-intelligence/ethics",
+  "topics": [
+    "ai ethics",
+    "trustworthy ai",
+    "fairness",
+    "explainability"
+  ],
+  "industries": []
+}

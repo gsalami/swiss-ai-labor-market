@@ -1,0 +1,11 @@
+{
+  "id": "research-snb-stability-2024",
+  "title": "Financial Stability Report",
+  "authors": ["Swiss National Bank"],
+  "institution": "SNB",
+  "year": 2024,
+  "abstract": "Assessment of Swiss financial sector stability covering banks, insurance, and fintech. Examines digitalization risks and opportunities, including AI adoption in financial services and cybersecurity implications.",
+  "url": "https://www.snb.ch/en/publications/financial-stability-report",
+  "topics": ["financial stability", "fintech", "digitalization", "banking"],
+  "industries": ["finance", "insurance", "fintech"]
+}

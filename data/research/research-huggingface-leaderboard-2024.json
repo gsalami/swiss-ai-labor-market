@@ -1,0 +1,18 @@
+{
+  "id": "research-huggingface-leaderboard-2024",
+  "title": "Open LLM Leaderboard",
+  "authors": [
+    "Hugging Face"
+  ],
+  "institution": "Hugging Face",
+  "year": 2024,
+  "abstract": "Benchmark tracking of open-source language model capabilities and performance.",
+  "url": "https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard",
+  "topics": [
+    "llm",
+    "benchmarks",
+    "open source",
+    "performance"
+  ],
+  "industries": []
+}

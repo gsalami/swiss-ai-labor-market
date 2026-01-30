@@ -1,0 +1,18 @@
+{
+  "id": "research-openai-research-2024",
+  "title": "OpenAI Research",
+  "authors": [
+    "OpenAI"
+  ],
+  "institution": "OpenAI",
+  "year": 2024,
+  "abstract": "Research on large language models, safety, and AI capabilities from OpenAI.",
+  "url": "https://openai.com/research/",
+  "topics": [
+    "llm",
+    "ai safety",
+    "capabilities",
+    "research"
+  ],
+  "industries": []
+}

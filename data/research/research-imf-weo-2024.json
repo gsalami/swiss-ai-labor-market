@@ -1,0 +1,11 @@
+{
+  "id": "research-imf-weo-2024",
+  "title": "World Economic Outlook",
+  "authors": ["International Monetary Fund"],
+  "institution": "IMF",
+  "year": 2024,
+  "abstract": "Global economic analysis examining macroeconomic trends, growth forecasts, and emerging challenges. Includes special chapters on AI's impact on productivity and labor markets across advanced economies.",
+  "url": "https://www.imf.org/en/Publications/WEO",
+  "topics": ["global economy", "productivity", "ai impact", "economic growth"],
+  "industries": ["finance", "technology", "manufacturing", "services"]
+}

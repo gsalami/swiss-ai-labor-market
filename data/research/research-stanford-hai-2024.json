@@ -1,0 +1,11 @@
+{
+  "id": "research-stanford-hai-2024",
+  "title": "AI Index Report 2024",
+  "authors": ["Stanford Institute for Human-Centered AI"],
+  "institution": "Stanford HAI",
+  "year": 2024,
+  "abstract": "Annual comprehensive report tracking AI progress across research, industry, policy and public perception. Covers model capabilities, investment trends, regulation developments, and labor market impacts globally.",
+  "url": "https://aiindex.stanford.edu/report/",
+  "topics": ["ai research", "ai policy", "ai investment", "ai capabilities"],
+  "industries": ["technology", "research", "all sectors"]
+}

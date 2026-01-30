@@ -1,0 +1,18 @@
+{
+  "id": "research-nvidia-ai-2024",
+  "title": "NVIDIA AI Research",
+  "authors": [
+    "NVIDIA"
+  ],
+  "institution": "NVIDIA",
+  "year": 2024,
+  "abstract": "Research on GPU computing, deep learning, and AI infrastructure for enterprise and research.",
+  "url": "https://www.nvidia.com/en-us/research/",
+  "topics": [
+    "gpu computing",
+    "deep learning",
+    "ai infrastructure",
+    "research"
+  ],
+  "industries": []
+}
