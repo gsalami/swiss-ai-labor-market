@@ -5,152 +5,190 @@
       "code": "J",
       "automationRisk": 35,
       "aiAdoption": 85,
+      "aiImpactScore": 8.5,
+      "riskLevel": "medium",
       "trend": "up",
-      "employees": 73840
+      "employees": 264021
     },
     {
       "name": "Finanzdienstleistungen",
       "code": "K",
       "automationRisk": 45,
       "aiAdoption": 72,
+      "aiImpactScore": 7.2,
+      "riskLevel": "medium",
       "trend": "up",
-      "employees": 273684
+      "employees": 406565
     },
     {
       "name": "Freiberufliche Tätigkeiten",
       "code": "M",
       "automationRisk": 35,
       "aiAdoption": 62,
+      "aiImpactScore": 6.2,
+      "riskLevel": "medium",
       "trend": "up",
-      "employees": 304937
+      "employees": 259383
     },
     {
       "name": "Erziehung und Unterricht",
       "code": "P",
       "automationRisk": 20,
       "aiAdoption": 55,
+      "aiImpactScore": 5.5,
+      "riskLevel": "low",
       "trend": "up",
-      "employees": 213929
+      "employees": 151323
     },
     {
       "name": "Energieversorgung",
       "code": "D",
       "automationRisk": 40,
       "aiAdoption": 52,
+      "aiImpactScore": 5.2,
+      "riskLevel": "medium",
       "trend": "stable",
-      "employees": 427043
+      "employees": 410654
     },
     {
       "name": "Verarbeitendes Gewerbe",
       "code": "C",
       "automationRisk": 55,
       "aiAdoption": 48,
+      "aiImpactScore": 4.8,
+      "riskLevel": "high",
       "trend": "stable",
-      "employees": 246346
+      "employees": 415470
     },
     {
       "name": "Verkehr und Lagerei",
       "code": "H",
       "automationRisk": 55,
       "aiAdoption": 45,
+      "aiImpactScore": 4.5,
+      "riskLevel": "high",
       "trend": "up",
-      "employees": 129927
+      "employees": 364354
     },
     {
       "name": "Gesundheits- und Sozialwesen",
       "code": "Q",
       "automationRisk": 25,
       "aiAdoption": 42,
+      "aiImpactScore": 4.2,
+      "riskLevel": "low",
       "trend": "up",
-      "employees": 448416
+      "employees": 229769
     },
     {
       "name": "Handel",
       "code": "G",
       "automationRisk": 50,
       "aiAdoption": 38,
+      "aiImpactScore": 3.8,
+      "riskLevel": "medium",
       "trend": "up",
-      "employees": 148348
+      "employees": 119788
     },
     {
       "name": "Öffentliche Verwaltung",
       "code": "O",
       "automationRisk": 40,
       "aiAdoption": 35,
+      "aiImpactScore": 3.5,
+      "riskLevel": "medium",
       "trend": "stable",
-      "employees": 108201
+      "employees": 104488
     },
     {
       "name": "Bergbau",
       "code": "B",
       "automationRisk": 35,
       "aiAdoption": 30,
+      "aiImpactScore": 3,
+      "riskLevel": "medium",
       "trend": "stable",
-      "employees": 288717
+      "employees": 306551
     },
     {
       "name": "Wasserversorgung",
       "code": "E",
       "automationRisk": 35,
       "aiAdoption": 30,
+      "aiImpactScore": 3,
+      "riskLevel": "medium",
       "trend": "stable",
-      "employees": 328079
+      "employees": 178931
     },
     {
       "name": "Grundstücks- und Wohnungswesen",
       "code": "L",
       "automationRisk": 35,
       "aiAdoption": 30,
+      "aiImpactScore": 3,
+      "riskLevel": "medium",
       "trend": "stable",
-      "employees": 206050
+      "employees": 386620
     },
     {
       "name": "Sonstige wirtschaftliche DL",
       "code": "N",
       "automationRisk": 35,
       "aiAdoption": 30,
+      "aiImpactScore": 3,
+      "riskLevel": "medium",
       "trend": "stable",
-      "employees": 151071
+      "employees": 247721
     },
     {
       "name": "Kunst, Unterhaltung, Erholung",
       "code": "R",
       "automationRisk": 35,
       "aiAdoption": 30,
+      "aiImpactScore": 3,
+      "riskLevel": "medium",
       "trend": "stable",
-      "employees": 120118
+      "employees": 303412
     },
     {
       "name": "Sonstige Dienstleistungen",
       "code": "S",
       "automationRisk": 35,
       "aiAdoption": 30,
+      "aiImpactScore": 3,
+      "riskLevel": "medium",
       "trend": "stable",
-      "employees": 54139
+      "employees": 115457
     },
     {
       "name": "Gastgewerbe",
       "code": "I",
       "automationRisk": 45,
       "aiAdoption": 28,
+      "aiImpactScore": 2.8,
+      "riskLevel": "medium",
       "trend": "up",
-      "employees": 204943
+      "employees": 173632
     },
     {
       "name": "Baugewerbe",
       "code": "F",
       "automationRisk": 30,
       "aiAdoption": 22,
+      "aiImpactScore": 2.2,
+      "riskLevel": "low",
       "trend": "stable",
-      "employees": 107504
+      "employees": 240782
     },
     {
       "name": "Land- und Forstwirtschaft",
       "code": "A",
       "automationRisk": 35,
       "aiAdoption": 18,
+      "aiImpactScore": 1.8,
+      "riskLevel": "medium",
       "trend": "stable",
-      "employees": 202794
+      "employees": 293061
     }
   ]
 }

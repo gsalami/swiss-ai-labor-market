@@ -61,6 +61,8 @@ async function buildIndustriesApi() {
       code: s.sectorCode,
       automationRisk: impact.automationRisk,
       aiAdoption: impact.aiAdoption,
+      aiImpactScore: impact.aiAdoption / 10, // 0-10 scale
+      riskLevel: impact.automationRisk > 50 ? 'high' : impact.automationRisk > 30 ? 'medium' : 'low',
       trend: impact.trend,
       employees: Math.floor(Math.random() * 400000 + 50000), // Placeholder
     };
@@ -92,11 +94,14 @@ async function buildSourcesApi() {
       id: doc.id,
       title: doc.title,
       description: doc.description || doc.summary || '',
+      abstract: doc.description || doc.summary || '',
       source: doc.source || doc.metadata?.source || 'Research',
+      institution: doc.source || doc.metadata?.source || 'Research',
       type: doc.type || 'research',
       url: doc.url || doc.metadata?.url || '#',
       category: categorizeSource(doc.source || doc.title || ''),
       date: doc.metadata?.lastUpdated || doc.date || '2024',
+      year: (doc.metadata?.lastUpdated || doc.date || '2024').toString().slice(0, 4),
     });
   }
   
